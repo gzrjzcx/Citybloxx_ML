@@ -19,8 +19,35 @@ This is a reporsitory where tracks the latest process of dissertation.
 
 - Project proposal:
 	- Final proposal:
-		- Develop a complete game suitable for kids with ASD so that the game provide both dynamically adjusted suitable **difficulty level** and a **sensory enviroment**(e.g., colour, sounds and visual effects).
+		- `Develop a complete game suitable for kids with ASD so that the game provide both dynamically adjusted suitable difficulty level and a sensory enviroment(e.g., colour, sounds and visual effects).`
 	- Initial proposal:
 		- Develop a simple prototype game.
 		- Investigate how to use Unity's Machine Learning Agents.
 		- Test the developed game in an IOS tablet.
+
+## Minutes
+##### Meeting 1
+- Time: 10:00 am, 23.1.2019
+- Topic: Project ideas and background reading.
+- Contents:
+	- Basic idea: 
+		- [City Bloxx game](https://www.youtube.com/watch?v=9eP2rVisHPo)
+	- Background reading:
+		- [Brackey’s YouTube channel](https://www.youtube.com/watch?v=IlKaB1etrik)
+		- [Unity Learn Tutorial](https://unity3d.com/learn/tutorials)
+	- Ensure basic developer environment:
+		- OS: MacOS
+		- Unity Edition: Personal
+		- Version Control: Github
+		- ML Tool: Unity Machine Learning Agents
+- Q&A:
+	- What is a gameing session?
+		- It is a period that one player is playing a game.
+- Next meeting time:
+	- Wed 2nd Feb, 10:00 am.
+- Next 2 weeks work:
+	- [ ] Reading background materails about game developing and ASD.
+	- [ ] Learning basic concepts about game developing like game objects, game assets, event system, GUI controls visual animations, etc.
+	- [ ] Configurating enviroment for Unity and Machine Learning Agents, like installing depencies like Python 3.6 and Tensflow.
+	- [ ] Download some sample projects and become familiar with Unity.
+	- [ ] Maintain [personal WIKI page](https://www.wiki.ed.ac.uk/display/hpcdis/S1702794+Alex+Zou).

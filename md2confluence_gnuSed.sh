@@ -11,7 +11,9 @@ sed -i "s/^#####\( \)/${h5}/" text.md
 sed -i "s/^####\( \)/${h4}/" text.md
 sed -i "s/^###\( \)/${h3}/" text.md
 sed -i "s/^##\( \)/${h2}/" text.md
+sed -i "/${h2}/a ----" text.md
 sed -i "s/^#\( \)/${h1}/" text.md
+sed -i "/${h1}/a ----" text.md
 
 # ---------------------- replace list ----------------------
 l2="-- "

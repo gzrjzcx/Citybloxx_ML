@@ -1,6 +1,7 @@
 # Citybloxx_ML
 This is a repository where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionally, it is also used to store codes and version control of this project.
-
+  
+This is the [usage](https://github.com/gzrjzcx/Citybloxx_ML/issues/1) of how to use the scripts to convert Markdown to Markup. 
 ## Deadline
 - Dissertation
 	- Hand-in: Fri, `24th May`, 2019 --- Fri, `23rd Aug`, 2019

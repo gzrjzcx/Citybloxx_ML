@@ -11,8 +11,8 @@ rm -f ${tempfile}
 
 # --------------------------------------------
 # Inside single quote '' everything is preserved literally(i.e., '$a' --> $a)
-# Inside double quote "" everything is preserved extened(i.e., "$a" --> apple)
-# If one want to have the expandition inside the single quote '', it can close
+# Inside double quote "" everything is preserved extendedly(i.e., "$a" --> apple)
+# If one want to have the explanation inside the single quote '', it can close
 # the quotes, insert something, and then re-single-quote again.
 # For example,  sed -n '/'"${partition_pattern}"'/,$p'
 

@@ -38,7 +38,7 @@ sed -i "s/\- \[.\]/\-\- []/g" ${1}
 
 # Because there may be one or more # in one line, like ### or #####
 # we need to substitute the # according to the order from most to least
-# to avoid the wrong substitutation like ####h1. 
+# to avoid the wrong substitution like ####h1. 
 
 
 

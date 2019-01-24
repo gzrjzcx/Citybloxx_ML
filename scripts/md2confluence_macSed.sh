@@ -33,7 +33,7 @@ sed -i '' "s/\](/\|/" test.md
 
 # Because there may be one or more # in one line, like ### or #####
 # we need to substitute the # according to the order from most to least
-# to avoid the wrong substitutation like ####h1. 
+# to avoid the wrong substitution like ####h1. 
 
 # Need to use sed -i '' with -i flag in Mac sed
 # Mac sed not support "//a" flag to add a new line below the match line
@@ -49,11 +49,11 @@ sed -i '' "s/\](/\|/" test.md
 # only the first occurrence, only if there is '://' later on the '['
 
 # Both examples can be used by Mac sed, and the before and later condition just need
-# to adjust the substitution pattarn: 
+# to adjust the substitution pattern: 
 #	*	If want the condition is found before the matched string, just need to put the condition and 
-#		condition regular expression captuting \1 before the pattern stuff.
+#		condition regular expression capturing \1 before the pattern stuff.
 #	*	If want the condition is found later on the matched string, just need to put the condition and 
-#		condition regular expression captuting \1 after the pattern stuff
+#		condition regular expression capturing \1 after the pattern stuff
 # The reason is that In sed, using \( \) saves whatever is in the parentheses 
 # and you can then access it with \1. This is regular expression(https://www.regular-expressions.info/)
 
@@ -62,8 +62,8 @@ sed -i '' "s/\](/\|/" test.md
 # Due to the {}, it is only supported by GNU sed!!!
 
 # ----------- Several tricks ------------
-# '(' or ')' is not need to excape in match pattarn.
-# RE: '.' means one any charactor, '*' means one or more last charactor
+# '(' or ')' is not need to escape in match pattern.
+# RE: '.' means one any character, '*' means one or more last character
 # therefore, '.*' means any contents
 
 

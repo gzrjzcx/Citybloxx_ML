@@ -1,5 +1,5 @@
 # Citybloxx_ML
-This is a reporsitory where tracks the latest process of dissertation.
+This is a reporsitory where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionanly, it is also used to store codes and version control of this project.
 
 ## Deadline
 - Dissertation
@@ -15,12 +15,16 @@ This is a reporsitory where tracks the latest process of dissertation.
 
 ## Project Information
 - Project title: 
-	- Self-adaptive Video Games for Autistic Kids using Unity Machine Learning Agents
+	- [Self-adaptive Video Games for Autistic Kids using Unity Machine Learning Agents](https://www.wiki.ed.ac.uk/display/hpcdis/Self-adaptive+Video+Games+for+Autistic+Kids+using+Unity+Machine+Learning+Agents)
+- Student name:
+	- Alex Zou
+- EPCC supervisor name:
+	- Charaka Palansuriya
 
 - Project proposal:
 	- Final proposal:
 		- `Develop a complete game suitable for kids with ASD so that the game provide both dynamically adjusted suitable difficulty level and a sensory enviroment(e.g., colour, sounds and visual effects).`
-	- Initial proposal:
+	- [Initial proposal](https://www.wiki.ed.ac.uk/display/hpcdis/Self-adaptive+Video+Games+for+Autistic+Kids+using+Unity+Machine+Learning+Agents):
 		- Develop a simple prototype game.
 		- Investigate how to use Unity's Machine Learning Agents.
 		- Test the developed game in an IOS tablet.

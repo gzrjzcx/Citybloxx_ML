@@ -1,5 +1,5 @@
 # Citybloxx_ML
-This is a reporsitory where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionanly, it is also used to store codes and version control of this project.
+This is a repository where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionaly, it is also used to store codes and version control of this project.
 
 ## Deadline
 - Dissertation

@@ -24,6 +24,11 @@ This is a reporsitory where tracks the latest process of dissertation.
 		- Develop a simple prototype game.
 		- Investigate how to use Unity's Machine Learning Agents.
 		- Test the developed game in an IOS tablet.
+	- Project Risk:
+		- Time Limitation:
+			- Not only the new programming language and game engine(i.e., Unity), but also the Machine Learning part I need to learn and experiment. Therefore it is possible to cannot finish it on time.
+		- ML Part Failure:
+			- There are various techniques to achieve dynamic adjustment with Machine learning, however, it is high likelihood for most of them to fail to learn the acquire knowledge and achieve our goals.  
 
 ## Minutes
 ##### Meeting 1
@@ -50,4 +55,4 @@ This is a reporsitory where tracks the latest process of dissertation.
 	- [ ] Learning basic concepts about game developing like game objects, game assets, event system, GUI controls visual animations, etc.
 	- [ ] Configurating enviroment for Unity and Machine Learning Agents, like installing depencies like Python 3.6 and Tensflow.
 	- [ ] Download some sample projects and become familiar with Unity.
-	- [ ] Maintain [personal WIKI page](https://www.wiki.ed.ac.uk/display/hpcdis/S1702794+Alex+Zou).
+	- [x] Maintain [personal WIKI page](https://www.wiki.ed.ac.uk/display/hpcdis/S1702794+Alex+Zou).

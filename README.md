@@ -1,5 +1,5 @@
 # Citybloxx_ML
-This is a repository where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionaly, it is also used to store codes and version control of this project.
+This is a repository where is intended as a space for 'working documents' and will be updated regularly during the whole project for tracking the work progress. Additionally, it is also used to store codes and version control of this project.
 
 ## Deadline
 - Dissertation
@@ -23,7 +23,7 @@ This is a repository where is intended as a space for 'working documents' and wi
 
 - Project proposal:
 	- Final proposal:
-		- `Develop a complete game suitable for kids with ASD so that the game provide both dynamically adjusted suitable difficulty level and a sensory enviroment(e.g., colour, sounds and visual effects).`
+		- `Develop a complete game suitable for kids with ASD so that the game provide both dynamically adjusted suitable difficulty level and a sensory environment(e.g., colour, sounds and visual effects).`
 	- [Initial proposal](https://www.wiki.ed.ac.uk/display/hpcdis/Self-adaptive+Video+Games+for+Autistic+Kids+using+Unity+Machine+Learning+Agents):
 		- Develop a simple prototype game.
 		- Investigate how to use Unity's Machine Learning Agents.
@@ -50,13 +50,13 @@ This is a repository where is intended as a space for 'working documents' and wi
 		- Version Control: Github
 		- ML Tool: Unity Machine Learning Agents
 - Q&A:
-	- What is a gameing session?
+	- What is a gaming session?
 		- It is a period that one player is playing a game.
 - Next meeting time:
 	- Wed 2nd Feb, 10:00 am.
 - Next 2 weeks work:
-	- [ ] Reading background materails about game developing and ASD.
+	- [ ] Reading background materials about game developing and ASD.
 	- [ ] Learning basic concepts about game developing like game objects, game assets, event system, GUI controls visual animations, etc.
-	- [ ] Configurating enviroment for Unity and Machine Learning Agents, like installing depencies like Python 3.6 and Tensflow.
+	- [ ] Configuring environment for Unity and Machine Learning Agents, like installing dependencies like Python 3.6 and Tensflow.
 	- [ ] Download some sample projects and become familiar with Unity.
 	- [x] Maintain [personal WIKI page](https://www.wiki.ed.ac.uk/display/hpcdis/S1702794+Alex+Zou).

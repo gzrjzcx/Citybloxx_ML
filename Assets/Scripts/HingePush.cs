@@ -6,8 +6,8 @@ public class HingePush : MonoBehaviour
 {
 
 	public Rigidbody2D rb2d;
-	public float leftPushRange = -45;
-	public float rightPushRange = 45;
+	public float leftPushRange;
+	public float rightPushRange;
 	public float velocityThreshold;
 
     // Start is called before the first frame update
@@ -27,14 +27,14 @@ public class HingePush : MonoBehaviour
     {
     	if(transform.rotation.z > 0
     		&& transform.rotation.z < rightPushRange
-    		&& rb2d.angularVelocity > 0
+    		&& (rb2d.angularVelocity > 0)
     		&& rb2d.angularVelocity < velocityThreshold)
     	{
     		rb2d.angularVelocity = velocityThreshold;
     	}
     	else if(transform.rotation.z < 0
     		&& transform.rotation.z > leftPushRange
-    		&& rb2d.angularVelocity < 0
+    		&& (rb2d.angularVelocity < 0)
     		&& rb2d.angularVelocity > velocityThreshold * -1)
     	{
     		rb2d.angularVelocity = velocityThreshold * -1;

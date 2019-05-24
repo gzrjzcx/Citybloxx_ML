@@ -635,6 +635,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &611633405 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4658085433500430778, guid: 30d8bfdadf57249999a5c869687bc0a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4658085434443693553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &690769935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piecePrefab: {fileID: 4658085433500430776, guid: 30d8bfdadf57249999a5c869687bc0a8,
     type: 3}
-  piecePoolSize: 4
+  piecePoolSize: 2
   SlingObj: {fileID: 1341039995}
   currentPiece: 0
 --- !u!4 &1065792518
@@ -1553,5 +1559,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4658085433500430781, guid: 30d8bfdadf57249999a5c869687bc0a8,
+        type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 611633405}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d8bfdadf57249999a5c869687bc0a8, type: 3}

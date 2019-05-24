@@ -54,22 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\EllipticalOrbit.cs" />
+     <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\HingePush.cs" />
+     <Compile Include="Assets\Scripts\Piece.cs" />
+     <Compile Include="Assets\Scripts\PiecePool.cs" />
      <Compile Include="Assets\Scripts\RotateWithSwinging.cs" />
-     <Compile Include="Assets\TooCubeForest\demoScenes\Movement.cs" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Base.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Comment_Shader.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Leaf.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Depth_Blend.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Gate_Particle.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Area_Comment_Wireframe.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Shader_Tri.shader" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Blockout_Water.shader" />
-     <None Include="Assets\Isometric Block\readme.txt" />
-     <None Include="Assets\Blockout\Resources\Blockout\Shaders\Editor_Trigger.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/alex/citybloxxDemo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -288,9 +277,6 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Blockout">
- <HintPath>/Users/alex/citybloxxDemo/Assets/Blockout/Blockout.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/alex/citybloxxDemo/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>

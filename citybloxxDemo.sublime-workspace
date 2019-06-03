@@ -4,8 +4,72 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"GetContact(int index)\tContactPoint2D"
+			],
+			[
+				"collisi",
+				"Collision2D\tCollision2D"
+			],
+			[
+				"con",
+				"contactCount\tint"
+			],
+			[
+				"l",
+				"Log(object message, Object context)\tvoid"
+			],
+			[
+				"pos",
+				"posSkyObj_1\tVector3"
+			],
+			[
+				"po",
+				"posSkyObj_2\tVector3"
+			],
+			[
+				"sky",
+				"skyObj_2\tGameObject"
+			],
+			[
+				"getc",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"Scmo",
+				"ScreenMoveUp()\tvoid"
+			],
+			[
+				"ve",
+				"Vector3\tVector3"
+			],
+			[
+				"gam",
+				"GameControl\tGameControl"
+			],
+			[
 				"ro",
-				"rotateZ\tfloat"
+				"rotation\tQuaternion"
+			],
+			[
+				"piece",
+				"pieceObj\tPiece"
+			],
+			[
+				"am",
+				"amplitudeRotate\tfloat"
+			],
+			[
+				"fix",
+				"fixedDeltaTime\tfloat"
+			],
+			[
+				"an",
+				"angularVelocity\tfloat"
+			],
+			[
+				"mat",
+				"Mathf\tMathf"
 			],
 			[
 				"rota",
@@ -25,10 +89,6 @@
 			],
 			[
 				"vel",
-				"velocityThreshold"
-			],
-			[
-				"ve",
 				"velocityThreshold"
 			],
 			[
@@ -454,79 +514,64 @@
 			[
 				"pre",
 				"prev_a"
-			],
-			[
-				"cu",
-				"currentNode_a"
-			],
-			[
-				"nex",
-				"next"
-			],
-			[
-				"par",
-				"partition_pattern"
-			],
-			[
-				"crea",
-				"create_h"
-			],
-			[
-				"cr",
-				"create_h"
-			],
-			[
-				"D",
-				"DES"
-			],
-			[
-				"src",
-				"SRC"
-			],
-			[
-				"name",
-				"NAME"
-			],
-			[
-				"nam",
-				"NAME"
-			],
-			[
-				"inc",
-				"include"
-			],
-			[
-				"TOO",
-				"TOO"
-			],
-			[
-				"PRO",
-				"PRO"
-			],
-			[
-				"CC",
-				"CCFLAGS"
-			],
-			[
-				"SC",
-				"SCRIPTS"
-			],
-			[
-				"pi",
-				"pie_1"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class HingePush : MonoBehaviour\n{\n\n\tpublic Rigidbody2D rb2d;\n\tpublic float leftPushRange;\n\tpublic float rightPushRange;\n\tpublic float velocityThreshold;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n        rb2d.angularVelocity = velocityThreshold;\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n        Push();\n    }\n\n    private void Push()\n    {\n    \tif(transform.rotation.z > 0\n    \t\t&& transform.rotation.z < rightPushRange\n    \t\t&& (rb2d.angularVelocity > 0)\n    \t\t&& rb2d.angularVelocity < velocityThreshold)\n    \t{\n    \t\trb2d.angularVelocity = velocityThreshold;\n    \t}\n    \telse if(transform.rotation.z < 0\n    \t\t&& transform.rotation.z > leftPushRange\n    \t\t&& (rb2d.angularVelocity < 0)\n    \t\t&& rb2d.angularVelocity > velocityThreshold * -1)\n    \t{\n    \t\trb2d.angularVelocity = velocityThreshold * -1;\n    \t}\n    }\n}\n",
-			"file": "Assets/Scripts/HingePush.cs",
-			"file_size": 1060,
-			"file_write_time": 132029278717425802,
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic int totalStacked;\n\tpublic float swingSpeed;\n\tpublic float maxAngle;\n\tpublic int swinger;\n\n\tpublic float amplitudeMove = 0.5f;\n\tpublic float amplitudeRotate = 1f;\n\n\tpublic Rigidbody2D rb2d;\n\n\tprivate float maxSwingingAngle = 5f;\n\tprivate float minSwingingAngle = -5f;\n\tprivate float angle;\n\tprivate Vector3 pos;\n\n\tint stackPlacement;\n\tbool rotateRight;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\t// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);\n\t\trb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);\n\t\t// transform.position = new Vector3(Mathf.Cos(Time.time)*amplitudeMove, transform.position.y, transform.position.z);\n\t\ttransform.rotation = Quaternion.Euler(0,0,-Mathf.Sin(Time.time)*amplitudeRotate);\n\t\tDebug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);\n\t\tDebug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);\n\t}\n\n\tpublic void getAmplitudeMove()\n\t{\n\t\t\n\t}\n}\n",
+			"file": "Assets/Scripts/ColumnSwinging.cs",
+			"file_size": 1256,
+			"file_write_time": 132039685048830442,
+			"settings":
+			{
+				"buffer_size": 1207,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class GameControl : MonoBehaviour\n{\n\n\tpublic static GameControl instance;\n\n\tpublic PiecePool piecePoolObj;\n    public ColumnSwinging columnObj;\n    public ScreenMoveUp screenMoveUpObj;\n    public EllipticalOrbit slingObj;\n\n    public int populationScore = 0;\n    public int stackedPieceNum = 0;\n\n\t// public bool \n\n    // Start is called before the first frame update\n    void Awake()\n    {\n        if(!instance)\n        {\n        \tinstance = this;\n        }else if(instance)\n        {\n        \tDestroy(gameObject);\n        }\n    }\n\n    public void OnPieceStacking()\n    {\n        PieceStacked();\n        Score();\n        ScreenMoveUp();\n\n    }\n\n    void PieceStacked()\n    {\n    \tpiecePoolObj.HookNewPiece();\n    }\n\n    void Score()\n    {\n        stackedPieceNum++;\n    }\n\n    void ScreenMoveUp()\n    {\n        screenMoveUpObj.MoveUp();\n    }\n\n    public int getStackedPiecesNum()\n    {\n        return stackedPieceNum;\n    }\n}\n",
+			"file": "Assets/Scripts/GameControl.cs",
+			"file_size": 1076,
+			"file_write_time": 132039614461054912,
 			"settings":
 			{
 				"buffer_size": 1014,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Assets/Scripts/PiecePool.cs",
+			"settings":
+			{
+				"buffer_size": 1399,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ScreenMoveUp.cs",
+			"settings":
+			{
+				"buffer_size": 1055,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n\tpublic float downForce = 200f;\n    public bool isHooked = false;\n\n\tprivate Rigidbody2D rb2d;\n\tpublic bool isStacked = true;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            isStacked = true;\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(this.gameObject.tag != GameControl.instance.piecePoolObj.topPieceTag)\n        {\n            Debug.Log(this.gameObject.tag);\n            if(checkIfCanStack(ctl))\n            {\n                GameControl.instance.piecePoolObj.topPieceTag = this.gameObject.tag;\n            }\n        }\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n\n        if(Mathf.Abs(ctl.collider.transform.position.x - ctl.otherCollider.transform.position.x) < 0.5)\n        {\n            Debug.Log(\"drop true\");\n            return true;\n            // Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x);\n            // Debug.Log(ctl.otherCollider.gameObject.name +\"  \" + ctl.otherCollider.transform.localPosition.x);\n        }\n        else \n        {\n            Debug.Log(\"drop false\");\n            return false;\n        }\n    }\n\n}\n",
+			"file": "Assets/Scripts/Piece.cs",
+			"file_size": 2350,
+			"file_write_time": 132039830932731345,
+			"settings":
+			{
+				"buffer_size": 2260,
+				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows",
 				"scratch": true
 			}
@@ -535,7 +580,7 @@
 			"file": "Assets/Scripts/EllipticalOrbit.cs",
 			"settings":
 			{
-				"buffer_size": 1227,
+				"buffer_size": 1268,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -662,8 +707,9 @@
 	],
 	"file_history":
 	[
-		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
 		"/Users/alex/citybloxxDemo/Assets/Scripts/HingePush.cs",
+		"/Users/alex/citybloxxDemo/Assets/Scripts/ForceToSwing.cs",
+		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
 		"/Users/alex/Desktop/test.cs",
 		"/Users/alex/FlappyBird/Assets/FlappyBirdStyleAssets/Scripts/ScrollingObject.cs",
 		"/Users/alex/FlappyBird/Assets/FlappyBirdStyleAssets/Scripts/RepeatingBG.cs",
@@ -788,12 +834,11 @@
 		"/Users/alex/Documents/blog/themes/next/source/images/favicon-16x16-next.png",
 		"/Users/alex/Documents/PersonalMaterial/bachelor/所有完成！/Board.h",
 		"/Users/alex/Desktop/presentation_handout.md",
-		"/Users/alex/Desktop/project_templete/src/board/board.h",
-		"/Users/alex/Desktop/project_templete/src/main.c"
+		"/Users/alex/Desktop/project_templete/src/board/board.h"
 	],
 	"find":
 	{
-		"height": 45.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -807,6 +852,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"currentPiece",
+			"currentPieceTag",
+			"currentPiece",
+			"pos"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -814,6 +863,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"currentPieceIdx",
+			"currentPiece",
+			"currentPieceTag"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -824,12 +876,53 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/HingePush.cs",
+					"file": "Assets/Scripts/ColumnSwinging.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								975,
+								975
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"26,31": "不需要的 using 指令。",
+								"993,994": "参数 1: 无法从“int”转换为“UnityEngine.Vector3”",
+								"996,997": "参数 2: 无法从“int”转换为“UnityEngine.Vector3”"
+							},
+							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic int totalStacked;\n\tpublic float swingSpeed;\n\tpublic float maxAngle;\n\tpublic int swinger;\n\n\tpublic Rigidbody2D rb2d;\n\n\tprivate float maxSwingingAngle = 5f;\n\tprivate float minSwingingAngle = -5f;\n\tprivate float angle;\n\tprivate Vector3 pos;\n\tprivate float speed = 0.03f;\n\n\tint stackPlacement;\n\tbool rotateRight;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\t// angle += Time.fixedDeltaTime * 0.1f;\n\t\t// Vector3 posX = transform.position.x * Mathf.Cos(angle);\n\t\tpos = transform.position;\n\t\tif(transform.position.x > -2 && transform.position.x < 0)\n\t\t{\t\n\t\t\tspeed += 0.01f * Time.fixedDeltaTime;\n\t\t\tpos.x -= speed;\n\t\t\ttransform.position = pos;\n\t\t}\n\t\telse if(transform.position.x >= 0 && transform.position.x < 2)\n\t\t{\n\t\t\tDebug.Log(Time.fixedDeltaTime);\n\t\t\tspeed -= 0.01f * Time.fixedDeltaTime;\n\t\t\tpos.x += speed;\n\t\t\ttransform.position = pos;\n\t\t}\n\t}\n}\n",
+							"origin_encoding": "UTF-8-SIG",
+							"revert_to_scratch": true,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/GameControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
@@ -840,8 +933,8 @@
 						"selection":
 						[
 							[
-								700,
-								700
+								308,
+								308
 							]
 						],
 						"settings":
@@ -851,38 +944,88 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"178,179": "无法将类型“double”隐式转换为“float”。存在一个显式转换(是否缺少强制转换?)",
-								"215,216": "无法将 Double 类型隐式转换为“float”类型；请使用“F”后缀创建此类型",
-								"26,31": "不需要的 using 指令。"
+								"26,31": "不需要的 using 指令。",
+								"887,888": "表达式项“)”无效"
 							},
-							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class HingePush : MonoBehaviour\n{\n\n\tpublic Rigidbody2D rb2d;\n\tpublic float leftPushRange = -45;\n\tpublic float rightPushRange = 45;\n\tpublic float velocityThreshold;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n        rb2d.angularVelocity = velocityThreshold;\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n        Push();\n    }\n\n    private void Push()\n    {\n    \tif(transform.rotation.z > 0\n    \t\t&& transform.rotation.z < rightPushRange\n    \t\t&& rb2d.angularVelocity > 0\n    \t\t&& rb2d.angularVelocity < velocityThreshold)\n    \t{\n    \t\trb2d.angularVelocity = velocityThreshold;\n    \t}\n    \telse if(transform.rotation.z < 0\n    \t\t&& transform.rotation.z > leftPushRange\n    \t\t&& rb2d.angularVelocity < 0\n    \t\t&& rb2d.angularVelocity > velocityThreshold * -1)\n    \t{\n    \t\trb2d.angularVelocity = velocityThreshold * -1;\n    \t}\n    }\n}\n",
+							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class GameControl : MonoBehaviour\n{\n\n\tpublic static GameControl instance;\n\n\tpublic PiecePool piecePoolObj;\n    public ColumnSwinging columnObj;\n\n    public int populationScore = 0;\n    public int stackedPieceNum = 0;\n\n\t// public bool \n\n    // Start is called before the first frame update\n    void Awake()\n    {\n        if(!instance)\n        {\n        \tinstance = this;\n        }else if(instance)\n        {\n        \tDestroy(gameObject);\n        }\n    }\n\n    public void OnPieceStacking()\n    {\n        PieceStacked();\n        Score();\n    }\n\n    void PieceStacked()\n    {\n    \tpiecePoolObj.HookNewPiece();\n    }\n\n    void Score()\n    {\n        stackedPieceNum++;\n    }\n\n    public int getStackedPiecesNum()\n    {\n        return stackedPieceNum;\n    }\n}\n",
 							"origin_encoding": "UTF-8-SIG",
+							"revert_to_scratch": true,
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 326.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Assets/Scripts/EllipticalOrbit.cs",
+					"buffer": 2,
+					"file": "Assets/Scripts/PiecePool.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1227,
+						"buffer_size": 1399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								958,
-								958
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"1299,1314": "当前上下文中不存在名称“currentPieceIdx”",
+								"1329,1344": "当前上下文中不存在名称“currentPieceIdx”",
+								"1375,1390": "当前上下文中不存在名称“currentPieceIdx”",
+								"26,31": "不需要的 using 指令。",
+								"886,901": "当前上下文中不存在名称“currentPieceIdx”"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/ScreenMoveUp.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								795,
+								795
+							],
+							[
+								946,
+								946
 							]
 						],
 						"settings":
@@ -890,16 +1033,94 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"1020,1021": "应输入 ;",
-								"26,31": "不需要的 using 指令。"
+								"26,31": "不需要的 using 指令。",
+								"672,686": "变量“backgroundSize”已被赋值，但从未使用过它的值"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 187.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Piece.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1420,
+								1423
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"1496,1500": "无法将类型“string”隐式转换为“int”",
+								"26,31": "不需要的 using 指令。"
+							},
+							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n\tpublic float downForce = 200f;\n    public bool isHooked = false;\n\n\tprivate Rigidbody2D rb2d;\n\tpublic bool isStacked = true;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void FixedUpdate()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D(Collision2D ctl)\n    {\n        ContactPoint2D contact = ctl.contacts[0];\n        Debug.Log(contact.point);\n\n        if(!isStacked)\n        {\n            isStacked = true;\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, false);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n}\n",
+							"origin_encoding": "UTF-8-SIG",
+							"revert_to_scratch": true,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 21.0,
+						"translation.y": 794.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/EllipticalOrbit.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1190,
+								1190
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"1020,1021": "应输入 ;",
+								"26,31": "不需要的 using 指令。"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -907,7 +1128,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -922,11 +1143,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.537083864484,
 			1.0
 		],
 		"rows":
@@ -952,7 +1180,7 @@
 	"project": "citybloxxDemo.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 89.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -970,12 +1198,12 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -994,7 +1222,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 252.0,
+	"side_bar_width": 184.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

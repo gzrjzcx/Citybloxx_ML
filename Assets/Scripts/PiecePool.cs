@@ -7,11 +7,12 @@ public class PiecePool : MonoBehaviour
 	public GameObject piecePrefab;
 	public int piecePoolSize = 4;
 	public GameObject SlingObj;
+    public int currentPieceIdx = 0;
+    public string topPieceIdx;
 
 	private GameObject[] pieces;
 	private Vector2 objPoolPos = new Vector2(0, -10f);
 	private float spawnInterval;
-	public int currentPiece = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,29 +21,24 @@ public class PiecePool : MonoBehaviour
         for(int i=0; i<piecePoolSize; i++)
         {
         	pieces[i] = (GameObject)Instantiate(piecePrefab, objPoolPos, Quaternion.identity);
+            pieces[i].gameObject.name = "Piece" + i.ToString();
+            pieces[i].gameObject.tag = "Piece";
         }
         HookNewPiece();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // if(Input.GetKeyDown("r"))
-        // {
-        //     pieces[1].transform.position = new Vector3(0,0,0);
-        //     pieces[1].transform.rotation = Quaternion.Euler(0,0,0);
-        // }
-    }
-
     public void HookNewPiece()
     {
-        var pieceObj = pieces[currentPiece].GetComponent<Piece>();
-        pieces[currentPiece].transform.position = new Vector3(0, -2.25f, 0);
-    	pieces[currentPiece].transform.SetParent(SlingObj.transform,false);
+        var pieceObj = pieces[currentPieceIdx].GetComponent<Piece>();
+        pieceObj.transform.parent = null; // avoid x offset when hooking the piece from column
+        pieceObj.transform.position = new Vector3(0, -2.25f, 0);
+    	pieceObj.transform.SetParent(SlingObj.transform,false);
         pieceObj.isHooked = true;
+        pieceObj.isStacked = false;
         pieceObj.GetComponent<Rigidbody2D>().isKinematic = true;
-        currentPiece++;
-        if(currentPiece >= piecePoolSize)
-            currentPiece=0;
+        
+        currentPieceIdx++;
+        if(currentPieceIdx >= piecePoolSize)
+            currentPieceIdx=0;
     }
 }

@@ -17,7 +17,7 @@ public class EllipticalOrbit : MonoBehaviour
 	public float rotateY;
 	public float rotateZ;
 
-	public float offsetY = 1f;
+	public float offsetY = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +27,22 @@ public class EllipticalOrbit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        angle += Time.deltaTime * angularSpeed;
-        z = a * Mathf.Cos(angle);
-        x = b * Mathf.Sin(angle);
-        y = h * Mathf.Cos(angle) + offsetY;
-        _pos = new Vector3(x,y,z);
+    void FixedUpdate()
+    {   
+        if(!GameControl.instance.isGameOver)
+        {
+            angle += Time.deltaTime * angularSpeed;
+            z = a * Mathf.Cos(angle);
+            x = b * Mathf.Sin(angle);
+            y = h * Mathf.Cos(angle) + offsetY;
+            _pos = new Vector3(x,y,z);
 
-        rotateX = -10 * Mathf.Sin(angle);
-        rotateY = rotateAngle * Mathf.Cos(angle);
-        rotateZ = rotateAngle * Mathf.Cos(angle);
-        transform.rotation = Quaternion.Euler(rotateX, rotateY, rotateZ);
+            rotateX = -10 * Mathf.Sin(angle);
+            rotateY = rotateAngle * Mathf.Cos(angle);
+            rotateZ = rotateAngle * Mathf.Cos(angle);
+            transform.rotation = Quaternion.Euler(rotateX, rotateY, rotateZ);
 
-        transform.position = Vector3.Lerp(transform.position, _pos, Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, _pos, Time.deltaTime);
+        }
     }
 }

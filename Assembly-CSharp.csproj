@@ -63,8 +63,6 @@
      <Compile Include="Assets\Scripts\RotateWithSwinging.cs" />
      <Compile Include="Assets\Scripts\ScreenMoveUp.cs" />
      <Compile Include="Assets\Scripts\StackingEffect.cs" />
-     <Compile Include="Assets\TooCubeForest\demoScenes\Movement.cs" />
-     <None Include="Assets\Isometric Block\readme.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/alex/citybloxxDemo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

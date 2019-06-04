@@ -4,6 +4,146 @@
 		"selected_items":
 		[
 			[
+				"com",
+				"comboScoreText\tText"
+			],
+			[
+				"waitfor",
+				"WaitForSeconds(float seconds)\tWaitForSeconds(float seconds)"
+			],
+			[
+				"t",
+				"text\tstring"
+			],
+			[
+				"ist",
+				"isTimerEnd\tbool"
+			],
+			[
+				"ac",
+				"activeSelf\tbool"
+			],
+			[
+				"is",
+				"isTimerStart\tbool"
+			],
+			[
+				"ti",
+				"timerOffset\tfloat"
+			],
+			[
+				"oncom",
+				"OnComboTimingComplete()\tvoid"
+			],
+			[
+				"Tim",
+				"Timer\tTimer"
+			],
+			[
+				"istim",
+				"isTiming\tbool"
+			],
+			[
+				"isti",
+				"isTiming\tbool"
+			],
+			[
+				"isTI",
+				"isTimerStart\tbool"
+			],
+			[
+				"tetarge",
+				"timerTarget_\tfloat"
+			],
+			[
+				"isre",
+				"isRepeate_\tbool"
+			],
+			[
+				"isI",
+				"isIgnoreTimeScale_\tbool"
+			],
+			[
+				"up",
+				"updateEvent_\tUpdateEvent"
+			],
+			[
+				"upd",
+				"updateEvent_\tUpdateEvent"
+			],
+			[
+				"ontim",
+				"onTimerCompleted_\tCompleteEvent"
+			],
+			[
+				"time",
+				"timerTarget\tfloat"
+			],
+			[
+				"Time",
+				"Time_\tfloat"
+			],
+			[
+				"istime",
+				"isTimerStart\tbool"
+			],
+			[
+				"clam",
+				"Clamp(float value, float min, float max)\tfloat"
+			],
+			[
+				"cheiffa",
+				"checkFallenSide(float deltaX)\tvoid"
+			],
+			[
+				"ve",
+				"Vector3\tVector3"
+			],
+			[
+				"tr",
+				"true\ttrue"
+			],
+			[
+				"sta",
+				"stackStatus\tstackStatus"
+			],
+			[
+				"del",
+				"deltaX\tfloat"
+			],
+			[
+				"check",
+				"CheckFirstPieceIfStacked()\tvoid"
+			],
+			[
+				"ot",
+				"otherCollider\tCollider2D"
+			],
+			[
+				"gam",
+				"GameControl\tGameControl"
+			],
+			[
+				"scne",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"mis",
+				"missNum\tint"
+			],
+			[
+				"si",
+				"Sin(float f)\tfloat"
+			],
+			[
+				"bo",
+				"bottomRight\tVector3"
+			],
+			[
+				"tra",
+				"Translate(Vector3 translation)\tvoid"
+			],
+			[
 				"get",
 				"GetContact(int index)\tContactPoint2D"
 			],
@@ -38,14 +178,6 @@
 			[
 				"Scmo",
 				"ScreenMoveUp()\tvoid"
-			],
-			[
-				"ve",
-				"Vector3\tVector3"
-			],
-			[
-				"gam",
-				"GameControl\tGameControl"
 			],
 			[
 				"ro",
@@ -136,10 +268,6 @@
 				"GetComponent"
 			],
 			[
-				"is",
-				"isDead"
-			],
-			[
 				"qop",
 				"qopt-report"
 			],
@@ -156,10 +284,6 @@
 				"delta_pos"
 			],
 			[
-				"del",
-				"delta_pos"
-			],
-			[
 				"te",
 				"tempz"
 			],
@@ -170,10 +294,6 @@
 			[
 				"j",
 				"j_total_force"
-			],
-			[
-				"si",
-				"sign"
 			],
 			[
 				"coll",
@@ -256,10 +376,6 @@
 				"int2str"
 			],
 			[
-				"sta",
-				"state"
-			],
-			[
 				"bes",
 				"best_action"
 			],
@@ -298,10 +414,6 @@
 			[
 				"A",
 				"ACTION"
-			],
-			[
-				"ac",
-				"action"
 			],
 			[
 				"p",
@@ -402,144 +514,31 @@
 			[
 				"X",
 				"X_train"
-			],
-			[
-				"xtest",
-				"X_test_2"
-			],
-			[
-				"x_test",
-				"X_test_1"
-			],
-			[
-				"P",
-				"PATCHING_ARGS"
-			],
-			[
-				"me",
-				"method"
-			],
-			[
-				"a",
-				"args"
-			],
-			[
-				"ra",
-				"random_args"
-			],
-			[
-				"DI",
-				"DILATION"
-			],
-			[
-				"dial",
-				"dilation"
-			],
-			[
-				"fo",
-				"football"
-			],
-			[
-				"patch_s",
-				"patch_start_point"
-			],
-			[
-				"patch",
-				"patch_start_point"
-			],
-			[
-				"ran",
-				"random_window"
-			],
-			[
-				"dilation_pa",
-				"dilation_patch_size"
-			],
-			[
-				"retu",
-				"returnSize"
-			],
-			[
-				"s_",
-				"s_key"
-			],
-			[
-				"a_",
-				"a_idx"
-			],
-			[
-				"n",
-				"np"
-			],
-			[
-				"v",
-				"s_v"
-			],
-			[
-				"max",
-				"max_action_value"
-			],
-			[
-				"pr",
-				"print"
-			],
-			[
-				"dere",
-				"dereferencing"
-			],
-			[
-				"pri",
-				"printf\tprintf …"
-			],
-			[
-				"BO",
-				"BOARD_OBJ"
-			],
-			[
-				"tr",
-				"true"
-			],
-			[
-				"string",
-				"string.h\tstandard header (deprecated)"
-			],
-			[
-				"d",
-				"d"
-			],
-			[
-				"i_",
-				"i_b"
-			],
-			[
-				"pre",
-				"prev_a"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic int totalStacked;\n\tpublic float swingSpeed;\n\tpublic float maxAngle;\n\tpublic int swinger;\n\n\tpublic float amplitudeMove = 0.5f;\n\tpublic float amplitudeRotate = 1f;\n\n\tpublic Rigidbody2D rb2d;\n\n\tprivate float maxSwingingAngle = 5f;\n\tprivate float minSwingingAngle = -5f;\n\tprivate float angle;\n\tprivate Vector3 pos;\n\n\tint stackPlacement;\n\tbool rotateRight;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\t// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);\n\t\trb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);\n\t\t// transform.position = new Vector3(Mathf.Cos(Time.time)*amplitudeMove, transform.position.y, transform.position.z);\n\t\ttransform.rotation = Quaternion.Euler(0,0,-Mathf.Sin(Time.time)*amplitudeRotate);\n\t\tDebug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);\n\t\tDebug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);\n\t}\n\n\tpublic void getAmplitudeMove()\n\t{\n\t\t\n\t}\n}\n",
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic int totalStacked;\n\tpublic float swingSpeed;\n\tpublic float maxAngle;\n\tpublic int swinger;\n\n\tpublic float amplitudeMove = 0.5f;\n\tpublic float amplitudeRotate = 1f;\n\n\tpublic Rigidbody2D rb2d;\n\n\tprivate float maxSwingingAngle = 5f;\n\tprivate float minSwingingAngle = -5f;\n\tprivate float angle;\n\tprivate Vector3 pos;\n\n\tint stackPlacement;\n\tbool rotateRight;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\tif(!GameControl.instance.isGameOver && GameControl.instance.isFirstPieceStacked)\n\t\t{\n\t\t\t// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);\n\t\t\trb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);\n\t\t\t// transform.position = new Vector3(Mathf.Cos(Time.time)*amplitudeMove, transform.position.y, transform.position.z);\n\t\t\ttransform.rotation = Quaternion.Euler(0,0,-Mathf.Sin(Time.time)*amplitudeRotate);\n\t\t\tDebug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);\n\t\t\tDebug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);\t\t\t\n\t\t}\n\t\telse\n\t\t{\n\t\t\trb2d.velocity = Vector2.zero;\n\t\t}\n\t}\n\n\tpublic void getAmplitudeMove()\n\t{\n\t\t\n\t}\n}\n",
 			"file": "Assets/Scripts/ColumnSwinging.cs",
-			"file_size": 1256,
-			"file_write_time": 132039685048830442,
+			"file_size": 1411,
+			"file_write_time": 132040640985228315,
 			"settings":
 			{
-				"buffer_size": 1207,
-				"encoding": "UTF-8 with BOM",
+				"buffer_size": 1355,
 				"line_ending": "Windows",
 				"scratch": true
 			}
 		},
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class GameControl : MonoBehaviour\n{\n\n\tpublic static GameControl instance;\n\n\tpublic PiecePool piecePoolObj;\n    public ColumnSwinging columnObj;\n    public ScreenMoveUp screenMoveUpObj;\n    public EllipticalOrbit slingObj;\n\n    public int populationScore = 0;\n    public int stackedPieceNum = 0;\n\n\t// public bool \n\n    // Start is called before the first frame update\n    void Awake()\n    {\n        if(!instance)\n        {\n        \tinstance = this;\n        }else if(instance)\n        {\n        \tDestroy(gameObject);\n        }\n    }\n\n    public void OnPieceStacking()\n    {\n        PieceStacked();\n        Score();\n        ScreenMoveUp();\n\n    }\n\n    void PieceStacked()\n    {\n    \tpiecePoolObj.HookNewPiece();\n    }\n\n    void Score()\n    {\n        stackedPieceNum++;\n    }\n\n    void ScreenMoveUp()\n    {\n        screenMoveUpObj.MoveUp();\n    }\n\n    public int getStackedPiecesNum()\n    {\n        return stackedPieceNum;\n    }\n}\n",
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.UI;\nusing UnityEngine.SceneManagement;\n\npublic class GameControl : MonoBehaviour\n{\n\n\tpublic static GameControl instance;\n\n\tpublic PiecePool piecePoolObj;\n    public ColumnSwinging columnObj;\n    public ScreenMoveUp screenMoveUpObj;\n    public EllipticalOrbit slingObj;\n    public StackingEffect stackingEffectObj;\n\n    public Text scoreText;\n    public Text missText;\n    public Text comboNumText;\n    public Text comboScoreText;\n    public GameObject gameOverText;\n    public GameObject columnGameObj;\n    public Slider comboSlider;\n    public Timer comboTimer;\n\n    public bool isFirstPieceStacked = false;\n    public bool isGameOver = false;\n\n    public int populationScore = 0;\n    public int stackedPieceNum = 0;\n    public int missNum = 0;\n    public int comboNum = 0;\n\n\t// public bool \n\n    // Start is called before the first frame update\n    void Awake()\n    {\n        if(!instance)\n        {\n        \tinstance = this;\n        }else if(instance)\n        {\n        \tDestroy(gameObject);\n        }\n    }\n\n    void Start()\n    {\n        comboTimer = Timer.createTimer(\"ComboTimer\");\n    }\n\n    void Update()\n    {\n        if(isGameOver && Input.GetKeyDown(\"space\"))\n        {\n            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);\n        }\n    }\n\n    public void OnPieceStacking()\n    {\n        PieceStacked();\n    }\n\n    public void AfterPieceStackingSuccessfully(bool isDeadCenter)\n    {\n        CheckFirstPieceIfStacked();\n        Scored();\n        ScreenMoveUp();\n        if(isDeadCenter)\n            Combo();\n    }\n\n    public void AfterPieceStackingFailed(int fallenSide)\n    {\n        Missed();\n        CheckMissNum();\n    }\n\n    void PieceStacked()\n    {\n    \tpiecePoolObj.HookNewPiece();\n    }\n\n    void Scored()\n    {\n        stackedPieceNum++;\n        scoreText.text = \"Score:\" + stackedPieceNum.ToString();\n    }\n\n    void Missed()\n    {\n        missNum++;\n        missText.text = \"Miss:\" + missNum.ToString();\n    }\n\n    void CheckMissNum()\n    {\n        if(missNum > 2)\n        {\n            isGameOver = true;\n            gameOverText.SetActive(true);\n        }\n    }\n\n    void ScreenMoveUp()\n    {\n        screenMoveUpObj.MoveUp();\n    }\n\n    public void Combo()\n    {\n        comboNum++;\n        comboNumText.text = \"X \" + comboNum.ToString();\n        comboSlider.gameObject.SetActive(true);\n        if(comboTimer.isTiming)\n        {\n            comboTimer.RestartTimerForCombo();\n        }\n        else\n            comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, true, false, false);\n    }\n\n    void OnComboTimingComplete()\n    {\n        comboSlider.gameObject.SetActive(false);\n        comboScored();\n        comboNum = 0;\n    }\n\n    void OnComboTimingProcess(float p)\n    {\n        comboSlider.value = 1 - p;\n        //Debug.Log(\"combo timing process\" + p);\n    }\n\n    void comboScored()\n    {\n        comboScoreText.gameObject.SetActive(true);\n        int comboScore = comboNum * 3;\n        comboScoreText.text = \"+ \" + comboScore.ToString(); \n        stackedPieceNum += comboScore;\n        scoreText.text = \"Score:\" + stackedPieceNum.ToString();\n        Invoke(\"delayInactiveComboScoreText\", 2);\n    }\n\n    void delayInactiveComboScoreText()\n    {\n        comboScoreText.gameObject.SetActive(false);\n    }\n\n    void CheckFirstPieceIfStacked()\n    {\n        if(!isFirstPieceStacked)\n        {\n            isFirstPieceStacked = true;\n        }\n    }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n}\n",
 			"file": "Assets/Scripts/GameControl.cs",
-			"file_size": 1076,
-			"file_write_time": 132039614461054912,
+			"file_size": 3722,
+			"file_write_time": 132041560285493079,
 			"settings":
 			{
-				"buffer_size": 1014,
+				"buffer_size": 3540,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows",
 				"scratch": true
@@ -555,32 +554,31 @@
 			}
 		},
 		{
-			"file": "Assets/Scripts/ScreenMoveUp.cs",
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n    public struct StackStatus\n    {\n        public bool isStackSuccessful;\n        public int fallenSide;\n        public bool isDeadCenter;\n    }\n    public StackStatus stackStatus;\n\n    public bool isHooked = false;\n    public bool isStacked = true;\n    public float deadCenterRange = 0.15f;\n\n\tprivate Rigidbody2D rb2d;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(!isStacked && ctl.collider.gameObject.tag == \"Piece\")\n        {\n            if(checkIfCanStack(ctl))\n            {\n                stackStatus.isStackSuccessful = true;\n                GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);\n            }\n            else\n            {\n                stackStatus.isStackSuccessful = false;\n                GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);\n                transform.position = new Vector3(0, -10f, 0);\n            }\n        }\n        isStacked = true;\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n        float topPiecePosX = ctl.collider.transform.localPosition.x;\n        float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;\n        float deltaX = dropPiecePosX - topPiecePosX;\n        float absDeltaX = Mathf.Abs(deltaX);\n        \n        if(absDeltaX < 0.5)\n        {\n            checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop true\");\n            return true;\n        }\n        else \n        {\n            checkFallenSide(deltaX);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop false\");\n            return false;\n        }\n    }\n\n    private void checkIfDeadCenter(float absDeltaX, float topPiecePosX, Collider2D other)\n    {\n        if(absDeltaX < deadCenterRange)\n        {\n            stackStatus.isDeadCenter = true;\n            Vector3 pos = other.transform.localPosition;\n            pos.x = topPiecePosX;\n            other.transform.localPosition = pos;\n        }\n        else\n        {\n            stackStatus.isDeadCenter = false;\n        }\n    }\n\n    private void checkFallenSide(float deltaX)\n    {\n        if(deltaX > 0)\n        {\n            stackStatus.fallenSide = 1;\n        }\n        else\n        {\n            stackStatus.fallenSide = -1;\n        }\n        // Debug.Log(\"fallen side = \" + stackStatus.fallenSide);\n    }\n\n}\n",
+			"file": "Assets/Scripts/Piece.cs",
+			"file_size": 4025,
+			"file_write_time": 132041389608279227,
 			"settings":
 			{
-				"buffer_size": 1055,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
+				"buffer_size": 3887,
+				"line_ending": "Windows",
+				"scratch": true
 			}
 		},
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n\tpublic float downForce = 200f;\n    public bool isHooked = false;\n\n\tprivate Rigidbody2D rb2d;\n\tpublic bool isStacked = true;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            isStacked = true;\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(this.gameObject.tag != GameControl.instance.piecePoolObj.topPieceTag)\n        {\n            Debug.Log(this.gameObject.tag);\n            if(checkIfCanStack(ctl))\n            {\n                GameControl.instance.piecePoolObj.topPieceTag = this.gameObject.tag;\n            }\n        }\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n\n        if(Mathf.Abs(ctl.collider.transform.position.x - ctl.otherCollider.transform.position.x) < 0.5)\n        {\n            Debug.Log(\"drop true\");\n            return true;\n            // Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x);\n            // Debug.Log(ctl.otherCollider.gameObject.name +\"  \" + ctl.otherCollider.transform.localPosition.x);\n        }\n        else \n        {\n            Debug.Log(\"drop false\");\n            return false;\n        }\n    }\n\n}\n",
-			"file": "Assets/Scripts/Piece.cs",
-			"file_size": 2350,
-			"file_write_time": 132039830932731345,
+			"file": "Assets/Scripts/Utilities/Timer.cs",
 			"settings":
 			{
-				"buffer_size": 2260,
+				"buffer_size": 3798,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows",
-				"scratch": true
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/EllipticalOrbit.cs",
 			"settings":
 			{
-				"buffer_size": 1268,
+				"buffer_size": 1298,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -703,10 +701,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alex/citybloxxDemo/Assets/Scripts"
+		"/Users/alex/citybloxxDemo/Assets/Scripts",
+		"/Users/alex/citybloxxDemo/Assets/Scripts/Utilities"
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/Assets/Scripts/Utilities/Timer.cs",
+		"/Users/alex/citybloxxDemo/Assets/Scripts/Timer.cs",
+		"/Users/alex/citybloxxDemo/Assets/Scripts/ScreenMoveUp.cs",
+		"/Users/alex/citybloxxDemo/Assets/Scripts/StackingEffect.cs",
 		"/Users/alex/citybloxxDemo/Assets/Scripts/HingePush.cs",
 		"/Users/alex/citybloxxDemo/Assets/Scripts/ForceToSwing.cs",
 		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
@@ -830,11 +833,7 @@
 		"/Users/alex/Documents/gitRepo/gzrjzcx.github.io/blog/source/blogs/Interview-Tencent.md",
 		"/Users/alex/Documents/gitRepo/gzrjzcx.github.io/blog/source/_posts/Interview-Tencent.md",
 		"/Users/alex/Documents/gitRepo/gzrjzcx.github.io/.git/config",
-		"/Users/alex/Documents/blog/_config.yml",
-		"/Users/alex/Documents/blog/themes/next/source/images/favicon-16x16-next.png",
-		"/Users/alex/Documents/PersonalMaterial/bachelor/所有完成！/Board.h",
-		"/Users/alex/Desktop/presentation_handout.md",
-		"/Users/alex/Desktop/project_templete/src/board/board.h"
+		"/Users/alex/Documents/blog/_config.yml"
 	],
 	"find":
 	{
@@ -845,6 +844,7 @@
 		"height": 129.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -852,6 +852,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isFirstPieceStacked",
+			"timerStart",
+			"angle",
+			"stackStatus",
+			"MoveUp",
+			"toppieceidx",
 			"currentPiece",
 			"currentPieceTag",
 			"currentPiece",
@@ -863,6 +869,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"timerStartTime",
 			"currentPieceIdx",
 			"currentPiece",
 			"currentPieceTag"
@@ -876,7 +883,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -885,15 +892,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1207,
+						"buffer_size": 1355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								975,
-								975
+								664,
+								664
 							]
 						],
 						"settings":
@@ -904,8 +911,7 @@
 							{
 								"0,5": "不需要的 using 指令。",
 								"26,31": "不需要的 using 指令。",
-								"993,994": "参数 1: 无法从“int”转换为“UnityEngine.Vector3”",
-								"996,997": "参数 2: 无法从“int”转换为“UnityEngine.Vector3”"
+								"588,589": "运算符“&&”无法应用于“bool”和“int”类型的操作数"
 							},
 							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic int totalStacked;\n\tpublic float swingSpeed;\n\tpublic float maxAngle;\n\tpublic int swinger;\n\n\tpublic Rigidbody2D rb2d;\n\n\tprivate float maxSwingingAngle = 5f;\n\tprivate float minSwingingAngle = -5f;\n\tprivate float angle;\n\tprivate Vector3 pos;\n\tprivate float speed = 0.03f;\n\n\tint stackPlacement;\n\tbool rotateRight;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\t// angle += Time.fixedDeltaTime * 0.1f;\n\t\t// Vector3 posX = transform.position.x * Mathf.Cos(angle);\n\t\tpos = transform.position;\n\t\tif(transform.position.x > -2 && transform.position.x < 0)\n\t\t{\t\n\t\t\tspeed += 0.01f * Time.fixedDeltaTime;\n\t\t\tpos.x -= speed;\n\t\t\ttransform.position = pos;\n\t\t}\n\t\telse if(transform.position.x >= 0 && transform.position.x < 2)\n\t\t{\n\t\t\tDebug.Log(Time.fixedDeltaTime);\n\t\t\tspeed -= 0.01f * Time.fixedDeltaTime;\n\t\t\tpos.x += speed;\n\t\t\ttransform.position = pos;\n\t\t}\n\t}\n}\n",
 							"origin_encoding": "UTF-8-SIG",
@@ -917,7 +923,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -926,15 +932,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1014,
+						"buffer_size": 3540,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								308,
-								308
+								2791,
+								2791
 							]
 						],
 						"settings":
@@ -945,7 +951,7 @@
 							{
 								"0,5": "不需要的 using 指令。",
 								"26,31": "不需要的 using 指令。",
-								"887,888": "表达式项“)”无效"
+								"3259,3272": "未能找到类型或命名空间名“MethodInvoker”(是否缺少 using 指令或程序集引用?)"
 							},
 							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class GameControl : MonoBehaviour\n{\n\n\tpublic static GameControl instance;\n\n\tpublic PiecePool piecePoolObj;\n    public ColumnSwinging columnObj;\n\n    public int populationScore = 0;\n    public int stackedPieceNum = 0;\n\n\t// public bool \n\n    // Start is called before the first frame update\n    void Awake()\n    {\n        if(!instance)\n        {\n        \tinstance = this;\n        }else if(instance)\n        {\n        \tDestroy(gameObject);\n        }\n    }\n\n    public void OnPieceStacking()\n    {\n        PieceStacked();\n        Score();\n    }\n\n    void PieceStacked()\n    {\n    \tpiecePoolObj.HookNewPiece();\n    }\n\n    void Score()\n    {\n        stackedPieceNum++;\n    }\n\n    public int getStackedPiecesNum()\n    {\n        return stackedPieceNum;\n    }\n}\n",
 							"origin_encoding": "UTF-8-SIG",
@@ -955,10 +961,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2734.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -974,8 +980,8 @@
 						"selection":
 						[
 							[
-								243,
-								243
+								267,
+								278
 							]
 						],
 						"settings":
@@ -998,7 +1004,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1009,57 +1015,19 @@
 			[
 				{
 					"buffer": 3,
-					"file": "Assets/Scripts/ScreenMoveUp.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1055,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								795,
-								795
-							],
-							[
-								946,
-								946
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"26,31": "不需要的 using 指令。",
-								"672,686": "变量“backgroundSize”已被赋值，但从未使用过它的值"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "Assets/Scripts/Piece.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2260,
+						"buffer_size": 3887,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1420,
-								1423
+								2018,
+								2018
 							]
 						],
 						"settings":
@@ -1069,18 +1037,130 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"1496,1500": "无法将类型“string”隐式转换为“int”",
-								"26,31": "不需要的 using 指令。"
+								"26,31": "不需要的 using 指令。",
+								"2839,2844": "表达式项“float”无效",
+								"2845,2851": "语法错误，应输入“,”"
 							},
-							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n\tpublic float downForce = 200f;\n    public bool isHooked = false;\n\n\tprivate Rigidbody2D rb2d;\n\tpublic bool isStacked = true;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void FixedUpdate()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D(Collision2D ctl)\n    {\n        ContactPoint2D contact = ctl.contacts[0];\n        Debug.Log(contact.point);\n\n        if(!isStacked)\n        {\n            isStacked = true;\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, false);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n}\n",
+							"origin_content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n\tpublic float downForce = 200f;\n    public bool isHooked = false;\n    public bool isStacked = true;\n    private bool stackStatus = true;\n\n\tprivate Rigidbody2D rb2d;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n\n        if(!stackStatus)\n        {\n            int angle = 90;\n            rb2d.velocity = new Vector2(Mathf.Sin(angle) * 5f, Mathf.Sin(angle) * 5f);\n        }\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(!isStacked)\n        {\n            if(checkIfCanStack(ctl))\n            {\n                stackStatus = true;\n            }\n            else\n            {\n                stackStatus = false;\n            }\n        }\n        isStacked = true;\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n\n        if(Mathf.Abs(ctl.collider.transform.localPosition.x - ctl.otherCollider.transform.localPosition.x) < 0.5)\n        {\n            // Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x);\n            // Debug.Log(ctl.otherCollider.gameObject.name +\"  \" + ctl.otherCollider.transform.localPosition.x);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop true\");\n            return true;\n        }\n        else \n        {\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop false\");\n            return false;\n        }\n    }\n\n\n\n}\n",
 							"origin_encoding": "UTF-8-SIG",
 							"revert_to_scratch": true,
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 21.0,
-						"translation.y": 794.0,
+						"translation.x": 0.0,
+						"translation.y": 574.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Utilities/Timer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2069,
+								2069
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"101,114": "命名空间“<global namespace>”已经包含“CompleteEvent”的定义",
+								"1049,1060": "在“Timer.updateEvent”和“Timer.updateEvent”之间具有二义性",
+								"1080,1105": "在“Timer.isTimerDestoryAfterTiming”和“Timer.isTimerDestoryAfterTiming”之间具有二义性",
+								"1122,1139": "在“Timer.isIgnoreTimeScale”和“Timer.isIgnoreTimeScale”之间具有二义性",
+								"1164,1173": "在“Timer.isRepeate”和“Timer.isRepeate”之间具有二义性",
+								"1191,1205": "在“Timer.timerStartTime”和“Timer.timerStartTime”之间具有二义性",
+								"1208,1213": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"1217,1228": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"1236,1248": "在“Timer.isTimerStart”和“Timer.isTimerStart”之间具有二义性",
+								"1259,1267": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"1342,1353": "类型“Timer”已定义了一个名为“createTimer”的具有相同参数类型的成员",
+								"139,150": "命名空间“<global namespace>”已经包含“UpdateEvent”的定义",
+								"1538,1544": "类型“Timer”已定义了一个名为“Update”的具有相同参数类型的成员",
+								"1564,1572": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"1593,1600": "在“Timer.nowTime”和“Timer.nowTime”之间具有二义性",
+								"1603,1608": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"1611,1622": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"1633,1636": "在“Timer.now”和“Timer.now”之间具有二义性",
+								"1639,1646": "在“Timer.nowTime”和“Timer.nowTime”之间具有二义性",
+								"1649,1663": "在“Timer.timerStartTime”和“Timer.timerStartTime”之间具有二义性",
+								"1678,1689": "在“Timer.updateEvent”和“Timer.updateEvent”之间具有二义性",
+								"1720,1731": "不可调用的成员“Timer.updateEvent”不能像方法一样使用。",
+								"1746,1749": "在“Timer.now”和“Timer.now”之间具有二义性",
+								"175,180": "命名空间“<global namespace>”已经包含“Timer”的定义",
+								"1750,1761": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"1788,1791": "在“Timer.now”和“Timer.now”之间具有二义性",
+								"1794,1805": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"1831,1847": "在“Timer.onTimerCompleted”和“Timer.onTimerCompleted”之间具有二义性",
+								"1868,1884": "不可调用的成员“Timer.onTimerCompleted”不能像方法一样使用。",
+								"1907,1916": "在“Timer.isRepeate”和“Timer.isRepeate”之间具有二义性",
+								"1938,1950": "以下方法或属性之间的调用具有二义性:“Timer.RestartTimer()”和“Timer.RestartTimer()”",
+								"1967,1992": "在“Timer.isTimerDestoryAfterTiming”和“Timer.isTimerDestoryAfterTiming”之间具有二义性",
+								"2005,2012": "以下方法或属性之间的调用具有二义性:“Timer.Destroy()”和“Timer.Destroy()”",
+								"2061,2072": "类型“Timer”已定义了一个名为“GetLeftTime”的具有相同参数类型的成员",
+								"2105,2116": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"2119,2122": "在“Timer.now”和“Timer.now”之间具有二义性",
+								"2127,2138": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"2157,2175": "类型“Timer”已定义了一个名为“OnApplicationPause”的具有相同参数类型的成员",
+								"2221,2231": "以下方法或属性之间的调用具有二义性:“Timer.PauseTimer()”和“Timer.PauseTimer()”",
+								"2251,2264": "以下方法或属性之间的调用具有二义性:“Timer.ContinueTimer()”和“Timer.ContinueTimer()”",
+								"2291,2301": "类型“Timer”已定义了一个名为“PauseTimer”的具有相同参数类型的成员",
+								"2322,2332": "在“Timer.isTimerEnd”和“Timer.isTimerEnd”之间具有二义性",
+								"2360,2365": "在“Timer.isLog”和“Timer.isLog”之间具有二义性",
+								"2461,2469": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"2491,2502": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"2505,2510": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"2545,2558": "类型“Timer”已定义了一个名为“ContinueTimer”的具有相同参数类型的成员",
+								"2579,2589": "在“Timer.isTimerEnd”和“Timer.isTimerEnd”之间具有二义性",
+								"26,31": "不需要的 using 指令。",
+								"2617,2622": "在“Timer.isLog”和“Timer.isLog”之间具有二义性",
+								"2726,2734": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"2766,2777": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"2780,2785": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"2788,2799": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"2817,2825": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"2881,2893": "类型“Timer”已定义了一个名为“RestartTimer”的具有相同参数类型的成员",
+								"2907,2921": "在“Timer.timerStartTime”和“Timer.timerStartTime”之间具有二义性",
+								"2924,2929": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"2936,2947": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"2961,2973": "在“Timer.isTimerStart”和“Timer.isTimerStart”之间具有二义性",
+								"2990,2998": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"3212,3226": "在“Timer.timerStartTime”和“Timer.timerStartTime”之间具有二义性",
+								"3229,3234": "在“Timer.Time_”和“Timer.Time_”之间具有二义性",
+								"3244,3255": "在“Timer.timerOffset”和“Timer.timerOffset”之间具有二义性",
+								"3269,3281": "在“Timer.isTimerStart”和“Timer.isTimerStart”之间具有二义性",
+								"3298,3306": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"3338,3357": "类型“Timer”已定义了一个名为“increaseTimerTarget”的具有相同参数类型的成员",
+								"3392,3403": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"3447,3454": "类型“Timer”已定义了一个名为“Destroy”的具有相同参数类型的成员",
+								"3468,3480": "在“Timer.isTimerStart”和“Timer.isTimerStart”之间具有二义性",
+								"3495,3503": "在“Timer.isTiming”和“Timer.isTiming”之间具有二义性",
+								"3518,3528": "在“Timer.isTimerEnd”和“Timer.isTimerEnd”之间具有二义性",
+								"3545,3570": "在“Timer.isTimerDestoryAfterTiming”和“Timer.isTimerDestoryAfterTiming”之间具有二义性",
+								"655,672": "在“Timer.isIgnoreTimeScale”和“Timer.isIgnoreTimeScale”之间具有二义性",
+								"732,743": "类型“Timer”已定义了一个名为“startTiming”的具有相同参数类型的成员",
+								"918,929": "在“Timer.timerTarget”和“Timer.timerTarget”之间具有二义性",
+								"981,997": "在“Timer.onTimerCompleted”和“Timer.onTimerCompleted”之间具有二义性"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1282.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1092,15 +1172,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1268,
+						"buffer_size": 1298,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1190,
-								1190
+								723,
+								723
 							]
 						],
 						"settings":
@@ -1154,7 +1234,7 @@
 		"cols":
 		[
 			0.0,
-			0.537083864484,
+			0.586370677931,
 			1.0
 		],
 		"rows":
@@ -1180,7 +1260,7 @@
 	"project": "citybloxxDemo.sublime-project",
 	"replace":
 	{
-		"height": 89.0
+		"height": 68.0
 	},
 	"save_all_on_build": true,
 	"select_file":

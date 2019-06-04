@@ -17,8 +17,12 @@ public class GameControl : MonoBehaviour
 
     public Text scoreText;
     public Text missText;
+    public Text comboNumText;
+    public Text comboScoreText;
     public GameObject gameOverText;
     public GameObject columnGameObj;
+    public Slider comboSlider;
+    public Timer comboTimer;
 
     public bool isFirstPieceStacked = false;
     public bool isGameOver = false;
@@ -26,6 +30,7 @@ public class GameControl : MonoBehaviour
     public int populationScore = 0;
     public int stackedPieceNum = 0;
     public int missNum = 0;
+    public int comboNum = 0;
 
 	// public bool 
 
@@ -41,6 +46,11 @@ public class GameControl : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        comboTimer = Timer.createTimer("ComboTimer");
+    }
+
     void Update()
     {
         if(isGameOver && Input.GetKeyDown("space"))
@@ -54,14 +64,16 @@ public class GameControl : MonoBehaviour
         PieceStacked();
     }
 
-    public void AfterPieceStackingSuccessfully()
+    public void AfterPieceStackingSuccessfully(bool isDeadCenter)
     {
         CheckFirstPieceIfStacked();
         Scored();
         ScreenMoveUp();
+        if(isDeadCenter)
+            Combo();
     }
 
-    public void AfterPieceStackingFailed()
+    public void AfterPieceStackingFailed(int fallenSide)
     {
         Missed();
         CheckMissNum();
@@ -98,18 +110,70 @@ public class GameControl : MonoBehaviour
         screenMoveUpObj.MoveUp();
     }
 
+    public void Combo()
+    {
+        comboNum++;
+        comboNumText.text = "X " + comboNum.ToString();
+        comboSlider.gameObject.SetActive(true);
+        if(comboTimer.isTiming)
+        {
+            comboTimer.RestartTimerForCombo();
+        }
+        else
+            comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, true, false, false);
+    }
+
+    void OnComboTimingComplete()
+    {
+        comboSlider.gameObject.SetActive(false);
+        comboScored();
+        comboNum = 0;
+    }
+
+    void OnComboTimingProcess(float p)
+    {
+        comboSlider.value = 1 - p;
+        //Debug.Log("combo timing process" + p);
+    }
+
+    void comboScored()
+    {
+        comboScoreText.gameObject.SetActive(true);
+        int comboScore = comboNum * 3;
+        comboScoreText.text = "+ " + comboScore.ToString(); 
+        stackedPieceNum += comboScore;
+        scoreText.text = "Score:" + stackedPieceNum.ToString();
+        Invoke("delayInactiveComboScoreText", 2);
+    }
+
+    void delayInactiveComboScoreText()
+    {
+        comboScoreText.gameObject.SetActive(false);
+    }
+
     void CheckFirstPieceIfStacked()
     {
-        Debug.Log(columnGameObj.activeSelf);
         if(!isFirstPieceStacked)
         {
-            Debug.Log(columnGameObj.activeSelf);
             isFirstPieceStacked = true;
         }
     }
 
-    public int getStackedPiecesNum()
-    {
-        return stackedPieceNum;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

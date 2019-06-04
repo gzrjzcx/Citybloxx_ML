@@ -5,10 +5,17 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
 
+    public struct StackStatus
+    {
+        public bool isStackSuccessful;
+        public int fallenSide;
+        public bool isDeadCenter;
+    }
+    public StackStatus stackStatus;
+
     public bool isHooked = false;
     public bool isStacked = true;
-    private bool stackStatus = true;
-    public float angle = 90;
+    public float deadCenterRange = 0.15f;
 
 	private Rigidbody2D rb2d;
 
@@ -61,13 +68,13 @@ public class Piece : MonoBehaviour
         {
             if(checkIfCanStack(ctl))
             {
-                stackStatus = true;
-                GameControl.instance.AfterPieceStackingSuccessfully();
+                stackStatus.isStackSuccessful = true;
+                GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
             }
             else
             {
-                stackStatus = false;
-                GameControl.instance.AfterPieceStackingFailed();
+                stackStatus.isStackSuccessful = false;
+                GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
                 transform.position = new Vector3(0, -10f, 0);
             }
         }
@@ -76,21 +83,53 @@ public class Piece : MonoBehaviour
 
     private bool checkIfCanStack(Collision2D ctl)
     {
-
-        if(Mathf.Abs(ctl.collider.transform.localPosition.x - ctl.otherCollider.transform.localPosition.x) < 0.5)
+        float topPiecePosX = ctl.collider.transform.localPosition.x;
+        float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;
+        float deltaX = dropPiecePosX - topPiecePosX;
+        float absDeltaX = Mathf.Abs(deltaX);
+        
+        if(absDeltaX < 0.5)
         {
+            checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);
             Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
                 + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
             return true;
         }
         else 
         {
+            checkFallenSide(deltaX);
             Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
                 + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
             return false;
         }
     }
 
+    private void checkIfDeadCenter(float absDeltaX, float topPiecePosX, Collider2D other)
+    {
+        if(absDeltaX < deadCenterRange)
+        {
+            stackStatus.isDeadCenter = true;
+            Vector3 pos = other.transform.localPosition;
+            pos.x = topPiecePosX;
+            other.transform.localPosition = pos;
+        }
+        else
+        {
+            stackStatus.isDeadCenter = false;
+        }
+    }
 
+    private void checkFallenSide(float deltaX)
+    {
+        if(deltaX > 0)
+        {
+            stackStatus.fallenSide = 1;
+        }
+        else
+        {
+            stackStatus.fallenSide = -1;
+        }
+        // Debug.Log("fallen side = " + stackStatus.fallenSide);
+    }
 
 }

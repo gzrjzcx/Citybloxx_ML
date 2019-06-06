@@ -29,9 +29,20 @@ public class ColumnSwinging : MonoBehaviour
 		rb2d = GetComponent<Rigidbody2D>();
 	}
 
+	bool IsColumnShouldRotate()
+	{
+		if(GameControl.instance.gameStatus != GameControl.GameStatus.GAME_OVER
+			&& GameControl.instance.gameStatus != GameControl.GameStatus.GAME_START)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+
 	void FixedUpdate()
 	{
-		if(!GameControl.instance.isGameOver && GameControl.instance.isFirstPieceStacked)
+		if(IsColumnShouldRotate())
 		{
 			// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);
 			rb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);

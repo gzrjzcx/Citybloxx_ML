@@ -1294,6 +1294,7 @@ GameObject:
   - component: {fileID: 1065792517}
   - component: {fileID: 1065792516}
   - component: {fileID: 1065792519}
+  - component: {fileID: 1065792520}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1318,20 +1319,15 @@ MonoBehaviour:
   screenMoveUpObj: {fileID: 1065792519}
   slingObj: {fileID: 1341039998}
   stackingEffectObj: {fileID: 0}
+  comboControlObj: {fileID: 1065792520}
   scoreText: {fileID: 1331612907}
   missText: {fileID: 639505844}
-  comboNumText: {fileID: 758074239}
-  comboScoreText: {fileID: 1128542436}
   gameOverText: {fileID: 1943313062}
   columnGameObj: {fileID: 1230117401}
-  comboSlider: {fileID: 646420454}
-  comboTimer: {fileID: 0}
-  isFirstPieceStacked: 0
-  isGameOver: 0
   populationScore: 0
   stackedPieceNum: 0
   missNum: 0
-  comboNum: 0
+  gameStatus: 0
 --- !u!114 &1065792517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,6 +1375,23 @@ MonoBehaviour:
   skyObj_1: {fileID: 793219187}
   skyObj_2: {fileID: 934024283}
   cameraObj: {fileID: 519420028}
+--- !u!114 &1065792520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065792515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd84b31bcd9348e08d7b525b80424b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboSlider: {fileID: 646420454}
+  comboTimer: {fileID: 0}
+  comboNumText: {fileID: 758074239}
+  comboScoreText: {fileID: 1128542436}
+  comboNum: 0
 --- !u!1 &1128542433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.77254903, g: 0.18431373, b: 0.16470589, a: 0.5882353}
+  m_Color: {r: 0.78431374, g: 0.28235295, b: 0.21176471, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1454,11 +1467,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 31c61ace2265946a79172842e0f40425, type: 3}
-    m_FontSize: 20
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 244
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

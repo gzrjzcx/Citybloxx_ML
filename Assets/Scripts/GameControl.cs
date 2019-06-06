@@ -14,25 +14,26 @@ public class GameControl : MonoBehaviour
     public ScreenMoveUp screenMoveUpObj;
     public EllipticalOrbit slingObj;
     public StackingEffect stackingEffectObj;
+    public ComboControl comboControlObj;
 
     public Text scoreText;
     public Text missText;
-    public Text comboNumText;
-    public Text comboScoreText;
     public GameObject gameOverText;
     public GameObject columnGameObj;
-    public Slider comboSlider;
-    public Timer comboTimer;
-
-    public bool isFirstPieceStacked = false;
-    public bool isGameOver = false;
 
     public int populationScore = 0;
     public int stackedPieceNum = 0;
     public int missNum = 0;
-    public int comboNum = 0;
 
-	// public bool 
+    public enum GameStatus
+    {
+        GAME_READY = 0,  // Scene has been loaded, but game not start
+        GAME_START, // Game start, but first piece not fallen
+        GAME_RUNNING, // Game is running but not combo, the first piece has fallen
+        GAME_COMBO, // Game is running and in combo phase
+        GAME_OVER // Game is over.
+    }
+    public GameStatus gameStatus = GameStatus.GAME_START;
 
     // Start is called before the first frame update
     void Awake()
@@ -46,16 +47,13 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        comboTimer = Timer.createTimer("ComboTimer");
-    }
-
     void Update()
     {
-        if(isGameOver && Input.GetKeyDown("space"))
+        if(gameStatus == GameStatus.GAME_OVER 
+            && Input.GetKeyDown("space"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameStatus = GameStatus.GAME_START; 
         }
     }
 
@@ -70,7 +68,14 @@ public class GameControl : MonoBehaviour
         Scored();
         ScreenMoveUp();
         if(isDeadCenter)
-            Combo();
+        {
+            gameStatus = GameStatus.GAME_COMBO;
+            comboControlObj.Combo();
+        }
+        else if(gameStatus == GameStatus.GAME_COMBO)
+        {
+            comboControlObj.AddComboNum();            
+        }
     }
 
     public void AfterPieceStackingFailed(int fallenSide)
@@ -100,8 +105,13 @@ public class GameControl : MonoBehaviour
     {
         if(missNum > 2)
         {
-            isGameOver = true;
             gameOverText.SetActive(true);
+            if(gameStatus == GameStatus.GAME_COMBO)
+            {
+                comboControlObj.comboTimer.EndTiming();
+                comboControlObj.comboScored();
+            }
+            gameStatus = GameStatus.GAME_OVER;
         }
     }
 
@@ -110,52 +120,11 @@ public class GameControl : MonoBehaviour
         screenMoveUpObj.MoveUp();
     }
 
-    public void Combo()
-    {
-        comboNum++;
-        comboNumText.text = "X " + comboNum.ToString();
-        comboSlider.gameObject.SetActive(true);
-        if(comboTimer.isTiming)
-        {
-            comboTimer.RestartTimerForCombo();
-        }
-        else
-            comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, true, false, false);
-    }
-
-    void OnComboTimingComplete()
-    {
-        comboSlider.gameObject.SetActive(false);
-        comboScored();
-        comboNum = 0;
-    }
-
-    void OnComboTimingProcess(float p)
-    {
-        comboSlider.value = 1 - p;
-        //Debug.Log("combo timing process" + p);
-    }
-
-    void comboScored()
-    {
-        comboScoreText.gameObject.SetActive(true);
-        int comboScore = comboNum * 3;
-        comboScoreText.text = "+ " + comboScore.ToString(); 
-        stackedPieceNum += comboScore;
-        scoreText.text = "Score:" + stackedPieceNum.ToString();
-        Invoke("delayInactiveComboScoreText", 2);
-    }
-
-    void delayInactiveComboScoreText()
-    {
-        comboScoreText.gameObject.SetActive(false);
-    }
-
     void CheckFirstPieceIfStacked()
     {
-        if(!isFirstPieceStacked)
+        if(gameStatus == GameStatus.GAME_START)
         {
-            isFirstPieceStacked = true;
+            gameStatus = GameStatus.GAME_RUNNING;
         }
     }
 

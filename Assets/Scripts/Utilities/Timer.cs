@@ -134,7 +134,6 @@ public class Timer : MonoBehaviour
 
     public void RestartTimerForCombo()
     {
-        Debug.Log("RestartTimerForCombo  " + this.gameObject.name + "  " + this.gameObject.activeSelf);
         this.gameObject.SetActive(true);
         timerStartTime = Time_;
         timerOffset = 0;

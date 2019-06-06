@@ -26,10 +26,18 @@ public class EllipticalOrbit : MonoBehaviour
         // transform.position = new Vector3(b*Mathf.Sin(0), h*Mathf.Cos(0), a*Mathf.Cos(0));
     }
 
-    // Update is called once per frame
+    bool IsHookShouldSpin()
+    {
+        // When add load scene, here should add extra check
+        if(GameControl.instance.gameStatus != GameControl.GameStatus.GAME_OVER)
+            return true;
+        else
+            return false;
+    }
+
     void FixedUpdate()
     {   
-        if(!GameControl.instance.isGameOver)
+        if(IsHookShouldSpin())
         {
             angle += Time.deltaTime * angularSpeed;
             z = a * Mathf.Cos(angle);
@@ -45,4 +53,5 @@ public class EllipticalOrbit : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, _pos, Time.deltaTime);
         }
     }
+
 }

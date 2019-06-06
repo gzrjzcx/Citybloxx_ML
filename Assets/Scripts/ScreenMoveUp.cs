@@ -9,19 +9,43 @@ public class ScreenMoveUp : MonoBehaviour
 	public GameObject skyObj_2;
 	public GameObject cameraObj;
 
-	public void MoveUp()
+	public float pieceSize = 1f;
+	public float backgroundHeight = 10f;
+	public float moveSpeed = 2f;
+
+	private float slingMoveStep;
+	private Vector3 cameraDestination;
+	private float slingPosYOffsetDestination;
+
+	void FixedUpdate()
 	{
-		SlingAndCameraMoveUp();
-		BackgroundMoveUp();
+		if(GameControl.instance.isGameRunning)
+		{
+			cameraObj.transform.position = Vector3.MoveTowards(
+				cameraObj.transform.position, cameraDestination, moveSpeed*Time.fixedDeltaTime);
+			GameControl.instance.slingObj.offsetY = Mathf.MoveTowards(
+				GameControl.instance.slingObj.offsetY, slingPosYOffsetDestination, moveSpeed*Time.fixedDeltaTime);
+		}
+		
 	}
 
-	private void SlingAndCameraMoveUp()
+	public void MoveUp()
 	{
-		GameControl.instance.slingObj.offsetY++;
-		Vector3 posCamera = cameraObj.transform.position;
-		posCamera.y++;
+		BackgroundMoveUp();
+		SetCameraMoveDestination();
+		SetSlingMoveDestination();
+	}
 
-		cameraObj.transform.position = posCamera;
+	private void SetCameraMoveDestination()
+	{
+		cameraDestination = cameraObj.transform.position;
+		cameraDestination.y += pieceSize;
+	}
+
+	private void SetSlingMoveDestination()
+	{
+		slingPosYOffsetDestination = GameControl.instance.slingObj.offsetY;
+		slingPosYOffsetDestination += pieceSize;
 	}
 
 	private void BackgroundMoveUp()
@@ -29,13 +53,12 @@ public class ScreenMoveUp : MonoBehaviour
 		Vector3 posSkyObj_1 = skyObj_1.transform.position;
 		Vector3 posSkyObj_2 = skyObj_2.transform.position;
 		Vector3 posCamera = cameraObj.transform.position;
-		float backgroundHeight = 10f;
 
 		if(posSkyObj_1.y < posSkyObj_2.y)
 		{
 			if(posCamera.y - posSkyObj_2.y >= 0)
 			{
-				posSkyObj_1.y += backgroundHeight;
+				posSkyObj_1.y += 2 * backgroundHeight;
 				skyObj_1.transform.position = posSkyObj_1;
 			}
 		}
@@ -43,7 +66,7 @@ public class ScreenMoveUp : MonoBehaviour
 		{
 			if(posCamera.y - posSkyObj_1.y >= 0)
 			{
-				posSkyObj_2.y += backgroundHeight;
+				posSkyObj_2.y += 2 * backgroundHeight;
 				skyObj_2.transform.position = posSkyObj_2;
 			}
 		}

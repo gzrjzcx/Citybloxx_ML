@@ -35,6 +35,12 @@ public class GameControl : MonoBehaviour
     }
     public GameStatus gameStatus = GameStatus.GAME_START;
 
+    public bool isGameRunning
+    {
+        get {return (gameStatus == GameStatus.GAME_RUNNING 
+            || gameStatus == GameStatus.GAME_COMBO);}
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -45,6 +51,11 @@ public class GameControl : MonoBehaviour
         {
         	Destroy(gameObject);
         }
+    }
+
+    void Start()
+    {
+        gameStatus = GameStatus.GAME_START;
     }
 
     void Update()

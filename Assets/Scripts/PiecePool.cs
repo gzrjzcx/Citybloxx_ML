@@ -39,6 +39,8 @@ public class PiecePool : MonoBehaviour
         
         currentPieceIdx++;
         if(currentPieceIdx >= piecePoolSize)
+        {
             currentPieceIdx=0;
+        }
     }
 }

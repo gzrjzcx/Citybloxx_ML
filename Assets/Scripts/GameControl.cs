@@ -78,6 +78,7 @@ public class GameControl : MonoBehaviour
         CheckFirstPieceIfStacked();
         Scored();
         ScreenMoveUp();
+        ColumnSwingingCenterMoveUp();
         if(isDeadCenter)
         {
             gameStatus = GameStatus.GAME_COMBO;
@@ -103,7 +104,8 @@ public class GameControl : MonoBehaviour
     void Scored()
     {
         stackedPieceNum++;
-        scoreText.text = "Score:" + stackedPieceNum.ToString();
+        populationScore++;
+        scoreText.text = "Score:" + populationScore.ToString();
     }
 
     void Missed()
@@ -129,6 +131,12 @@ public class GameControl : MonoBehaviour
     void ScreenMoveUp()
     {
         screenMoveUpObj.MoveUp();
+    }
+
+    public void ColumnSwingingCenterMoveUp()
+    {
+        if(stackedPieceNum > piecePoolObj.piecePoolSize)
+            columnObj.SwingingCenterMoveUp();
     }
 
     void CheckFirstPieceIfStacked()

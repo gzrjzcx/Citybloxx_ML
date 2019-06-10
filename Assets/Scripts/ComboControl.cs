@@ -55,8 +55,8 @@ public class ComboControl : MonoBehaviour
         comboScoreText.gameObject.SetActive(true);
         int comboScore = comboNum * 3;
         comboScoreText.text = "+ " + comboScore.ToString(); 
-        GameControl.instance.stackedPieceNum += comboScore;
-        GameControl.instance.scoreText.text = "Score:" + GameControl.instance.stackedPieceNum.ToString();
+        GameControl.instance.populationScore += comboScore;
+        GameControl.instance.scoreText.text = "Score:" + GameControl.instance.populationScore.ToString();
         Invoke("delayInactiveComboScoreText", 1);
     }
 

@@ -71,4 +71,5 @@ public class ScreenMoveUp : MonoBehaviour
 			}
 		}
 	}
+
 }

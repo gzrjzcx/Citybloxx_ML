@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Piece.cs" />
      <Compile Include="Assets\Scripts\PiecePool.cs" />
      <Compile Include="Assets\Scripts\ScreenMoveUp.cs" />
+     <Compile Include="Assets\Scripts\Utilities\Extension.cs" />
      <Compile Include="Assets\Scripts\Utilities\NoUse\ForceToSwing.cs" />
      <Compile Include="Assets\Scripts\Utilities\NoUse\HingePush.cs" />
      <Compile Include="Assets\Scripts\Utilities\NoUse\RotateWithSwinging.cs" />

@@ -75,7 +75,7 @@ public class Piece : MonoBehaviour
             {
                 stackStatus.isStackSuccessful = false;
                 GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
-                transform.position = new Vector3(0, -10f, 0);
+                OnStackingFailed();
             }
         }
         isStacked = true;
@@ -130,6 +130,12 @@ public class Piece : MonoBehaviour
             stackStatus.fallenSide = -1;
         }
         // Debug.Log("fallen side = " + stackStatus.fallenSide);
+    }
+
+    private void OnStackingFailed()
+    {
+        transform.parent = null;
+        transform.position = new Vector3(0, -10f, 0);
     }
 
 }

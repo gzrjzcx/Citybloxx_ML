@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static GO_Extensions;
 
 public class GameControl : MonoBehaviour
 {
@@ -78,11 +79,12 @@ public class GameControl : MonoBehaviour
         CheckFirstPieceIfStacked();
         Scored();
         ScreenMoveUp();
-        ColumnSwingingCenterMoveUp();
+        SetColumnSwinging();
         if(isDeadCenter)
         {
             gameStatus = GameStatus.GAME_COMBO;
             comboControlObj.Combo();
+            columnObj.Set2ComboSwingingAmplitude();
         }
         else if(gameStatus == GameStatus.GAME_COMBO)
         {
@@ -133,18 +135,19 @@ public class GameControl : MonoBehaviour
         screenMoveUpObj.MoveUp();
     }
 
-    public void ColumnSwingingCenterMoveUp()
-    {
-        if(stackedPieceNum > piecePoolObj.piecePoolSize)
-            columnObj.SwingingCenterMoveUp();
-    }
-
     void CheckFirstPieceIfStacked()
     {
         if(gameStatus == GameStatus.GAME_START)
         {
             gameStatus = GameStatus.GAME_RUNNING;
         }
+    }
+
+    void SetColumnSwinging()
+    {
+        columnObj.SwingingCenterMoveUp();
+        columnObj.AddAmplitudeRotate();
+        columnObj.SetAmplitudeIncrementAndMax();
     }
 
 

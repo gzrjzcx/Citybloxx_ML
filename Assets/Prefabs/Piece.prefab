@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4658085433500430781}
   - component: {fileID: 4658085433500430778}
   - component: {fileID: 4658085433500430782}
-  - component: {fileID: 4546052217978341353}
+  - component: {fileID: 9191188388087632567}
   m_Layer: 0
   m_Name: Piece
   m_TagString: Untagged
@@ -93,9 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649e1257535564df5ae1714f087a4a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downForce: 200
+  doTween: {fileID: 9191188388087632567}
   isHooked: 0
   isStacked: 1
+  deadCenterRange: 0.15
 --- !u!50 &4658085433500430778
 Rigidbody2D:
   serializedVersion: 4
@@ -143,7 +144,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4546052217978341353
+--- !u!114 &9191188388087632567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,6 +153,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4658085433500430776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deb7520e53a29420aa15e664ac1fb663, type: 3}
+  m_Script: {fileID: 11500000, guid: 364ccaf2d5f1b4f4aa3c4f20070deb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pos: {x: 0, y: 0, z: 0}
+  targetJump: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0}

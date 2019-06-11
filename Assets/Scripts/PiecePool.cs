@@ -8,15 +8,15 @@ public class PiecePool : MonoBehaviour
 	public int piecePoolSize = 4;
 	public GameObject SlingObj;
     public int currentPieceIdx = 0;
-    public string topPieceIdx;
-
-	private GameObject[] pieces;
-	private Vector2 objPoolPos = new Vector2(0, -10f);
+	public GameObject[] pieces;
+	
+    private Vector3 objPoolPos;
 	private float spawnInterval;
 
     // Start is called before the first frame update
     void Start()
     {
+        objPoolPos = GameControl.instance.seaLevel;
         pieces = new GameObject[piecePoolSize];
         for(int i=0; i<piecePoolSize; i++)
         {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
 
+    public DoTweenControl doTween;
     public struct StackStatus
     {
         public bool isStackSuccessful;
@@ -66,10 +67,12 @@ public class Piece : MonoBehaviour
     {
         if(!isStacked && ctl.collider.gameObject.tag == "Piece")
         {
+            GetColumnHeightIncrement(ctl);
             if(checkIfCanStack(ctl))
             {
                 stackStatus.isStackSuccessful = true;
                 GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
+                doTween.StackingNoDeadCenterAnimation();
             }
             else
             {
@@ -79,6 +82,14 @@ public class Piece : MonoBehaviour
             }
         }
         isStacked = true;
+    }
+
+    private void GetColumnHeightIncrement(Collision2D ctl)
+    {
+        float topPiecePosY = ctl.collider.transform.localPosition.y;
+        float dropPiecePosY = ctl.otherCollider.transform.localPosition.y;
+        GameControl.instance.columnObj.columnHeightIncrement = Mathf.Abs(dropPiecePosY - topPiecePosY);
+        GameControl.instance.columnObj.topPieceCollider = ctl.collider;
     }
 
     private bool checkIfCanStack(Collision2D ctl)
@@ -123,19 +134,21 @@ public class Piece : MonoBehaviour
     {
         if(deltaX > 0)
         {
-            stackStatus.fallenSide = 1;
+            stackStatus.fallenSide = 1;  // right side
         }
         else
         {
-            stackStatus.fallenSide = -1;
+            stackStatus.fallenSide = -1;  // left side
         }
         // Debug.Log("fallen side = " + stackStatus.fallenSide);
     }
 
     private void OnStackingFailed()
     {
+        // transform.position = new Vector3(0, -10f, 0);
+        // GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform
+        doTween.FallenAnimation(stackStatus.fallenSide);
         transform.parent = null;
-        transform.position = new Vector3(0, -10f, 0);
     }
 
 }

@@ -13,20 +13,24 @@ public class ColumnSwinging : MonoBehaviour
 	public float maxAmplitudeRotate = 15f;
 	public Rigidbody2D rb2d;
 
+	// public float idealDistanceColumn2Sling; //Todo: use this control distance
+	public float columnHeightIncrement;
+	public Collider2D topPieceCollider;
+
 	private float angle;
 	private float angularSpeed = 1f;
-
-	public Vector3 swingingCenter;
-
-	int stackPlacement;
-	bool rotateRight;
 
 	void Start()
 	{
 		angle = 0;
 		rb2d = GetComponent<Rigidbody2D>();
-		swingingCenter = new Vector3(0, -4, 0);
 	}
+
+	// public float GetDistanceColumn2Sling
+	// {
+	// 	get {return GameControl.instance.slingObj.transform.position.y
+	// 			+ GameControl.instance.slingObj.offsetY - transform.position.y;}
+	// }
 
 	bool IsColumnShouldRotate()
 	{
@@ -53,7 +57,6 @@ public class ColumnSwinging : MonoBehaviour
 			// transform.RotateAround(swingingCenter, Vector3.forward, swingingSpeed * Time.fixedDeltaTime);
 			Debug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);
 			Debug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);
-			Debug.DrawLine (Vector3.zero, swingingCenter,Color.green);						
 		}
 		else
 		{
@@ -63,7 +66,12 @@ public class ColumnSwinging : MonoBehaviour
 
 	public void SwingingCenterMoveUp()
 	{
-		transform.PositionToLastChild();
+		if(GameControl.instance.stackedPieceNum >= GameControl.instance.piecePoolObj.piecePoolSize - 1)
+		{
+			Vector3 _pos = transform.position;
+			_pos.y += columnHeightIncrement;
+			transform.MoveOnlyParent(_pos);
+		}
 	}
 
 	public void AddAmplitudeRotate()

@@ -19,4 +19,18 @@ public static class GO_Extensions
 			c.parent = aParent;
 		}
 	}
+
+	public static void MoveOnlyParent(this Transform aParent, Vector3 _pos)
+	{
+		var childs = aParent.Cast<Transform>().ToList();
+		foreach(var c in childs)
+		{
+			c.parent = null;
+		}
+		aParent.position = _pos;
+		foreach(var c in childs)
+		{
+			c.parent = aParent;
+		}
+	}
 }

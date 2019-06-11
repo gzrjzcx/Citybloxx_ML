@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ScreenMoveUp : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class ScreenMoveUp : MonoBehaviour
 	private float slingMoveStep;
 	private Vector3 cameraDestination;
 	private float slingPosYOffsetDestination;
+
+	public Vector3 screenBottomPos
+	{
+		get {return Vector3.Min(skyObj_1.transform.position, skyObj_2.transform.position);}
+	}
 
 	void FixedUpdate()
 	{
@@ -39,13 +45,13 @@ public class ScreenMoveUp : MonoBehaviour
 	private void SetCameraMoveDestination()
 	{
 		cameraDestination = cameraObj.transform.position;
-		cameraDestination.y += pieceSize;
+		cameraDestination.y += GameControl.instance.columnObj.columnHeightIncrement;
 	}
 
 	private void SetSlingMoveDestination()
 	{
 		slingPosYOffsetDestination = GameControl.instance.slingObj.offsetY;
-		slingPosYOffsetDestination += pieceSize;
+		slingPosYOffsetDestination += GameControl.instance.columnObj.columnHeightIncrement;
 	}
 
 	private void BackgroundMoveUp()
@@ -71,5 +77,23 @@ public class ScreenMoveUp : MonoBehaviour
 			}
 		}
 	}
+
+	public void ShakeCamera()
+	{
+		cameraObj.transform.DOShakePosition(0.5f, new Vector3(0.1f, 0.1f, 0), 50, 60);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

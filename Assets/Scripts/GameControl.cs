@@ -14,8 +14,8 @@ public class GameControl : MonoBehaviour
     public ColumnSwinging columnObj;
     public ScreenMoveUp screenMoveUpObj;
     public EllipticalOrbit slingObj;
-    public StackingEffect stackingEffectObj;
     public ComboControl comboControlObj;
+    public DoTweenControl doTweenObj;
 
     public Text scoreText;
     public Text missText;
@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
     public int populationScore = 0;
     public int stackedPieceNum = 0;
     public int missNum = 0;
+    public Vector3 seaLevel;
 
     public enum GameStatus
     {
@@ -34,7 +35,7 @@ public class GameControl : MonoBehaviour
         GAME_COMBO, // Game is running and in combo phase
         GAME_OVER // Game is over.
     }
-    public GameStatus gameStatus = GameStatus.GAME_START;
+    public GameStatus gameStatus;
 
     public bool isGameRunning
     {
@@ -56,6 +57,7 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
+        seaLevel = new Vector3(0, -10, 0);
         gameStatus = GameStatus.GAME_START;
     }
 
@@ -80,6 +82,7 @@ public class GameControl : MonoBehaviour
         Scored();
         ScreenMoveUp();
         SetColumnSwinging();
+        seaLevel.y++;
         if(isDeadCenter)
         {
             gameStatus = GameStatus.GAME_COMBO;
@@ -95,7 +98,8 @@ public class GameControl : MonoBehaviour
     public void AfterPieceStackingFailed(int fallenSide)
     {
         Missed();
-        CheckMissNum();
+        // CheckMissNum();
+        screenMoveUpObj.ShakeCamera();
     }
 
     void PieceStacked()
@@ -150,7 +154,17 @@ public class GameControl : MonoBehaviour
         columnObj.SetAmplitudeIncrementAndMax();
     }
 
-
+    // Use this to control the ideal distance
+    // void LockDistanceColumn2Sling()
+    // {
+    //     Debug.Log(columnObj.GetDistanceColumn2Sling);
+    //     if(!Mathf.Approximately(columnObj.initialDistance, 
+    //         columnObj.GetDistanceColumn2Sling))
+    //         {
+    //             columnObj.transform.position = slingObj.transform.position 
+    //                 - new Vector3(0, columnObj.initialDistance - slingObj.offsetY, 0);
+    //         }  
+    // }
 
 
 

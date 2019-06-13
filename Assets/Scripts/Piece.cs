@@ -16,7 +16,7 @@ public class Piece : MonoBehaviour
 
     public bool isHooked = false;
     public bool isStacked = true;
-    public float deadCenterRange = 0.15f;
+    public float deadCenterRange = 0.1f;
 
 	private Rigidbody2D rb2d;
 
@@ -72,7 +72,7 @@ public class Piece : MonoBehaviour
             {
                 stackStatus.isStackSuccessful = true;
                 GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-                doTween.StackingNoDeadCenterAnimation();
+                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide);
             }
             else
             {
@@ -98,8 +98,11 @@ public class Piece : MonoBehaviour
         float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;
         float deltaX = dropPiecePosX - topPiecePosX;
         float absDeltaX = Mathf.Abs(deltaX);
-        
-        if(absDeltaX < 0.5)
+
+        checkFallenSide(deltaX);
+        doTween.GetDeltaXFromCollision(absDeltaX);
+       
+        if(absDeltaX < 0.6)
         {
             checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);
             Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
@@ -108,7 +111,7 @@ public class Piece : MonoBehaviour
         }
         else 
         {
-            checkFallenSide(deltaX);
+            // checkFallenSide(deltaX);
             Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
                 + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
             return false;

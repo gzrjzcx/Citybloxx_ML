@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"f",
+				"From()\tTweener"
+			],
+			[
+				"Tweene",
+				"Tweener\tTweener"
+			],
+			[
+				"l",
+				"loopType\tLoopType"
+			],
+			[
+				"A",
+				"AppendCallback(TweenCallback callback)\tSequence"
+			],
+			[
+				"pla",
+				"PlayBackwards()\tvoid"
+			],
+			[
+				"dotw",
+				"DOTween\tDOTween"
+			],
+			[
+				"pl",
+				"PlayBackwards()\tvoid"
+			],
+			[
+				"s",
+				"StopMotion(int motionFps, AnimationCurve animCurve)\tEaseFunction"
+			],
+			[
+				"setsp",
+				"SetSpeedBased(bool isSpeedBased)\tTweener"
+			],
+			[
+				"Dotw",
+				"doTween\tDoTweenControl"
+			],
+			[
+				"Outqu",
+				"OutQuart\tEase"
+			],
+			[
+				"pi",
+				"pivot\tVector3"
+			],
+			[
+				"do",
+				"DoPunchRotation\tDoPunchRotation"
+			],
+			[
+				"gam",
+				"gameObject\tGameObject"
+			],
+			[
 				"pos",
 				"position\tVector3"
 			],
@@ -52,10 +108,6 @@
 				"DOPunchRotation(Vector3 punch, float duration)\tTweener"
 			],
 			[
-				"gam",
-				"GameControl\tGameControl"
-			],
-			[
 				"sc",
 				"localScale\tVector3"
 			],
@@ -78,10 +130,6 @@
 			[
 				"cam",
 				"cameraObj\tGameObject"
-			],
-			[
-				"pi",
-				"Piece\tPiece"
 			],
 			[
 				"ju",
@@ -300,10 +348,6 @@
 				"contactCount\tint"
 			],
 			[
-				"l",
-				"Log(object message, Object context)\tvoid"
-			],
-			[
 				"po",
 				"posSkyObj_2\tVector3"
 			],
@@ -424,10 +468,6 @@
 				"mass"
 			],
 			[
-				"f",
-				"f"
-			],
-			[
 				"r",
 				"r"
 			],
@@ -474,46 +514,6 @@
 			[
 				"file",
 				"file_name"
-			],
-			[
-				"bash",
-				"bash_profile"
-			],
-			[
-				"if",
-				"is_flag"
-			],
-			[
-				"int",
-				"int2str"
-			],
-			[
-				"bes",
-				"best_action"
-			],
-			[
-				"act",
-				"action"
-			],
-			[
-				"k",
-				"KICK"
-			],
-			[
-				"learn",
-				"learn_target"
-			],
-			[
-				"s",
-				"self"
-			],
-			[
-				"lea",
-				"learningRate"
-			],
-			[
-				"re",
-				"reverse"
 			]
 		]
 	},
@@ -527,7 +527,6 @@
 			"settings":
 			{
 				"buffer_size": 4201,
-				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows",
 				"scratch": true
 			}
@@ -540,7 +539,6 @@
 			"settings":
 			{
 				"buffer_size": 2111,
-				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows",
 				"scratch": true
 			}
@@ -555,10 +553,19 @@
 			}
 		},
 		{
+			"file": "Assets/Scripts/Utilities/Extension.cs",
+			"settings":
+			{
+				"buffer_size": 752,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing static GO_Extensions;\n\npublic class ColumnSwinging : MonoBehaviour\n{\n\n\tpublic float amplitudeMove = 0.5f;\n\tpublic float amplitudeRotate;\n\tpublic float comboAmplitudeRotate = 1f;\n\tpublic float amplitudeIncrement = 0.5f;\n\tpublic float maxAmplitudeRotate = 15f;\n\tpublic Rigidbody2D rb2d;\n\n\t// public float idealDistanceColumn2Sling; //Todo: use this control distance\n\tpublic float columnHeightIncrement;\n\tpublic Collider2D topPieceCollider;\n\n\tprivate float angle;\n\tprivate float angularSpeed = 1f;\n\n\tvoid Start()\n\t{\n\t\tangle = 0;\n\t\trb2d = GetComponent<Rigidbody2D>();\n\t}\n\n\t// public float GetDistanceColumn2Sling\n\t// {\n\t// \tget {return GameControl.instance.slingObj.transform.position.y\n\t// \t\t\t+ GameControl.instance.slingObj.offsetY - transform.position.y;}\n\t// }\n\n\tbool IsColumnShouldRotate()\n\t{\n\t\tif(GameControl.instance.gameStatus != GameControl.GameStatus.GAME_OVER\n\t\t\t&& GameControl.instance.gameStatus != GameControl.GameStatus.GAME_START)\n\t\t{\n\t\t\treturn true;\n\t\t}\n\t\telse\n\t\t\treturn false;\n\t}\n\n\tvoid FixedUpdate()\n\t{\n\t\tif(IsColumnShouldRotate())\n\t\t{\n\t\t\t// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);\n\t\t\t// transform.position = new Vector3(Mathf.Cos(Time.time)*amplitudeMove, transform.position.y, transform.position.z);\n\t\t\trb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);\n\t\t\ttransform.rotation = Quaternion.Euler(0,0,-Mathf.Sin(Time.time)*amplitudeRotate);\n\n\t\t\t// float swingingSpeed = Mathf.Cos(angle) * amplitudeRotate;\n\t\t\t// angle += angularSpeed * Time.fixedDeltaTime;\n\t\t\t// transform.RotateAround(swingingCenter, Vector3.forward, swingingSpeed * Time.fixedDeltaTime);\n\t\t\tDebug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);\n\t\t\tDebug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);\n\t\t}\n\t\telse\n\t\t{\n\t\t\trb2d.velocity = Vector2.zero;\n\t\t}\n\t}\n\n\tpublic void SwingingCenterMoveUp()\n\t{\n\t\tif(GameControl.instance.stackedPieceNum >= GameControl.instance.piecePoolObj.piecePoolSize - 1)\n\t\t{\n\t\t\tVector3 _pos = transform.position;\n\t\t\t_pos.y += columnHeightIncrement;\n\t\t\ttransform.MoveOnlyParent(_pos);\n\t\t}\n\t}\n\n\tpublic void AddAmplitudeRotate()\n\t{\n\t\tif(amplitudeRotate < maxAmplitudeRotate)\n\t\t{\n\t\t\tamplitudeRotate += amplitudeIncrement;\n\t\t}\n\t}\n\n\tpublic void SetAmplitudeIncrementAndMax()\n\t{\n\t\tint totalPieces = GameControl.instance.populationScore;\n\t\tif(totalPieces < 100){\n\t\t\tamplitudeIncrement = 0.5f;\n\t\t\tmaxAmplitudeRotate = 7f;\n\t\t\tcomboAmplitudeRotate = 1f;\n\t\t}\n\t\telse if(totalPieces < 200){\n\t\t\tamplitudeIncrement = 1f;\n\t\t\tmaxAmplitudeRotate = 10f;\n\t\t\tcomboAmplitudeRotate = 2f;\n\t\t}\n\t\telse if(totalPieces < 300){\n\t\t\tamplitudeIncrement = 1.5f;\n\t\t\tmaxAmplitudeRotate = 13f;\n\t\t\tcomboAmplitudeRotate = 3f;\n\t\t}\n\t\telse{\n\t\t\tamplitudeIncrement = 2f;\n\t\t\tmaxAmplitudeRotate = 15f;\n\t\t\tcomboAmplitudeRotate = 5f;\n\t\t}\n\t}\n\n\tpublic void Set2ComboSwingingAmplitude()\n\t{\n\t\tif(amplitudeRotate > comboAmplitudeRotate * 2)\n\t\t{\n\t\t\tamplitudeRotate -= comboAmplitudeRotate;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tamplitudeRotate = comboAmplitudeRotate;\t\t\t\n\t\t}\n\t}\n}\n",
 			"file": "Assets/Scripts/ColumnSwinging.cs",
 			"file_size": 3287,
-			"file_write_time": 132047574632561587,
+			"file_write_time": 132048347132536959,
 			"settings":
 			{
 				"buffer_size": 3163,
@@ -568,13 +575,13 @@
 			}
 		},
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n    public DoTweenControl doTween;\n    public struct StackStatus\n    {\n        public bool isStackSuccessful;\n        public int fallenSide;\n        public bool isDeadCenter;\n    }\n    public StackStatus stackStatus;\n\n    public bool isHooked = false;\n    public bool isStacked = true;\n    public float deadCenterRange = 0.15f;\n\n\tprivate Rigidbody2D rb2d;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(!isStacked && ctl.collider.gameObject.tag == \"Piece\")\n        {\n            GetColumnHeightIncrement(ctl);\n            if(checkIfCanStack(ctl))\n            {\n                stackStatus.isStackSuccessful = true;\n                GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);\n                doTween.StackingNoDeadCenterAnimation();\n            }\n            else\n            {\n                stackStatus.isStackSuccessful = false;\n                GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);\n                OnStackingFailed();\n            }\n        }\n        isStacked = true;\n    }\n\n    private void GetColumnHeightIncrement(Collision2D ctl)\n    {\n        float topPiecePosY = ctl.collider.transform.localPosition.y;\n        float dropPiecePosY = ctl.otherCollider.transform.localPosition.y;\n        GameControl.instance.columnObj.columnHeightIncrement = Mathf.Abs(dropPiecePosY - topPiecePosY);\n        GameControl.instance.columnObj.topPieceCollider = ctl.collider;\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n        float topPiecePosX = ctl.collider.transform.localPosition.x;\n        float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;\n        float deltaX = dropPiecePosX - topPiecePosX;\n        float absDeltaX = Mathf.Abs(deltaX);\n        \n        if(absDeltaX < 0.5)\n        {\n            checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop true\");\n            return true;\n        }\n        else \n        {\n            checkFallenSide(deltaX);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop false\");\n            return false;\n        }\n    }\n\n    private void checkIfDeadCenter(float absDeltaX, float topPiecePosX, Collider2D other)\n    {\n        if(absDeltaX < deadCenterRange)\n        {\n            stackStatus.isDeadCenter = true;\n            Vector3 pos = other.transform.localPosition;\n            pos.x = topPiecePosX;\n            other.transform.localPosition = pos;\n        }\n        else\n        {\n            stackStatus.isDeadCenter = false;\n        }\n    }\n\n    private void checkFallenSide(float deltaX)\n    {\n        if(deltaX > 0)\n        {\n            stackStatus.fallenSide = 1;  // right side\n        }\n        else\n        {\n            stackStatus.fallenSide = -1;  // left side\n        }\n        // Debug.Log(\"fallen side = \" + stackStatus.fallenSide);\n    }\n\n    private void OnStackingFailed()\n    {\n        // transform.position = new Vector3(0, -10f, 0);\n        // GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform\n        doTween.FallenAnimation(stackStatus.fallenSide);\n        transform.parent = null;\n    }\n\n}\n",
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class Piece : MonoBehaviour\n{\n\n    public DoTweenControl doTween;\n    public struct StackStatus\n    {\n        public bool isStackSuccessful;\n        public int fallenSide;\n        public bool isDeadCenter;\n    }\n    public StackStatus stackStatus;\n\n    public bool isHooked = false;\n    public bool isStacked = true;\n    public float deadCenterRange = 0.1f;\n\n\tprivate Rigidbody2D rb2d;\n\n    // Start is called before the first frame update\n    void Start()\n    {\n        rb2d = GetComponent<Rigidbody2D>();\n    }\n\n    // Update is called once per frame\n    void Update()\n    {\n    \tif(isHooked)\n    \t{\n\t        if(Input.GetKeyDown(\"space\"))\n\t        {\n\t        \ttransform.parent = null;\n                Vector3 p = transform.position;\n                p.z = 0;\n                transform.position = p;\n\t        \ttransform.rotation = Quaternion.Euler(0,0,0);\n\t        \trb2d.isKinematic = false;\n\t        \tisHooked = false;\n\t        }\n    \t}\n    }\n\n    void OnCollisionEnter2D()\n    {\n        if(!isStacked)\n        {\n            GameControl.instance.OnPieceStacking();\n            rb2d.isKinematic = true;\n            rb2d.velocity = Vector3.zero;\n            parent2Column();        \n        }\n    }\n\n    void parent2Column()\n    {\n        transform.SetParent(GameControl.instance.columnObj.transform, true);\n        // set the rotation for subObject using this way\n        transform.localEulerAngles = Vector3.zero;\n        rb2d.angularVelocity = 0;\n    }\n\n    void OnCollisionExit2D(Collision2D ctl)\n    {\n        if(!isStacked && ctl.collider.gameObject.tag == \"Piece\")\n        {\n            GetColumnHeightIncrement(ctl);\n            if(checkIfCanStack(ctl))\n            {\n                stackStatus.isStackSuccessful = true;\n                GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);\n                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide);\n            }\n            else\n            {\n                stackStatus.isStackSuccessful = false;\n                GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);\n                OnStackingFailed();\n            }\n        }\n        isStacked = true;\n    }\n\n    private void GetColumnHeightIncrement(Collision2D ctl)\n    {\n        float topPiecePosY = ctl.collider.transform.localPosition.y;\n        float dropPiecePosY = ctl.otherCollider.transform.localPosition.y;\n        GameControl.instance.columnObj.columnHeightIncrement = Mathf.Abs(dropPiecePosY - topPiecePosY);\n        GameControl.instance.columnObj.topPieceCollider = ctl.collider;\n    }\n\n    private bool checkIfCanStack(Collision2D ctl)\n    {\n        float topPiecePosX = ctl.collider.transform.localPosition.x;\n        float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;\n        float deltaX = dropPiecePosX - topPiecePosX;\n        float absDeltaX = Mathf.Abs(deltaX);\n\n        checkFallenSide(deltaX);\n        doTween.GetDeltaXFromCollision(absDeltaX);\n       \n        if(absDeltaX < 0.6)\n        {\n            checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop true\");\n            return true;\n        }\n        else \n        {\n            // checkFallenSide(deltaX);\n            Debug.Log(ctl.collider.gameObject.name + \"  \" + ctl.collider.transform.localPosition.x + \" | \" \n                + ctl.otherCollider.gameObject.name + \"  \" + ctl.otherCollider.transform.localPosition.x + \" || \" + \"drop false\");\n            return false;\n        }\n    }\n\n    private void checkIfDeadCenter(float absDeltaX, float topPiecePosX, Collider2D other)\n    {\n        if(absDeltaX < deadCenterRange)\n        {\n            stackStatus.isDeadCenter = true;\n            Vector3 pos = other.transform.localPosition;\n            pos.x = topPiecePosX;\n            other.transform.localPosition = pos;\n        }\n        else\n        {\n            stackStatus.isDeadCenter = false;\n        }\n    }\n\n    private void checkFallenSide(float deltaX)\n    {\n        if(deltaX > 0)\n        {\n            stackStatus.fallenSide = 1;  // right side\n        }\n        else\n        {\n            stackStatus.fallenSide = -1;  // left side\n        }\n        // Debug.Log(\"fallen side = \" + stackStatus.fallenSide);\n    }\n\n    private void OnStackingFailed()\n    {\n        // transform.position = new Vector3(0, -10f, 0);\n        // GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform\n        doTween.FallenAnimation(stackStatus.fallenSide);\n        transform.parent = null;\n    }\n\n}\n",
 			"file": "Assets/Scripts/Piece.cs",
-			"file_size": 4866,
-			"file_write_time": 132047575208808143,
+			"file_size": 4977,
+			"file_write_time": 132048331596249619,
 			"settings":
 			{
-				"buffer_size": 4709,
+				"buffer_size": 4817,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows",
 				"scratch": true
@@ -584,7 +591,7 @@
 			"file": "Assets/Scripts/Utilities/DoTweenControl.cs",
 			"settings":
 			{
-				"buffer_size": 1478,
+				"buffer_size": 3274,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -852,7 +859,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -867,6 +874,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"deadcenter",
+			"dead",
 			"stackedpieceNum",
 			"stackedPieceNum",
 			"stackedPiece",
@@ -905,7 +914,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -948,10 +957,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1280.0,
+						"translation.y": 1794.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -990,7 +999,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1027,7 +1036,44 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/Utilities/Extension.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 752,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								749
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"1161,1176": "'“Transform”未包含“doPunchRotation”的定义，并且找不到可接受第一个“Transform”类型参数的可访问扩展方法“doPunchRotation”(是否缺少 using 指令或程序集引用?)",
+								"1178,1179": "应输入 ;",
+								"26,31": "不需要的 using 指令。",
+								"98,103": "不需要的 using 指令。"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1037,7 +1083,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Assets/Scripts/ColumnSwinging.cs",
 					"semi_transient": false,
 					"settings":
@@ -1049,8 +1095,8 @@
 						"selection":
 						[
 							[
-								522,
-								522
+								1450,
+								1450
 							]
 						],
 						"settings":
@@ -1072,27 +1118,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 1.0,
-						"translation.y": 115.0,
+						"translation.y": 777.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "Assets/Scripts/Piece.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4709,
+						"buffer_size": 4817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2633,
-								2633
+								3042,
+								3042
 							]
 						],
 						"settings":
@@ -1113,27 +1159,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1993.0,
+						"translation.y": 1784.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "Assets/Scripts/Utilities/DoTweenControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1478,
+						"buffer_size": 3274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1381,
-								1381
+								2732,
+								2732
 							]
 						],
 						"settings":
@@ -1142,20 +1188,21 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"1325,1326": "表达式项“/”无效",
+								"2571,2572": "语法错误，应输入“,”",
 								"26,31": "不需要的 using 指令。"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 695.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "Assets/Scripts/Utilities/Timer.cs",
 					"semi_transient": false,
 					"settings":
@@ -1263,7 +1310,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1271,7 +1318,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -1297,7 +1344,7 @@
 		"cols":
 		[
 			0.0,
-			0.473271780751,
+			0.102416546016,
 			1.0
 		],
 		"rows":
@@ -1323,7 +1370,7 @@
 	"project": "citybloxxDemo.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":

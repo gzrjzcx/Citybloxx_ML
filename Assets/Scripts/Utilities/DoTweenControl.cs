@@ -5,13 +5,8 @@ using DG.Tweening;
 
 public class DoTweenControl : MonoBehaviour
 {
-	// public Vector3 _pos;
-	// public Vector3 targetJump;
-	// public Vector3 targetRotation;
-	void Start()
-	{
-		// FallenAnimation(1);
-	}
+
+	private float absDeltaX;
 
 	public void FallenAnimation(int fallenSide)
 	{
@@ -28,20 +23,50 @@ public class DoTweenControl : MonoBehaviour
 		transform.rotation = Quaternion.identity;
 	}
 
-	public void StackingNoDeadCenterAnimation()
+	public void StackingNoDeadCenterAnimation(int fallenSide)
 	{
-		Vector3 pos = GameControl.instance.columnObj.topPieceCollider.transform.localPosition;
-		pos.x -= 0.5f;
-		pos.y += 0.5f;
-		// Debug.Log(GameControl.instance.columnObj.topPieceCollider.transform.localPosition);
+		Vector3 pivot = GameControl.instance.columnObj.topPieceCollider.transform.localPosition;
+		pivot.x += 0.5f * fallenSide;
+		pivot.y += 0.5f;
+		// Debug.Log("TopPieceCorenerPos = " + pos.ToString("F4"));
 		var go = new GameObject();
-		go.transform.position = Vector3.zero;
-		go.transform.SetParent(GameControl.instance.columnObj.transform, false);
-		go.transform.localPosition = pos;
-		transform.SetParent(go.transform, false);
-		transform.localPosition = new Vector3(0, 0.5f, 0);
-		go.transform.DOPunchRotation(new Vector3(0,0,45), 2f, 0, 0.5f);
-		// transform.DOPunchRotation(pos, 2f, 0, 0.5f);
-		// transform.DOPunchPosition(new Vector3(-0.5f, -0.5f, 0), 2f, 0, 0.5f).SetEase(Ease.OutExpo);
+		// Debug.Log("new GameObject.position = " + go.transform.position.ToString("F4"));
+		// Debug.Log("new GameObject.localPosition = " + go.transform.localPosition.ToString("F4"));
+		go.transform.SetParent(GameControl.instance.columnObj.transform, true);
+		// Debug.Log("new GameObject.position = " + go.transform.position.ToString("F4"));		
+		// Debug.Log("new GameObject.localPosition = " + go.transform.localPosition.ToString("F4"));
+		go.transform.localPosition = pivot;
+		// Debug.Log("new GameObject.position = " + go.transform.position.ToString("F4"));		
+		// Debug.Log("new GameObject.localPosition = " + go.transform.localPosition.ToString("F4"));
+		// Debug.Log("TopPoece.position = " + transform.position.ToString("F4"));		
+		// Debug.Log("TopPoece.localPosition = " + transform.localPosition.ToString("F4"));
+		transform.SetParent(go.transform, true);
+		// Debug.Log("TopPiece.position = " + transform.position.ToString("F4"));		
+		// Debug.Log("TopPiece.localPosition = " + transform.localPosition.ToString("F4"));
+		float rotateAngle = -Mathf.Asin(absDeltaX) * Mathf.Rad2Deg;
+		Debug.Log("rotate angle = " + rotateAngle + "  absDeltaX = " + absDeltaX, gameObject);
+		rotateAngle -= GameControl.instance.columnObj.transform.rotation.z * Mathf.Rad2Deg * 2;
+		Debug.Log("rotate angle = " + rotateAngle + "  column z = " + GameControl.instance.columnObj.transform.rotation.z * Mathf.Rad2Deg * 2, gameObject);
+
+		Sequence stackAnimSequence = DOTween.Sequence();
+		Tween t = go.transform.DOLocalRotate(new Vector3(0,0,rotateAngle * fallenSide), 0.1f, RotateMode.LocalAxisAdd).SetEase(Ease.OutExpo);
+		stackAnimSequence.Append(t);
+		Tween t1 = go.transform.DOLocalRotate(new Vector3(0,0,rotateAngle * -fallenSide), 0.5f, RotateMode.LocalAxisAdd).SetEase(Ease.InCubic);
+		stackAnimSequence.Append(t1);
+		stackAnimSequence.AppendCallback(OnStackingNoDeadCenterAnimationEnd);
+		// go.transform.DOPunchRotation(new Vector3(0,0,rotateAngle * fallenSide), 0.7f, 0, 1f).SetEase(Ease.OutBack).OnComplete(OnStackingNoDeadCenterAnimationEnd);
+
+	}
+
+	private void OnStackingNoDeadCenterAnimationEnd()
+	{
+		GameObject go = transform.parent.gameObject;
+		transform.SetParent(GameControl.instance.columnObj.transform, true);
+		Destroy(go);
+	}
+
+	public void GetDeltaXFromCollision(float absDeltaX)
+	{
+		this.absDeltaX = absDeltaX;
 	}
 }

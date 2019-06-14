@@ -44,9 +44,9 @@ public class DoTweenControl : MonoBehaviour
 		// Debug.Log("TopPiece.position = " + transform.position.ToString("F4"));		
 		// Debug.Log("TopPiece.localPosition = " + transform.localPosition.ToString("F4"));
 		float rotateAngle = -Mathf.Asin(absDeltaX) * Mathf.Rad2Deg;
-		Debug.Log("rotate angle = " + rotateAngle + "  absDeltaX = " + absDeltaX, gameObject);
+		// Debug.Log("rotate angle = " + rotateAngle + "  absDeltaX = " + absDeltaX, gameObject);
 		rotateAngle -= GameControl.instance.columnObj.transform.rotation.z * Mathf.Rad2Deg * 2;
-		Debug.Log("rotate angle = " + rotateAngle + "  column z = " + GameControl.instance.columnObj.transform.rotation.z * Mathf.Rad2Deg * 2, gameObject);
+		// Debug.Log("rotate angle = " + rotateAngle + "  column z = " + GameControl.instance.columnObj.transform.rotation.z * Mathf.Rad2Deg * 2, gameObject);
 
 		Sequence stackAnimSequence = DOTween.Sequence();
 		Tween t = go.transform.DOLocalRotate(new Vector3(0,0,rotateAngle * fallenSide), 0.1f, RotateMode.LocalAxisAdd).SetEase(Ease.OutExpo);

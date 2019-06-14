@@ -16,6 +16,7 @@ public class GameControl : MonoBehaviour
     public EllipticalOrbit slingObj;
     public ComboControl comboControlObj;
     public DoTweenControl doTweenObj;
+    public ParticleControl particleObj;
 
     public Text scoreText;
     public Text missText;
@@ -88,6 +89,7 @@ public class GameControl : MonoBehaviour
             gameStatus = GameStatus.GAME_COMBO;
             comboControlObj.Combo();
             columnObj.Set2ComboSwingingAmplitude();
+            particleObj.PlayComboPeriodAnim();
         }
         else if(gameStatus == GameStatus.GAME_COMBO)
         {

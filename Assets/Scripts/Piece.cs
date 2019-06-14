@@ -105,15 +105,15 @@ public class Piece : MonoBehaviour
         if(absDeltaX < 0.6)
         {
             checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);
-            Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
-                + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
+            // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
+                // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
             return true;
         }
         else 
         {
             // checkFallenSide(deltaX);
-            Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
-                + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
+            // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
+                // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
             return false;
         }
     }
@@ -126,6 +126,11 @@ public class Piece : MonoBehaviour
             Vector3 pos = other.transform.localPosition;
             pos.x = topPiecePosX;
             other.transform.localPosition = pos;
+            pos = other.transform.position;
+            pos.z -= 0.5f;
+            pos.y -= 0.5f;
+            GameControl.instance.particleObj.PlayStackDeadCenterAnim(pos);
+            // GameControl.instance.particleObj.PlayComboPeriodAnim();
         }
         else
         {

@@ -15,7 +15,7 @@ public class ColumnSwinging : MonoBehaviour
 
 	// public float idealDistanceColumn2Sling; //Todo: use this control distance
 	public float columnHeightIncrement;
-	public Collider2D topPieceCollider;
+	public Collider2D topPieceCollider;  //collision2d.collider
 
 	private float angle;
 	private float angularSpeed = 1f;
@@ -117,5 +117,15 @@ public class ColumnSwinging : MonoBehaviour
 		{
 			amplitudeRotate = comboAmplitudeRotate;			
 		}
+	}
+
+	public float GetCenterPostion()
+	{
+		return transform.GetCenterPosition(1);
+	}
+
+	public void FlashColumnOnCombo()
+	{
+		
 	}
 }

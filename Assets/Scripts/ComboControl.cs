@@ -42,6 +42,7 @@ public class ComboControl : MonoBehaviour
         comboSlider.gameObject.SetActive(false);
         GameControl.instance.gameStatus = GameControl.GameStatus.GAME_RUNNING;
         comboScored();
+        GameControl.instance.particleObj.StopComboPeriodAnim();
         comboNum = 0;
     }
 

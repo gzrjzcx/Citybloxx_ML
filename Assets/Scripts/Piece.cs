@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
-
     public DoTweenControl doTween;
     public struct StackStatus
     {
@@ -16,6 +15,7 @@ public class Piece : MonoBehaviour
 
     public bool isHooked = false;
     public bool isStacked = true;
+    public bool isFallen = false;
     public float deadCenterRange = 0.1f;
 
 	private Rigidbody2D rb2d;
@@ -72,7 +72,7 @@ public class Piece : MonoBehaviour
             {
                 stackStatus.isStackSuccessful = true;
                 GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide);
+                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
             }
             else
             {
@@ -104,6 +104,7 @@ public class Piece : MonoBehaviour
        
         if(absDeltaX < 0.6)
         {
+            isFallen = false;
             checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);
             // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
                 // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
@@ -114,6 +115,7 @@ public class Piece : MonoBehaviour
             // checkFallenSide(deltaX);
             // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
                 // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
+            isFallen = true;
             return false;
         }
     }
@@ -159,4 +161,9 @@ public class Piece : MonoBehaviour
         transform.parent = null;
     }
 
+    void OnBecameInvisible()
+    {
+        if(isFallen)
+            GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
+    }
 }

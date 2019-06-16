@@ -23,8 +23,11 @@ public class DoTweenControl : MonoBehaviour
 		transform.rotation = Quaternion.identity;
 	}
 
-	public void StackingNoDeadCenterAnimation(int fallenSide)
+	public void StackingNoDeadCenterAnimation(int fallenSide, bool isDeadCenter)
 	{
+		if(isDeadCenter)
+			return;
+
 		Vector3 pivot = GameControl.instance.columnObj.topPieceCollider.transform.localPosition;
 		pivot.x += 0.5f * fallenSide;
 		pivot.y += 0.5f;

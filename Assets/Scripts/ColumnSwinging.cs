@@ -57,6 +57,8 @@ public class ColumnSwinging : MonoBehaviour
 			// transform.RotateAround(swingingCenter, Vector3.forward, swingingSpeed * Time.fixedDeltaTime);
 			Debug.DrawLine (new Vector3(0,-30,0), new Vector3(0,30,0),Color.red);
 			Debug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);
+			Debug.DrawLine(new Vector3(GameControl.instance.seaLevel.x - 10, GameControl.instance.seaLevel.y, 0),
+			 new Vector3(GameControl.instance.seaLevel.x + 10, GameControl.instance.seaLevel.y, 0), Color.blue);
 		}
 		else
 		{
@@ -126,6 +128,6 @@ public class ColumnSwinging : MonoBehaviour
 
 	public void FlashColumnOnCombo()
 	{
-		
+
 	}
 }

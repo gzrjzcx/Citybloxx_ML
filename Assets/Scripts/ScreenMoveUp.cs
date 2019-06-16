@@ -18,9 +18,9 @@ public class ScreenMoveUp : MonoBehaviour
 	private Vector3 cameraDestination;
 	private float slingPosYOffsetDestination;
 
-	public Vector3 screenBottomPos
+	public Vector3 cameraPos
 	{
-		get {return Vector3.Min(skyObj_1.transform.position, skyObj_2.transform.position);}
+		get {return cameraObj.transform.position;}
 	}
 
 	void FixedUpdate()

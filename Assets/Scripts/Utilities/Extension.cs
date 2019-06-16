@@ -42,11 +42,27 @@ public static class GO_Extensions
 		float posAxis = 0f;
 		foreach(var c in childs)
 		{
-			Debug.Log("piece name = " + c.gameObject.name + "pos = " + c.localPosition[axis], c.gameObject);
+			// Debug.Log("piece name = " + c.gameObject.name + "pos = " + c.localPosition[axis], c.gameObject);
 			posAxis += c.localPosition[axis];
 		}
-		Debug.Log("center pos = " +  posAxis / childs.Count + "childs.count = " + childs.Count);
-		Debug.Log("column pos = " + aParent.transform.position);
+		// Debug.Log("center pos = " +  posAxis / childs.Count + "childs.count = " + childs.Count);
+		// Debug.Log("column pos = " + aParent.transform.position);
 		return posAxis / childs.Count;
+	}
+
+	public static void SetAllChildsRotation(this Transform aParent, int axis, float eularAngle, bool isReset)
+	{
+		var childs = aParent.Cast<Transform>().ToList();
+		foreach(var c in childs)
+		{
+			var rot = c.transform.localEulerAngles;
+			if(isReset)
+				rot[axis] = 0;
+			else
+				rot[axis] += eularAngle;				
+			c.transform.localRotation = Quaternion.Euler(rot);
+			// Debug.Log("c.transform.localRotation = " + c.transform.localEulerAngles);
+			// Debug.Log("c.transform.rotation = " + c.transform.eulerAngles);
+		}
 	}
 }

@@ -16,7 +16,9 @@ public class Piece : MonoBehaviour
     public bool isHooked = false;
     public bool isStacked = true;
     public bool isFallen = false;
-    public float deadCenterRange = 0.1f;
+
+    public float deadCenterRange = 0.08f;
+    public float stackRange = 0.5f;
 
 	private Rigidbody2D rb2d;
 
@@ -31,7 +33,7 @@ public class Piece : MonoBehaviour
     {
     	if(isHooked)
     	{
-	        if(Input.GetKeyDown("space"))
+	        if(Input.GetKeyDown("space") || Input.touchCount > 0)
 	        {
 	        	transform.parent = null;
                 Vector3 p = transform.position;
@@ -102,7 +104,7 @@ public class Piece : MonoBehaviour
         checkFallenSide(deltaX);
         doTween.GetDeltaXFromCollision(absDeltaX);
        
-        if(absDeltaX < 0.6)
+        if(absDeltaX < stackRange)
         {
             isFallen = false;
             checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);

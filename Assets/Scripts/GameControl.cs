@@ -65,7 +65,7 @@ public class GameControl : MonoBehaviour
     void Update()
     {
         if(gameStatus == GameStatus.GAME_OVER 
-            && Input.GetKeyDown("space"))
+            && (Input.GetKeyDown("space") || Input.touchCount > 0))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             gameStatus = GameStatus.GAME_START; 
@@ -100,7 +100,7 @@ public class GameControl : MonoBehaviour
     public void AfterPieceStackingFailed(int fallenSide)
     {
         Missed();
-        // CheckMissNum();
+        CheckMissNum();
         screenMoveUpObj.ShakeCamera();
     }
 

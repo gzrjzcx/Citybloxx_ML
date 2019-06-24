@@ -20,7 +20,7 @@ public class Piece : MonoBehaviour
     public float deadCenterRange = 0.08f;
     public float stackRange = 0.5f;
 
-	private Rigidbody2D rb2d;
+	public Rigidbody2D rb2d;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class Piece : MonoBehaviour
                 Vector3 p = transform.position;
                 p.z = 0;
                 transform.position = p;
-	        	transform.rotation = Quaternion.Euler(0,0,0);
+	        	transform.rotation = Quaternion.identity;
 	        	rb2d.isKinematic = false;
 	        	isHooked = false;
 	        }
@@ -53,11 +53,11 @@ public class Piece : MonoBehaviour
             GameControl.instance.OnPieceStacking();
             rb2d.isKinematic = true;
             rb2d.velocity = Vector3.zero;
-            parent2Column();        
+            Parent2Column();        
         }
     }
 
-    void parent2Column()
+    public void Parent2Column()
     {
         transform.SetParent(GameControl.instance.columnObj.transform, true);
         // set the rotation for subObject using this way
@@ -67,56 +67,51 @@ public class Piece : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D ctl)
     {
-        if(!isStacked && ctl.collider.gameObject.tag == "Piece")
+        GameControl.instance.mycolObj.SetCollisionInfo(ctl);
+        if(!isStacked)
         {
-            GetColumnHeightIncrement(ctl);
-            if(checkIfCanStack(ctl))
+            GameControl.instance.mycolObj.GetColumnHeightIncrement();
+            if(CheckIfCanStack(ctl))
             {
                 stackStatus.isStackSuccessful = true;
                 GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
+                // doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
             }
             else
             {
                 stackStatus.isStackSuccessful = false;
                 GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
-                OnStackingFailed();
+                // OnStackingFailed();
             }
         }
         isStacked = true;
     }
 
-    private void GetColumnHeightIncrement(Collision2D ctl)
+    public bool CheckIfCanStack(Collision2D ctl)
     {
-        float topPiecePosY = ctl.collider.transform.localPosition.y;
-        float dropPiecePosY = ctl.otherCollider.transform.localPosition.y;
-        GameControl.instance.columnObj.columnHeightIncrement = Mathf.Abs(dropPiecePosY - topPiecePosY);
-        GameControl.instance.columnObj.topPieceCollider = ctl.collider;
-    }
+        float absDeltaX = Mathf.Abs(GameControl.instance.mycolObj.deltaX);
 
-    private bool checkIfCanStack(Collision2D ctl)
-    {
-        float topPiecePosX = ctl.collider.transform.localPosition.x;
-        float dropPiecePosX = ctl.otherCollider.transform.localPosition.x;
-        float deltaX = dropPiecePosX - topPiecePosX;
-        float absDeltaX = Mathf.Abs(deltaX);
+        if(ctl.collider.gameObject.tag == "Ground")
+        {
+            return false;
+        }
 
-        checkFallenSide(deltaX);
-        doTween.GetDeltaXFromCollision(absDeltaX);
+        checkFallenSide();
+        // doTween.GetDeltaXFromCollision(absDeltaX);
        
         if(absDeltaX < stackRange)
         {
             isFallen = false;
-            checkIfDeadCenter(absDeltaX, topPiecePosX, ctl.otherCollider);
+            checkIfDeadCenter(absDeltaX, GameControl.instance.mycolObj.topPieceLocalPos.x, ctl.otherCollider);
             // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
-                // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
+            //     + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop true");
             return true;
         }
         else 
         {
             // checkFallenSide(deltaX);
             // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
-                // + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
+            //     + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
             isFallen = true;
             return false;
         }
@@ -133,7 +128,7 @@ public class Piece : MonoBehaviour
             pos = other.transform.position;
             pos.z -= 0.5f;
             pos.y -= 0.5f;
-            GameControl.instance.particleObj.PlayStackDeadCenterAnim(pos);
+            // GameControl.instance.particleObj.PlayStackDeadCenterAnim(pos);
             // GameControl.instance.particleObj.PlayComboPeriodAnim();
         }
         else
@@ -142,9 +137,9 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private void checkFallenSide(float deltaX)
+    private void checkFallenSide()
     {
-        if(deltaX > 0)
+        if(GameControl.instance.mycolObj.deltaX > 0)
         {
             stackStatus.fallenSide = 1;  // right side
         }
@@ -159,13 +154,13 @@ public class Piece : MonoBehaviour
     {
         // transform.position = new Vector3(0, -10f, 0);
         // GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform
-        doTween.FallenAnimation(stackStatus.fallenSide);
+        // doTween.FallenAnimation(stackStatus.fallenSide);
         transform.parent = null;
     }
 
     void OnBecameInvisible()
     {
-        if(isFallen)
-            GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
+        // if(isFallen)
+        //     GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
     }
 }

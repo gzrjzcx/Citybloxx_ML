@@ -65,4 +65,17 @@ public static class GO_Extensions
 			// Debug.Log("c.transform.rotation = " + c.transform.eulerAngles);
 		}
 	}
+
+	public static string GetArg(this Transform aParent, string argName)
+	{
+		var args = System.Environment.GetCommandLineArgs();
+		for(int i=0; i<args.Length; i++)
+		{
+			if(args[i] == argName && args.Length > i+1)
+			{
+				return args[i+1];
+			}
+		}
+		return null;
+	}
 }

@@ -28,7 +28,7 @@ public class DoTweenControl : MonoBehaviour
 		if(isDeadCenter)
 			return;
 
-		Vector3 pivot = GameControl.instance.columnObj.topPieceCollider.transform.localPosition;
+		Vector3 pivot = GameControl.instance.mycolObj.topPieceLocalPos;
 		pivot.x += 0.5f * fallenSide;
 		pivot.y += 0.5f;
 		// Debug.Log("TopPieceCorenerPos = " + pos.ToString("F4"));

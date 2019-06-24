@@ -17,6 +17,9 @@ public class GameControl : MonoBehaviour
     public ComboControl comboControlObj;
     public DoTweenControl doTweenObj;
     public ParticleControl particleObj;
+    public MyCollisionControl mycolObj;
+    public CBXPieceAgent agentObj;
+    public CBXAcademy academyObj;
 
     public Text scoreText;
     public Text missText;
@@ -79,34 +82,48 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingSuccessfully(bool isDeadCenter)
     {
-        CheckFirstPieceIfStacked();
-        Scored();
-        ScreenMoveUp();
-        SetColumnSwinging();
-        seaLevel.y++;
+        // CheckFirstPieceIfStacked();
+        // Scored();
+        // ScreenMoveUp();
+        // SetColumnSwinging();
+        // seaLevel.y++;
+
         if(isDeadCenter)
         {
             gameStatus = GameStatus.GAME_COMBO;
-            comboControlObj.Combo();
-            columnObj.Set2ComboSwingingAmplitude();
-            particleObj.PlayComboPeriodAnim();
+            agentObj.ComputeReward();
+            agentObj.Done();
+            agentObj.isJustCalledDone = true;
+            agentObj.deadcenterCount++;
+            // comboControlObj.Combo();
+            // columnObj.Set2ComboSwingingAmplitude();
+            // particleObj.PlayComboPeriodAnim();
         }
-        else if(gameStatus == GameStatus.GAME_COMBO)
+        else
         {
-            comboControlObj.AddComboNum();            
+            agentObj.ComputeReward();
+            agentObj.Done();
+            agentObj.isJustCalledDone = true;
         }
+        // else if(gameStatus == GameStatus.GAME_COMBO)
+        // {
+        //     comboControlObj.AddComboNum();            
+        // }
     }
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        Missed();
-        CheckMissNum();
-        screenMoveUpObj.ShakeCamera();
+        agentObj.ComputeReward();
+        agentObj.Done();
+        agentObj.isJustCalledDone = true;
+        // Missed();
+        // CheckMissNum();
+        // screenMoveUpObj.ShakeCamera();
     }
 
     void PieceStacked()
     {
-    	piecePoolObj.HookNewPiece();
+    	// piecePoolObj.HookNewPiece();
     }
 
     void Scored()

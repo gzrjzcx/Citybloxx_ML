@@ -966,8 +966,7 @@ MonoBehaviour:
     broadcastingBrains:
     - {fileID: 11400000, guid: 9424232346a03491e87df16e41581d0c, type: 2}
     - {fileID: 11400000, guid: 98cd375185b7d45ac8f50bd261de6733, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 9424232346a03491e87df16e41581d0c, type: 2}
+    _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
     width: 80
@@ -2654,42 +2653,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: mlTarget
-      value: 
-      objectReference: {fileID: 7971334222993599991}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: pieceObj
-      value: 
-      objectReference: {fileID: 1856582595}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: brain
-      value: 
-      objectReference: {fileID: 11400000, guid: 9424232346a03491e87df16e41581d0c,
-        type: 2}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: agentParameters.onDemandDecision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: agentParameters.resetOnDone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
-        type: 3}
-      propertyPath: monitorObj
-      value: 
-      objectReference: {fileID: 899954675}
     - target: {fileID: 233358126232300190, guid: e20a0147baf41452fb1f6f3aa1de83ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2745,6 +2708,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: mlTarget
+      value: 
+      objectReference: {fileID: 7971334222993599991}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: pieceObj
+      value: 
+      objectReference: {fileID: 1856582595}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 11400000, guid: 9424232346a03491e87df16e41581d0c,
+        type: 2}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: monitorObj
+      value: 
+      objectReference: {fileID: 899954675}
+    - target: {fileID: 7237964594443217775, guid: e20a0147baf41452fb1f6f3aa1de83ec,
+        type: 3}
+      propertyPath: mlTargetRb2d
+      value: 
+      objectReference: {fileID: 5503680112245658389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e20a0147baf41452fb1f6f3aa1de83ec, type: 3}
 --- !u!1 &1943313062

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ve",
+				"Vector3\tVector3"
+			],
+			[
+				"mat",
+				"Mathf\tMathf"
+			],
+			[
+				"mlTarget",
+				"mlTargetRb2d\tRigidbody2D"
+			],
+			[
+				"Rigi",
+				"Rigidbody2D\tRigidbody2D"
+			],
+			[
 				"ML",
 				"ML_Piece\tML_Piece"
 			],
@@ -94,10 +110,6 @@
 			[
 				"CBX",
 				"CBXAcademy\tCBXAcademy"
-			],
-			[
-				"ve",
-				"vectorAction\tfloat[]"
 			],
 			[
 				"flto",
@@ -502,18 +514,6 @@
 			[
 				"piece",
 				"pieceObj\tPiece"
-			],
-			[
-				"am",
-				"amplitudeRotate\tfloat"
-			],
-			[
-				"fix",
-				"fixedDeltaTime\tfloat"
-			],
-			[
-				"mat",
-				"Mathf\tMathf"
 			]
 		]
 	},
@@ -523,9 +523,18 @@
 			"file": "Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
 			"settings":
 			{
-				"buffer_size": 3183,
+				"buffer_size": 4235,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
+			"settings":
+			{
+				"buffer_size": 5100,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -542,6 +551,15 @@
 			"settings":
 			{
 				"buffer_size": 5150,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
+			"settings":
+			{
+				"buffer_size": 3479,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -800,7 +818,7 @@
 	],
 	"find":
 	{
-		"height": 31.0
+		"height": 50.0
 	},
 	"find_in_files":
 	{
@@ -885,80 +903,26 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3183,
+						"buffer_size": 4235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								184,
-								184
+								95,
+								95
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"0,5": "不需要的 using 指令。",
-								"1010,1019": "当前上下文中不存在名称“transform”",
-								"1059,1068": "当前上下文中不存在名称“transform”",
-								"109,122": "命名空间“<global namespace>”已经包含“CBXPieceAgent”的定义",
-								"1112,1121": "当前上下文中不存在名称“transform”",
-								"1145,1154": "当前上下文中不存在名称“transform”",
-								"1196,1204": "在“CBXPieceAgent.pieceObj”和“CBXPieceAgent.pieceObj”之间具有二义性",
-								"125,130": "未能找到类型或命名空间名“Agent”(是否缺少 using 指令或程序集引用?)",
-								"1263,1271": "在“CBXPieceAgent.pieceObj”和“CBXPieceAgent.pieceObj”之间具有二义性",
-								"1299,1315": "在“CBXPieceAgent.isJustCalledDone”和“CBXPieceAgent.isJustCalledDone”之间具有二义性",
-								"1339,1350": "类型“CBXPieceAgent”已定义了一个名为“FixedUpdate”的具有相同参数类型的成员",
-								"1361,1377": "在“CBXPieceAgent.isJustCalledDone”和“CBXPieceAgent.isJustCalledDone”之间具有二义性",
-								"1386,1401": "当前上下文中不存在名称“RequestDecision”",
-								"1423,1431": "在“CBXPieceAgent.mlTarget”和“CBXPieceAgent.mlTarget”之间具有二义性",
-								"1457,1468": "当前上下文中不存在名称“GameControl”",
-								"1534,1549": "类型“CBXPieceAgent”已定义了一个名为“HookNewPiece4ML”的具有相同参数类型的成员",
-								"1571,1580": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"1662,1671": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"169,174": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs”中的类型“Piece”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“Piece”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs”中定义的类型。",
-								"1723,1732": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"1743,1754": "当前上下文中不存在名称“GameControl”",
-								"1799,1807": "在“CBXPieceAgent.pieceObj”和“CBXPieceAgent.pieceObj”之间具有二义性",
-								"1833,1841": "在“CBXPieceAgent.pieceObj”和“CBXPieceAgent.pieceObj”之间具有二义性",
-								"1874,1883": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"1955,1968": "类型“CBXPieceAgent”已定义了一个名为“ComputeReward”的具有相同参数类型的成员",
-								"2014,2023": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"2042,2050": "在“CBXPieceAgent.mlTarget”和“CBXPieceAgent.mlTarget”之间具有二义性",
-								"2099,2111": "以下方法或属性之间的调用具有二义性:“CBXPieceAgent.Power_Hybrid(float)”和“CBXPieceAgent.Power_Hybrid(float)”",
-								"2128,2137": "当前上下文中不存在名称“AddReward”",
-								"2152,2159": "当前上下文中不存在名称“Monitor”",
-								"2187,2197": "在“CBXPieceAgent.monitorObj”和“CBXPieceAgent.monitorObj”之间具有二义性",
-								"2242,2252": "在“CBXPieceAgent.monitorObj”和“CBXPieceAgent.monitorObj”之间具有二义性",
-								"2311,2321": "当前上下文中不存在名称“gameObject”",
-								"2349,2364": "类型“CBXPieceAgent”已定义了一个名为“Power_N2_Reward”的具有相同参数类型的成员",
-								"2569,2585": "类型“CBXPieceAgent”已定义了一个名为“Power_P04_Reward”的具有相同参数类型的成员",
-								"26,31": "不需要的 using 指令。",
-								"2749,2765": "类型“CBXPieceAgent”已定义了一个名为“Power_N3_Penalty”的具有相同参数类型的成员",
-								"2900,2912": "类型“CBXPieceAgent”已定义了一个名为“Power_Hybrid”的具有相同参数类型的成员",
-								"302,317": "'“CBXPieceAgent.InitializeAgent()”: 没有找到适合的方法来重写",
-								"325,341": "在“CBXPieceAgent.isJustCalledDone”和“CBXPieceAgent.isJustCalledDone”之间具有二义性",
-								"378,388": "'“CBXPieceAgent.AgentReset()”: 没有找到适合的方法来重写",
-								"396,411": "以下方法或属性之间的调用具有二义性:“CBXPieceAgent.HookNewPiece4ML()”和“CBXPieceAgent.HookNewPiece4ML()”",
-								"417,425": "在“CBXPieceAgent.mlTarget”和“CBXPieceAgent.mlTarget”之间具有二义性",
-								"507,526": "'“CBXPieceAgent.CollectObservations()”: 没有找到适合的方法来重写",
-								"534,546": "当前上下文中不存在名称“AddVectorObs”",
-								"552,561": "'“CBXPieceAgent”未包含“transform”的定义，并且找不到可接受第一个“CBXPieceAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
-								"575,587": "当前上下文中不存在名称“AddVectorObs”",
-								"588,596": "在“CBXPieceAgent.mlTarget”和“CBXPieceAgent.mlTarget”之间具有二义性",
-								"634,645": "'“CBXPieceAgent.AgentAction(float[], string)”: 没有找到适合的方法来重写",
-								"759,766": "当前上下文中不存在名称“Monitor”",
-								"79,84": "不需要的 using 指令。",
-								"812,822": "在“CBXPieceAgent.monitorObj”和“CBXPieceAgent.monitorObj”之间具有二义性",
-								"827,834": "当前上下文中不存在名称“Monitor”",
-								"85,93": "未能找到类型或命名空间名“MLAgents”(是否缺少 using 指令或程序集引用?)",
-								"852,871": "当前上下文中不存在名称“GetCumulativeReward”",
-								"886,896": "在“CBXPieceAgent.monitorObj”和“CBXPieceAgent.monitorObj”之间具有二义性",
-								"901,908": "当前上下文中不存在名称“Monitor”",
-								"934,949": "在“CBXPieceAgent.deadcenterCount”和“CBXPieceAgent.deadcenterCount”之间具有二义性",
-								"962,972": "在“CBXPieceAgent.monitorObj”和“CBXPieceAgent.monitorObj”之间具有二义性"
+								"0,5": "Unnecessary using directive.",
+								"2284,2292": "The name 'absDelta' does not exist in the current context",
+								"2349,2357": "The name 'absDelta' does not exist in the current context",
+								"2404,2412": "The name 'absDelta' does not exist in the current context",
+								"26,31": "Unnecessary using directive."
 							},
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/C#/C#.sublime-syntax",
@@ -974,6 +938,37 @@
 				},
 				{
 					"buffer": 1,
+					"file": "Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								515,
+								515
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "Assets/GamePlay/Scripts/GameControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -996,20 +991,20 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2690.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "Assets/GamePlay/Scripts/Piece.cs",
 					"semi_transient": false,
 					"settings":
@@ -1084,7 +1079,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1104,
+								1066
+							],
+							[
+								2179,
+								2113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 636.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1095,7 +1123,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 37.0
 	},
 	"input":
 	{
@@ -1121,7 +1149,7 @@
 		"cols":
 		[
 			0.0,
-			0.540176100824,
+			0.661880305226,
 			1.0
 		],
 		"rows":
@@ -1147,7 +1175,7 @@
 	"project": "citybloxxDemo.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

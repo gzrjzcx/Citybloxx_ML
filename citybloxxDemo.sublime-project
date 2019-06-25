@@ -8,7 +8,12 @@
 		},
 		{
 			"follow_symlinks":true,
-			"path": "./Assets/Scripts",
+			"path": "./Assets/GamePlay/Scripts",
+			"file_exclude_patterns": ["*.meta"]
+		},
+		{
+			"follow_symlinks":true,
+			"path": "./Assets/ML_Agents/ML_Scripts",
 			"file_exclude_patterns": ["*.meta"]
 		}
 	],

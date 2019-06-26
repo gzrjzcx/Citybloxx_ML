@@ -44,8 +44,8 @@ public class ColumnSwinging : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		// if(IsColumnShouldRotate())
-		// {
+		if(IsColumnShouldRotate())
+		{
 			// transform.position = new Vector3(Mathf.PingPong(Time.time*speed, 2), transform.position.y, transform.position.z);
 			// transform.position = new Vector3(Mathf.Cos(Time.time)*amplitudeMove, transform.position.y, transform.position.z);
 			rb2d.velocity = new Vector2(Mathf.Cos(Time.time)*amplitudeMove, 0);
@@ -58,11 +58,11 @@ public class ColumnSwinging : MonoBehaviour
 			Debug.DrawLine (new Vector3(transform.position.x,-30,0), new Vector3(transform.position.x,30,0),Color.yellow);
 			Debug.DrawLine(new Vector3(GameControl.instance.seaLevel.x - 10, GameControl.instance.seaLevel.y, 0),
 			 new Vector3(GameControl.instance.seaLevel.x + 10, GameControl.instance.seaLevel.y, 0), Color.blue);
-		// }
-		// else
-		// {
-		// 	rb2d.velocity = Vector2.zero;
-		// }
+		}
+		else
+		{
+			rb2d.velocity = Vector2.zero;
+		}
 	}
 
 	public void SwingingCenterMoveUp()

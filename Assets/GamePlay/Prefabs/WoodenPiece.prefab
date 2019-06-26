@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 3616114074434243906}
   - component: {fileID: 356531388322607283}
   - component: {fileID: 7709973032123586591}
-  - component: {fileID: 7237964594443217775}
   m_Layer: 0
   m_Name: WoodenPiece
   m_TagString: Untagged
@@ -120,6 +119,7 @@ MonoBehaviour:
   isFallen: 0
   deadCenterRange: 0.1
   stackRange: 0.5
+  rb2d: {fileID: 0}
 --- !u!50 &3616114074434243906
 Rigidbody2D:
   serializedVersion: 4
@@ -183,28 +183,3 @@ PolygonCollider2D:
       - {x: -1.0182637, y: -0.99811625}
       - {x: 1.0096118, y: -1.0081084}
       - {x: 1.002857, y: 0.9975741}
---- !u!114 &7237964594443217775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7682980575725646726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34b091dbc9e464de48ea0e9672c90a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 0}
-  agentParameters:
-    agentCameras: []
-    agentRenderTextures: []
-    maxStep: 0
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
-  mlTarget: {fileID: 0}
-  pieceObj: {fileID: 0}
-  monitorObj: {fileID: 0}
-  isJustCalledDone: 0
-  deadcenterCount: 0

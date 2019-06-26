@@ -68,20 +68,20 @@ public class Piece : MonoBehaviour
     void OnCollisionExit2D(Collision2D ctl)
     {
         GameControl.instance.mycolObj.SetCollisionInfo(ctl);
-        if(!isStacked)
+        if(!isStacked && GameControl.instance.mycolObj.topPieceCol.gameObject.tag == "Piece")
         {
             GameControl.instance.mycolObj.GetColumnHeightIncrement();
             if(CheckIfCanStack(ctl))
             {
                 stackStatus.isStackSuccessful = true;
                 GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-                // doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
+                doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
             }
             else
             {
                 stackStatus.isStackSuccessful = false;
                 GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
-                // OnStackingFailed();
+                OnStackingFailed();
             }
         }
         isStacked = true;
@@ -91,13 +91,8 @@ public class Piece : MonoBehaviour
     {
         float absDeltaX = Mathf.Abs(GameControl.instance.mycolObj.deltaX);
 
-        if(ctl.collider.gameObject.tag == "Ground")
-        {
-            return false;
-        }
-
         checkFallenSide();
-        // doTween.GetDeltaXFromCollision(absDeltaX);
+        doTween.GetDeltaXFromCollision(absDeltaX);
        
         if(absDeltaX < stackRange)
         {
@@ -109,7 +104,6 @@ public class Piece : MonoBehaviour
         }
         else 
         {
-            // checkFallenSide(deltaX);
             // Debug.Log(ctl.collider.gameObject.name + "  " + ctl.collider.transform.localPosition.x + " | " 
             //     + ctl.otherCollider.gameObject.name + "  " + ctl.otherCollider.transform.localPosition.x + " || " + "drop false");
             isFallen = true;
@@ -128,8 +122,8 @@ public class Piece : MonoBehaviour
             pos = other.transform.position;
             pos.z -= 0.5f;
             pos.y -= 0.5f;
-            // GameControl.instance.particleObj.PlayStackDeadCenterAnim(pos);
-            // GameControl.instance.particleObj.PlayComboPeriodAnim();
+            GameControl.instance.particleObj.PlayStackDeadCenterAnim(pos);
+            GameControl.instance.particleObj.PlayComboPeriodAnim();
         }
         else
         {
@@ -152,16 +146,16 @@ public class Piece : MonoBehaviour
 
     private void OnStackingFailed()
     {
-        // transform.position = new Vector3(0, -10f, 0);
-        // GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform
-        // doTween.FallenAnimation(stackStatus.fallenSide);
+        transform.position = new Vector3(0, -10f, 0);
+        GameControl.instance.doTweenObj.FallenAnimation(1); // cannot get the true transform
+        doTween.FallenAnimation(stackStatus.fallenSide);
         transform.parent = null;
     }
 
     void OnBecameInvisible()
     {
-        // if(isFallen)
-        //     GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
+        if(isFallen)
+            GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
     }
 
     public virtual void myTest()

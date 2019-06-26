@@ -18,8 +18,6 @@ public class GameControl : MonoBehaviour
     public DoTweenControl doTweenObj;
     public ParticleControl particleObj;
     public MyCollisionControl mycolObj;
-    public CBXPieceAgent agentObj;
-    public CBXAcademy academyObj;
 
     public Text scoreText;
     public Text missText;
@@ -82,48 +80,35 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingSuccessfully(bool isDeadCenter)
     {
-        // CheckFirstPieceIfStacked();
-        // Scored();
-        // ScreenMoveUp();
-        // SetColumnSwinging();
-        // seaLevel.y++;
+        CheckFirstPieceIfStacked();
+        Scored();
+        ScreenMoveUp();
+        SetColumnSwinging();
+        seaLevel.y++;
 
         if(isDeadCenter)
         {
             gameStatus = GameStatus.GAME_COMBO;
-            agentObj.ComputeReward();
-            agentObj.Done();
-            agentObj.isJustCalledDone = true;
-            agentObj.deadcenterCount++;
-            // comboControlObj.Combo();
-            // columnObj.Set2ComboSwingingAmplitude();
-            // particleObj.PlayComboPeriodAnim();
+            comboControlObj.Combo();
+            columnObj.Set2ComboSwingingAmplitude();
+            particleObj.PlayComboPeriodAnim();
         }
-        else
+        else if(gameStatus == GameStatus.GAME_COMBO)
         {
-            agentObj.ComputeReward();
-            agentObj.Done();
-            agentObj.isJustCalledDone = true;
+            comboControlObj.AddComboNum();            
         }
-        // else if(gameStatus == GameStatus.GAME_COMBO)
-        // {
-        //     comboControlObj.AddComboNum();            
-        // }
     }
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        agentObj.ComputeReward();
-        agentObj.Done();
-        agentObj.isJustCalledDone = true;
-        // Missed();
-        // CheckMissNum();
-        // screenMoveUpObj.ShakeCamera();
+        Missed();
+        CheckMissNum();
+        screenMoveUpObj.ShakeCamera();
     }
 
     void PieceStacked()
     {
-    	// piecePoolObj.HookNewPiece();
+    	piecePoolObj.HookNewPiece();
     }
 
     void Scored()

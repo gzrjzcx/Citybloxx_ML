@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"top",
+				"topPieceCol\tCollider2D"
+			],
+			[
 				"ve",
 				"Vector3\tVector3"
 			],
@@ -62,10 +66,6 @@
 			[
 				"del",
 				"stackDeltaX\tfloat"
-			],
-			[
-				"top",
-				"topPieceLocalPos\tVector3"
 			],
 			[
 				"dro",
@@ -520,28 +520,19 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
+			"file": "Assets/GamePlay/Scripts/GameControl.cs",
 			"settings":
 			{
-				"buffer_size": 4235,
-				"encoding": "UTF-8",
+				"buffer_size": 4352,
+				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
+			"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
 			"settings":
 			{
-				"buffer_size": 5100,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/GameControl.cs",
-			"settings":
-			{
-				"buffer_size": 4869,
+				"buffer_size": 2064,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -550,7 +541,7 @@
 			"file": "Assets/GamePlay/Scripts/Piece.cs",
 			"settings":
 			{
-				"buffer_size": 5150,
+				"buffer_size": 5052,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -559,7 +550,7 @@
 			"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
 			"settings":
 			{
-				"buffer_size": 3479,
+				"buffer_size": 3458,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -682,11 +673,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts",
-		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_Scripts"
+		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts"
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
+		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
+		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_Scripts/ML_GameControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_Scripts/ML_Piece.cs",
 		"/Users/alex/citybloxxDemo/Assets/ML_SourceFiles/config/trainer_config.yaml",
@@ -714,7 +707,6 @@
 		"/Users/alex/citybloxxDemo/Assets/Scripts/StackingEffect.cs",
 		"/Users/alex/citybloxxDemo/Assets/Scripts/HingePush.cs",
 		"/Users/alex/citybloxxDemo/Assets/Scripts/ForceToSwing.cs",
-		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
 		"/Users/alex/Desktop/test.cs",
 		"/Users/alex/FlappyBird/Assets/FlappyBirdStyleAssets/Scripts/ScrollingObject.cs",
 		"/Users/alex/FlappyBird/Assets/FlappyBirdStyleAssets/Scripts/RepeatingBG.cs",
@@ -812,9 +804,7 @@
 		"/Users/alex/Desktop/project_templete/includes/resource.h",
 		"/Users/alex/Desktop/mlp_cluster/mlp2019/data/fold1/X_test.pickle",
 		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-289048.out",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/baseline.py",
-		"/Users/alex/.zim/modules/custom/functions/from keras.layers import Dense",
-		"/Users/alex/.config/karabiner/assets/complex_modifications/1546877051.json"
+		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/baseline.py"
 	],
 	"find":
 	{
@@ -899,89 +889,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4235,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								95,
-								95
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"0,5": "Unnecessary using directive.",
-								"2284,2292": "The name 'absDelta' does not exist in the current context",
-								"2349,2357": "The name 'absDelta' does not exist in the current context",
-								"2404,2412": "The name 'absDelta' does not exist in the current context",
-								"26,31": "Unnecessary using directive."
-							},
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 703.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5100,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								515,
-								515
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "Assets/GamePlay/Scripts/GameControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4869,
+						"buffer_size": 4352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								179,
-								179
+								3524,
+								3524
 							]
 						],
 						"settings":
@@ -992,6 +912,35 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								899,
+								899
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1000,24 +949,24 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "Assets/GamePlay/Scripts/Piece.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5150,
+						"buffer_size": 5052,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5081,
-								5081
+								1817,
+								1817
 							]
 						],
 						"settings":
@@ -1079,31 +1028,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1413.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3479,
+						"buffer_size": 3458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1104,
-								1066
-							],
-							[
-								2179,
-								2113
+								2377,
+								2377
 							]
 						],
 						"settings":
@@ -1111,11 +1056,11 @@
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 636.0,
+						"translation.x": 3.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1149,7 +1094,7 @@
 		"cols":
 		[
 			0.0,
-			0.661880305226,
+			0.419525564534,
 			1.0
 		],
 		"rows":
@@ -1209,7 +1154,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1217,7 +1162,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 224.0,
+	"side_bar_width": 383.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

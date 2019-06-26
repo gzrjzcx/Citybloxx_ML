@@ -13,7 +13,7 @@
 		},
 		{
 			"follow_symlinks":true,
-			"path": "./Assets/ML_Agents/ML_Scripts",
+			"path": "./Assets/CBX_RL/Assets/ML_Agents/ML_Scripts",
 			"file_exclude_patterns": ["*.meta"]
 		}
 	],

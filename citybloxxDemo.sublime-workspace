@@ -818,7 +818,7 @@
 	],
 	"find":
 	{
-		"height": 50.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -930,7 +930,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 703.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1079,7 +1079,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 57.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1217,7 +1217,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 224.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

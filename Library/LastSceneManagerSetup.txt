@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ML_Agents/ML_Scenes/ML_SingleFixedPiece.unity
+- path: Assets/GamePlay/Scenes/Main.unity
   isLoaded: 1
   isActive: 1

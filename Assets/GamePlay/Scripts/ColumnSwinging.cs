@@ -34,7 +34,8 @@ public class ColumnSwinging : MonoBehaviour
 	bool IsColumnShouldRotate()
 	{
 		if(GameControl.instance.gameStatus != GameControl.GameStatus.GAME_OVER
-			&& GameControl.instance.gameStatus != GameControl.GameStatus.GAME_START)
+			&& GameControl.instance.gameStatus != GameControl.GameStatus.GAME_START
+			&& GameControl.instance.gameStatus != GameControl.GameStatus.GAME_FIRSTPIECE)
 		{
 			return true;
 		}

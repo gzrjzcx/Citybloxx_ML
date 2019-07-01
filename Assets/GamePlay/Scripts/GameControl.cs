@@ -1,9 +1,9 @@
-﻿﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using static GO_Extensions;
+using DG.Tweening;
 
 public class GameControl : MonoBehaviour
 {
@@ -33,7 +33,8 @@ public class GameControl : MonoBehaviour
     {
         GAME_READY = 0,  // Scene has been loaded, but game not start
         GAME_START, // Game start, but first piece not fallen
-        GAME_RUNNING, // Game is running but not combo, the first piece has fallen
+        GAME_FIRSTPIECE, // The first piece has fallen, but the second piece not fall
+        GAME_RUNNING, // Game is running but not combo, the second piece has fallen
         GAME_COMBO, // Game is running and in combo phase
         GAME_OVER // Game is over.
     }
@@ -73,14 +74,28 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void OnPieceStacking()
+    public void AfterCollisionAtGameStart()
     {
-        PieceStacked();
+        if(gameStatus == GameStatus.GAME_START)
+        {
+            gameStatus = GameStatus.GAME_FIRSTPIECE;
+        }
+        screenMoveUpObj.ObstacleMoveUp();
     }
+
+    public void AfterCollisionAtFirstPiece()
+    {
+        if(gameStatus == GameStatus.GAME_FIRSTPIECE)
+        {
+            gameStatus = GameStatus.GAME_RUNNING;
+        }
+    }
+
+
 
     public void AfterPieceStackingSuccessfully(bool isDeadCenter)
     {
-        CheckFirstPieceIfStacked();
+        CheckIfGameRunning();
         Scored();
         ScreenMoveUp();
         SetColumnSwinging();
@@ -104,11 +119,6 @@ public class GameControl : MonoBehaviour
         Missed();
         CheckMissNum();
         screenMoveUpObj.ShakeCamera();
-    }
-
-    void PieceStacked()
-    {
-    	piecePoolObj.HookNewPiece();
     }
 
     void Scored()
@@ -143,9 +153,9 @@ public class GameControl : MonoBehaviour
         screenMoveUpObj.MoveUp();
     }
 
-    void CheckFirstPieceIfStacked()
+    void CheckIfGameRunning()
     {
-        if(gameStatus == GameStatus.GAME_START)
+        if(gameStatus == GameStatus.GAME_FIRSTPIECE)
         {
             gameStatus = GameStatus.GAME_RUNNING;
         }

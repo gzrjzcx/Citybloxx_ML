@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class EllipticalOrbit : MonoBehaviour
 {
 	public float a = 50, b = 30;

@@ -9,6 +9,7 @@ public class ScreenMoveUp : MonoBehaviour
 	public GameObject skyObj_1;
 	public GameObject skyObj_2;
 	public GameObject cameraObj;
+	public GameObject obstacleObj;
 
 	public float pieceSize = 1f;
 	public float backgroundHeight = 10f;
@@ -17,6 +18,7 @@ public class ScreenMoveUp : MonoBehaviour
 	private float slingMoveStep;
 	private Vector3 cameraDestination;
 	private float slingPosYOffsetDestination;
+	private bool isFinishedOneDrop = false;
 
 	public Vector3 cameraPos
 	{
@@ -32,12 +34,12 @@ public class ScreenMoveUp : MonoBehaviour
 			GameControl.instance.slingObj.offsetY = Mathf.MoveTowards(
 				GameControl.instance.slingObj.offsetY, slingPosYOffsetDestination, moveSpeed*Time.fixedDeltaTime);
 		}
-		
 	}
 
 	public void MoveUp()
 	{
 		BackgroundMoveUp();
+		ObstacleMoveUp();
 		SetCameraMoveDestination();
 		SetSlingMoveDestination();
 	}
@@ -46,12 +48,15 @@ public class ScreenMoveUp : MonoBehaviour
 	{
 		cameraDestination = cameraObj.transform.position;
 		cameraDestination.y += GameControl.instance.columnObj.columnHeightIncrement;
+		// cameraObj.transform.DOMoveY(GameControl.instance.columnObj.columnHeightIncrement, 0.5);
 	}
 
 	private void SetSlingMoveDestination()
 	{
 		slingPosYOffsetDestination = GameControl.instance.slingObj.offsetY;
 		slingPosYOffsetDestination += GameControl.instance.columnObj.columnHeightIncrement;
+		// GameControl.instance.slingObj.offsetY += GameControl.instance.columnObj.columnHeightIncrement;
+		// GameControl.instance.slingObj.transform.DOMoveY(GameControl.instance.columnObj.columnHeightIncrement, 0.5);
 	}
 
 	private void BackgroundMoveUp()
@@ -83,8 +88,10 @@ public class ScreenMoveUp : MonoBehaviour
 		cameraObj.transform.DOShakePosition(0.5f, new Vector3(0.1f, 0.1f, 0), 50, 60);
 	}
 
-
-
+	public void ObstacleMoveUp()
+	{
+		obstacleObj.transform.position = GameControl.instance.seaLevel;
+	}
 
 
 

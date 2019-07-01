@@ -21,6 +21,7 @@ public class DoTweenControl : MonoBehaviour
 	private void OnJumpComplete()
 	{
 		transform.rotation = Quaternion.identity;
+		transform.GetComponent<Piece>().isFallen = false;
 	}
 
 	public void StackingNoDeadCenterAnimation(int fallenSide, bool isDeadCenter)

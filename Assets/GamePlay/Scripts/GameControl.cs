@@ -81,6 +81,8 @@ public class GameControl : MonoBehaviour
             gameStatus = GameStatus.GAME_FIRSTPIECE;
         }
         screenMoveUpObj.ObstacleMoveUp();
+
+        LoadingScene.instance.Show(SceneManager.LoadSceneAsync("TestScene"));
     }
 
     public void AfterCollisionAtFirstPiece()

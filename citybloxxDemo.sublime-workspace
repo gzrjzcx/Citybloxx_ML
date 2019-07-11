@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"pau",
+				"Pause()\tvoid"
+			],
+			[
+				"quit",
+				"Quit()\tvoid"
+			],
+			[
+				"scen",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"tr",
+				"true\ttrue"
+			],
+			[
+				"tim",
+				"timeScale\tfloat"
+			],
+			[
+				"col",
+				"columnPiecesObj\tColumnPieces"
+			],
+			[
+				"c",
+				"columnPiecesObj\tColumnPieces"
+			],
+			[
+				"re",
+				"Remove(GameObject item)\tbool"
+			],
+			[
+				"pi",
+				"piecePoolSize\tint"
+			],
+			[
+				"gam",
+				"GameControl\tGameControl"
+			],
+			[
+				"game",
+				"gameObject\tGameObject"
+			],
+			[
+				"m",
+				"mlTargetRb2d\tRigidbody2D"
+			],
+			[
+				"ml",
+				"mlTarget\tTransform"
+			],
+			[
+				"AI",
+				"AIPlay()\tvoid"
+			],
+			[
+				"getall",
+				"GetAllScenePaths()\tstring[]"
+			],
+			[
+				"lo",
+				"LoadScene(string sceneName, LoadSceneMode mode)\tvoid"
+			],
+			[
+				"sc",
+				"SceneManagement\tSceneManagement"
+			],
+			[
+				"Uni",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"fi",
+				"FirstOrDefault()\tT"
+			],
+			[
+				"Res",
+				"Resources\tResources"
+			],
+			[
+				"St",
+				"System\tSystem"
+			],
+			[
 				"load",
 				"LoadSceneAsync(string sceneName)\tAsyncOperation"
 			],
@@ -12,20 +96,12 @@
 				"SceneManager\tSceneManager"
 			],
 			[
-				"gam",
-				"gameObject\tGameObject"
-			],
-			[
 				"cei",
 				"CeilToInt(float f)\tint"
 			],
 			[
 				"Mat",
 				"Mathf\tMathf"
-			],
-			[
-				"sc",
-				"scrollbarValueText\tText"
 			],
 			[
 				"Unty",
@@ -72,16 +148,8 @@
 				"GAME_FIRSTPIECE\tGameStatus"
 			],
 			[
-				"game",
-				"GameControl\tGameControl"
-			],
-			[
 				"ga",
 				"gameObject\tGameObject"
-			],
-			[
-				"col",
-				"Collision\tCollision"
 			],
 			[
 				"GAme",
@@ -160,10 +228,6 @@
 				"dropPieceLocalPos\tVector3"
 			],
 			[
-				"re",
-				"return\treturn"
-			],
-			[
 				"Collision",
 				"CollisionControl\tCollisionControl"
 			],
@@ -186,10 +250,6 @@
 			[
 				"is",
 				"isJustCalledDone\tbool"
-			],
-			[
-				"m",
-				"MLAgents\tMLAgents"
 			],
 			[
 				"a",
@@ -324,10 +384,6 @@
 				"OutQuart\tEase"
 			],
 			[
-				"pi",
-				"pivot\tVector3"
-			],
-			[
 				"do",
 				"DoPunchRotation\tDoPunchRotation"
 			],
@@ -458,62 +514,6 @@
 			[
 				"oncom",
 				"OnComboTimingComplete()\tvoid"
-			],
-			[
-				"Tim",
-				"Timer\tTimer"
-			],
-			[
-				"istim",
-				"isTiming\tbool"
-			],
-			[
-				"isti",
-				"isTiming\tbool"
-			],
-			[
-				"isTI",
-				"isTimerStart\tbool"
-			],
-			[
-				"tetarge",
-				"timerTarget_\tfloat"
-			],
-			[
-				"isre",
-				"isRepeate_\tbool"
-			],
-			[
-				"isI",
-				"isIgnoreTimeScale_\tbool"
-			],
-			[
-				"up",
-				"updateEvent_\tUpdateEvent"
-			],
-			[
-				"upd",
-				"updateEvent_\tUpdateEvent"
-			],
-			[
-				"ontim",
-				"onTimerCompleted_\tCompleteEvent"
-			],
-			[
-				"time",
-				"timerTarget\tfloat"
-			],
-			[
-				"Time",
-				"Time_\tfloat"
-			],
-			[
-				"istime",
-				"isTimerStart\tbool"
-			],
-			[
-				"clam",
-				"Clamp(float value, float min, float max)\tfloat"
 			]
 		]
 	},
@@ -523,79 +523,52 @@
 			"file": "Assets/GamePlay/Scripts/GameControl.cs",
 			"settings":
 			{
-				"buffer_size": 4685,
+				"buffer_size": 4717,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/ComboControl.cs",
+			"file": "Assets/GamePlay/Scripts/AIControl.cs",
 			"settings":
 			{
-				"buffer_size": 1777,
+				"buffer_size": 657,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+			"file": "Assets/GamePlay/Scripts/RLAgent.cs",
 			"settings":
 			{
-				"buffer_size": 2560,
+				"buffer_size": 952,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/Piece.cs",
+			"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
 			"settings":
 			{
-				"buffer_size": 5766,
+				"buffer_size": 529,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/LoadingScene.cs",
+			"file": "Assets/GamePlay/Scripts/MainButton.cs",
 			"settings":
 			{
-				"buffer_size": 1008,
+				"buffer_size": 276,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/MyCollisionControl.cs",
+			"file": "Assets/GamePlay/Scripts/PiecePool.cs",
 			"settings":
 			{
-				"buffer_size": 1080,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
-			"settings":
-			{
-				"buffer_size": 3318,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/EllipticalOrbit.cs",
-			"settings":
-			{
-				"buffer_size": 1509,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
-			"settings":
-			{
-				"buffer_size": 3538,
+				"buffer_size": 1499,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -719,15 +692,31 @@
 	"expanded_folders":
 	[
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities"
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities",
+		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts"
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnPieces.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/EllipticalOrbit.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnSwinging.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities/NoUse/RotateWithSwinging.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/BtnManager.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/LoadingScene.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/StartupSceneManager.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ResourceManager.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Managers.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GameManager.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GlobalManager.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/MyCollisionControl.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GameControl.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/SingletonScriptableObject.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ObstacleControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ParticleControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GameControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs",
 		"/Users/alex/citybloxxDemo/citybloxxDemo.sublime-project",
 		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_SourceFiles/config/trainer_config.yaml",
 		"/Users/alex/citybloxxDemo/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
@@ -835,26 +824,11 @@
 		"/Users/alex/Downloads/irnv2_patching_phase2.sh",
 		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/data_handler.py",
 		"/Users/alex/Desktop/mlp_cluster/mlp2019/scripts/test_submit.sh",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-301961.out",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/test_submit.sh",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/preprocessing.py",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/scripts/experiments/sliding_stride.sh",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/scripts/experiments/sliding_dilation.sh",
-		"/Users/alex/Desktop/mlp2019/patch_test/dump1.txt",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-301526.out",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-301531.out",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/builder.py",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/test.py",
-		"/Users/alex/Desktop/mlp2019/src/data_handler.py",
-		"/Users/alex/Desktop/mlp2019/src/plots.py",
-		"/Users/alex/Desktop/mlp2019/data/fold1/X_train.pickle",
-		"/Users/alex/Desktop/mlp2019/src/arg_extractor.py",
-		"/Users/alex/Desktop/mlp2019/log.txt",
-		"/Users/alex/Desktop/mlp2019/src/utilities.py"
+		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-301961.out"
 	],
 	"find":
 	{
-		"height": 49.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -869,6 +843,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"columnGameObj",
 			"loadingSceneControl",
 			"sealevel",
 			"isFallen",
@@ -933,7 +908,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -942,15 +917,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4685,
+						"buffer_size": 4717,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1758,
-								1758
+								2106,
+								2106
 							]
 						],
 						"settings":
@@ -962,77 +937,11 @@
 								"0,5": "不需要的 using 指令。",
 								"110,115": "不需要的 using 指令。",
 								"138,143": "不需要的 using 指令。",
-								"1766,1781": "当前上下文中不存在名称“loadingSceneObj”"
+								"320,332": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnPieces.cs”中的类型“ColumnPieces”与“MacBLAS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“ColumnPieces”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnPieces.cs”中定义的类型。"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 666.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/GamePlay/Scripts/ComboControl.cs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1777,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								828,
-								828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 65.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2560,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2543,
-								2543
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"1082,1099": "当前上下文中不存在名称“SetObstacleMoveUp”",
-								"26,31": "不需要的 using 指令。"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1040,43 +949,36 @@
 					},
 					"stack_index": 5,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 3,
-					"file": "Assets/GamePlay/Scripts/Piece.cs",
+					"buffer": 1,
+					"file": "Assets/GamePlay/Scripts/AIControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5766,
+						"buffer_size": 657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2074,
-								2074
+								399,
+								399
 							]
 						],
 						"settings":
 						{
-							"history_list_is_closing": true,
 							"is_init_dirty_state": false,
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"2095,2121": "当前上下文中不存在名称“AfterCollisionAtFirstPiece”",
-								"26,31": "不需要的 using 指令。"
+								"129,136": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs”中的类型“RLAgent”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“RLAgent”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs”中定义的类型。",
+								"26,31": "不需要的 using 指令。",
+								"339,354": "'“RLAgent”未包含“RequestDecision”的定义，并且找不到可接受第一个“RLAgent”类型参数的可访问扩展方法“RequestDecision”(是否缺少 using 指令或程序集引用?)"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1086,20 +988,68 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Assets/GamePlay/Scripts/LoadingScene.cs",
+					"buffer": 2,
+					"file": "Assets/GamePlay/Scripts/RLAgent.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1008,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								596,
-								596
+								694,
+								427
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"119,124": "未能找到类型或命名空间名“Agent”(是否缺少 using 指令或程序集引用?)",
+								"135,140": "未能找到类型或命名空间名“Piece”(是否缺少 using 指令或程序集引用?)",
+								"236,251": "'“RLAgent.InitializeAgent()”: 没有找到适合的方法来重写",
+								"26,31": "不需要的 using 指令。",
+								"270,281": "当前上下文中不存在名称“GameControl”",
+								"329,340": "当前上下文中不存在名称“GameControl”",
+								"415,434": "'“RLAgent.CollectObservations()”: 没有找到适合的方法来重写",
+								"442,454": "当前上下文中不存在名称“AddVectorObs”",
+								"460,469": "'“RLAgent”未包含“transform”的定义，并且找不到可接受第一个“RLAgent”类型参数的可访问扩展方法“transform”(是否缺少 using 指令或程序集引用?)",
+								"483,495": "当前上下文中不存在名称“AddVectorObs”",
+								"638,649": "'“RLAgent.AgentAction(float[], string)”: 没有找到适合的方法来重写",
+								"79,84": "不需要的 using 指令。",
+								"790,800": "当前上下文中不存在名称“gameObject”",
+								"85,93": "未能找到类型或命名空间名“MLAgents”(是否缺少 using 指令或程序集引用?)"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
 							]
 						],
 						"settings":
@@ -1107,25 +1057,45 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"115,127": "命名空间“<global namespace>”已经包含“LoadingScene”的定义",
 								"26,31": "不需要的 using 指令。",
-								"328,334": "类型“LoadingScene”已定义了一个名为“Update”的具有相同参数类型的成员",
-								"354,363": "在“LoadingScene.isLoading”和“LoadingScene.isLoading”之间具有二义性",
-								"396,419": "在“LoadingScene.currentLoadingOperation”和“LoadingScene.currentLoadingOperation”之间具有二义性",
-								"443,466": "在“LoadingScene.currentLoadingOperation”和“LoadingScene.currentLoadingOperation”之间具有二义性",
-								"496,500": "以下方法或属性之间的调用具有二义性:“LoadingScene.Hide()”和“LoadingScene.Hide()”",
-								"549,560": "类型“LoadingScene”已定义了一个名为“SetProgress”的具有相同参数类型的成员",
-								"698,702": "类型“LoadingScene”已定义了一个名为“Show”的具有相同参数类型的成员",
-								"780,803": "在“LoadingScene.currentLoadingOperation”和“LoadingScene.currentLoadingOperation”之间具有二义性",
-								"829,840": "以下方法或属性之间的调用具有二义性:“LoadingScene.SetProgress(float)”和“LoadingScene.SetProgress(float)”",
-								"851,860": "在“LoadingScene.isLoading”和“LoadingScene.isLoading”之间具有二义性",
-								"892,896": "类型“LoadingScene”已定义了一个名为“Hide”的具有相同参数类型的成员",
-								"944,967": "在“LoadingScene.currentLoadingOperation”和“LoadingScene.currentLoadingOperation”之间具有二义性",
-								"981,990": "在“LoadingScene.isLoading”和“LoadingScene.isLoading”之间具有二义性"
+								"319,325": "当前上下文中不存在名称“Resume”",
+								"353,358": "当前上下文中不存在名称“Pause”"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/GamePlay/Scripts/MainButton.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"248,257": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PauseMenu.cs”中的类型“PauseMenu”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“PauseMenu”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PauseMenu.cs”中定义的类型。",
+								"26,31": "不需要的 using 指令。"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1135,33 +1105,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 0,
-					"file": "Assets/GamePlay/Scripts/GameControl.cs",
+					"buffer": 5,
+					"file": "Assets/GamePlay/Scripts/PiecePool.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4685,
+						"buffer_size": 1499,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2294,
-								2294
+								1355,
+								1355
 							]
 						],
 						"settings":
 						{
-							"history_list_is_closing": true,
 							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"110,115": "不需要的 using 指令。",
-								"138,143": "不需要的 using 指令。",
-								"557,572": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ObstacleControl.cs”中的类型“ObstacleControl”与“MacBLAS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“ObstacleControl”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ObstacleControl.cs”中定义的类型。"
-							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1171,130 +1133,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Assets/GamePlay/Scripts/MyCollisionControl.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1080,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								661,
-								661
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Assets/GamePlay/Scripts/EllipticalOrbit.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1509,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								97,
-								97
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1069,
-								1069
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1317,18 +1155,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.515355559192,
 			1.0
 		],
 		"rows":

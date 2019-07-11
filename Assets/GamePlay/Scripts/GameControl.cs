@@ -12,17 +12,18 @@ public class GameControl : MonoBehaviour
 
 	public PiecePool piecePoolObj;
     public ColumnSwinging columnObj;
+    public ColumnPieces columnPiecesObj;
     public ScreenMoveUp screenMoveUpObj;
     public EllipticalOrbit slingObj;
     public ComboControl comboControlObj;
     public DoTweenControl doTweenObj;
     public ParticleControl particleObj;
     public MyCollisionControl mycolObj;
+    public AIControl aiObj;
 
     public Text scoreText;
     public Text missText;
     public GameObject gameOverText;
-    public GameObject columnGameObj;
 
     public int populationScore = 0;
     public int stackedPieceNum = 0;
@@ -81,8 +82,6 @@ public class GameControl : MonoBehaviour
             gameStatus = GameStatus.GAME_FIRSTPIECE;
         }
         screenMoveUpObj.ObstacleMoveUp();
-
-        LoadingScene.instance.Show(SceneManager.LoadSceneAsync("TestScene"));
     }
 
     public void AfterCollisionAtFirstPiece()

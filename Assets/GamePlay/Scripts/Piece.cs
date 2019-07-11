@@ -5,6 +5,7 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
     public DoTweenControl doTween;
+    public AIControl aiObj;
     public struct StackStatus
     {
         public bool isStackSuccessful;
@@ -16,6 +17,7 @@ public class Piece : MonoBehaviour
     public bool isHooked = false;
     public bool isStacked = true;
     public bool isFallen = false;
+    public bool dropSignal = false;
 
     public float deadCenterRange = 0.08f;
     public float stackRange = 0.5f;
@@ -33,7 +35,7 @@ public class Piece : MonoBehaviour
     {
     	if(isHooked)
     	{
-	        if(Input.GetKeyDown("space") || Input.touchCount > 0)
+	        if(Input.GetKeyDown("space") || Input.touchCount > 0 || dropSignal)
 	        {
 	        	transform.parent = null;
                 Vector3 p = transform.position;
@@ -75,6 +77,7 @@ public class Piece : MonoBehaviour
             {
                 case GameControl.GameStatus.GAME_START:
                     GameControl.instance.AfterCollisionAtGameStart();
+                    GameControl.instance.columnPiecesObj.Add(this.gameObject);
                     break;
                 case GameControl.GameStatus.GAME_FIRSTPIECE:
                 case GameControl.GameStatus.GAME_RUNNING:
@@ -84,7 +87,6 @@ public class Piece : MonoBehaviour
             }
         }
         isStacked = true;
-        Debug.Log("Piece Exit");
     }
 
     void AfterCollisionAtGameRunning()
@@ -96,7 +98,7 @@ public class Piece : MonoBehaviour
             {
                 Stack();
                 if(GameControl.instance.gameStatus == GameControl.GameStatus.GAME_FIRSTPIECE)
-                 GameControl.instance.AfterCollisionAtGameStart();
+                    GameControl.instance.AfterCollisionAtGameStart();
             }
             else
                 Fall();
@@ -111,7 +113,8 @@ public class Piece : MonoBehaviour
     {
         stackStatus.isStackSuccessful = true;
         GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-        doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);        
+        doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
+        GameControl.instance.columnPiecesObj.Add(this.gameObject);
     }
 
     void Fall()

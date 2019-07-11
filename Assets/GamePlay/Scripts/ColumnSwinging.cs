@@ -130,4 +130,9 @@ public class ColumnSwinging : MonoBehaviour
 	{
 
 	}
+
+	public void ResetColumnStatus()
+	{
+		
+	}
 }

@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
 	public GameObject pauseMenuUI;
+    public RectTransform pauseWindow;
 
     public void Resume()
     {

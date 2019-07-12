@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
 
 public class ComboControl : MonoBehaviour
 {
     
 	public Slider comboSlider;
     public Timer comboTimer;
-    public Text comboNumText;
-    public Text comboScoreText;
+    public TextMeshProUGUI comboNumText;
+    public TextMeshProUGUI comboScoreText;
+    public Image comboBarStar;
+    public Image fillImage;
     
     public int comboNum = 0;
 
@@ -28,13 +32,41 @@ public class ComboControl : MonoBehaviour
             comboTimer.RestartTimerForCombo();
         }
         else
+        {
             comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, true, false, false);
+            PlayComboBarStarAnim();
+        }
+
+        FlashComboBar();
+    }
+
+    void PlayComboBarStarAnim()
+    {
+        Sequence barStarAnimSeq = DOTween.Sequence();
+        barStarAnimSeq.SetLink(comboSlider.gameObject, LinkBehaviour.KillOnDisable);
+        Tween rot = comboBarStar.transform.DOLocalRotate(new Vector3(0,0,60), 0.3f);
+        Tween scale = comboBarStar.transform.DOPunchScale(new Vector3(0.3f, 0.3f, 0), 0.3f, 1, 0);
+        barStarAnimSeq.Append(rot);
+        barStarAnimSeq.Join(scale);
+        barStarAnimSeq.SetLoops(-1, LoopType.Incremental);
+        barStarAnimSeq.OnKill(resetBarStar);
+    }
+
+    void resetBarStar()
+    {
+        comboBarStar.transform.localScale = new Vector3(1,1,1);
+        comboBarStar.transform.localRotation = Quaternion.identity;
+    }
+
+    void FlashComboBar()
+    {
+        fillImage.DOColor(Color.white, 0.08f).SetEase(Ease.Flash, 2, 0);
     }
 
     public void AddComboNum()
     {
         comboNum++;
-        comboNumText.text = "X " + comboNum.ToString();
+        comboNumText.text = "x " + comboNum.ToString();
     }
 
     void OnComboTimingComplete()

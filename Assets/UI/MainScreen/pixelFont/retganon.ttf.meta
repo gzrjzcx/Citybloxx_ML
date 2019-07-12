@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f3c3e94447aec44f08957f6b3d9f02c0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Return of Ganon
+  fontNames:
+  - Return of Ganon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4eb460550848147c293209d9c84227c3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

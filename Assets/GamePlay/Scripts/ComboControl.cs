@@ -57,7 +57,7 @@ public class ComboControl : MonoBehaviour
         int comboScore = comboNum * 3;
         comboScoreText.text = "+ " + comboScore.ToString(); 
         GameControl.instance.populationScore += comboScore;
-        GameControl.instance.scoreText.text = "Score:" + GameControl.instance.populationScore.ToString();
+        GameControl.instance.populationScoreText.text = GameControl.instance.populationScore.ToString();
         Invoke("delayInactiveComboScoreText", 1);
     }
 

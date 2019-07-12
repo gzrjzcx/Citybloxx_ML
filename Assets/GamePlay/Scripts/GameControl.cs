@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using static GO_Extensions;
 using DG.Tweening;
+using TMPro;
 
 public class GameControl : MonoBehaviour
 {
@@ -21,9 +22,10 @@ public class GameControl : MonoBehaviour
     public MyCollisionControl mycolObj;
     public AIControl aiObj;
 
-    public Text scoreText;
-    public Text missText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI populationScoreText;
     public GameObject gameOverText;
+    public GameObject[] lifePieces;
 
     public int populationScore = 0;
     public int stackedPieceNum = 0;
@@ -126,13 +128,14 @@ public class GameControl : MonoBehaviour
     {
         stackedPieceNum++;
         populationScore++;
-        scoreText.text = "Score:" + populationScore.ToString();
+        scoreText.text = stackedPieceNum.ToString();
+        populationScoreText.text = populationScore.ToString();
     }
 
     void Missed()
     {
+        lifePieces[missNum].SetActive(false);
         missNum++;
-        missText.text = "Miss:" + missNum.ToString();
     }
 
     void CheckMissNum()

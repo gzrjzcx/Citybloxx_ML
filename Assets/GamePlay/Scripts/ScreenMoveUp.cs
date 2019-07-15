@@ -10,6 +10,8 @@ public class ScreenMoveUp : MonoBehaviour
 	public GameObject skyObj_2;
 	public GameObject cameraObj;
 	public GameObject obstacleObj;
+	public Transform shadowObj_1;
+	public Transform shadowObj_2;
 
 	public float pieceSize = 1f;
 	public float backgroundHeight = 10f;
@@ -18,6 +20,8 @@ public class ScreenMoveUp : MonoBehaviour
 	private float slingMoveStep;
 	private Vector3 cameraDestination;
 	private float slingPosYOffsetDestination;
+	private Vector3 shadowPosYOffsetDestination_1;
+	private Vector3 shadowPosYOffsetDestination_2;
 	private bool isFinishedOneDrop = false;
 	[SerializeField]
 	private List<string> bgName;
@@ -43,6 +47,10 @@ public class ScreenMoveUp : MonoBehaviour
 		{
 			cameraObj.transform.position = Vector3.MoveTowards(
 				cameraObj.transform.position, cameraDestination, moveSpeed*Time.fixedDeltaTime);
+			shadowObj_1.position = Vector3.MoveTowards(
+				shadowObj_1.position, shadowPosYOffsetDestination_1, moveSpeed*Time.fixedDeltaTime);
+			shadowObj_2.position = Vector3.MoveTowards(
+				shadowObj_2.position, shadowPosYOffsetDestination_2, moveSpeed*Time.fixedDeltaTime);
 			GameControl.instance.slingObj.offsetY = Mathf.MoveTowards(
 				GameControl.instance.slingObj.offsetY, slingPosYOffsetDestination, moveSpeed*Time.fixedDeltaTime);
 		}
@@ -50,7 +58,6 @@ public class ScreenMoveUp : MonoBehaviour
 
 	public void MoveUp()
 	{
-		// BackgroundMoveUp();
 		BGMoveUp_v2();
 		ObstacleMoveUp();
 		SetCameraMoveDestination();
@@ -70,6 +77,14 @@ public class ScreenMoveUp : MonoBehaviour
 		slingPosYOffsetDestination += GameControl.instance.columnObj.columnHeightIncrement;
 		// GameControl.instance.slingObj.offsetY += GameControl.instance.columnObj.columnHeightIncrement;
 		// GameControl.instance.slingObj.transform.DOMoveY(GameControl.instance.columnObj.columnHeightIncrement, 0.5);
+	}
+
+	private void SetShadowMoveDestinantion()
+	{
+		shadowPosYOffsetDestination_1 = shadowObj_1.position;
+		shadowPosYOffsetDestination_1.y -= GameControl.instance.columnObj.columnHeightIncrement;
+		shadowPosYOffsetDestination_2 = shadowObj_2.position;
+		shadowPosYOffsetDestination_2.y -= GameControl.instance.columnObj.columnHeightIncrement;
 	}
 
 	private void BGMoveUp_v2()
@@ -145,7 +160,6 @@ public class ScreenMoveUp : MonoBehaviour
 	{
 		obstacleObj.transform.position = GameControl.instance.seaLevel;
 	}
-
 
 
 

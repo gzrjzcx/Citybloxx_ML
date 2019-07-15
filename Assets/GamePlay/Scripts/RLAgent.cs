@@ -7,18 +7,18 @@ public class RLAgent : Agent
 {
 	public Piece pieceObj;
 	public Transform mlTarget;
-	public Rigidbody2D mlTargetRb2d;
+	public Transform mlColumn;
 
 	public override void CollectObservations()
 	{
 		AddVectorObs(this.transform.position);
-		AddVectorObs(mlTarget.position);
-        AddVectorObs(mlTarget.rotation.z);
-        AddVectorObs(mlTargetRb2d.velocity.x);
+        AddVectorObs(mlTarget.position);
+		AddVectorObs(mlTarget.localPosition);
+        AddVectorObs(mlColumn.eulerAngles.z);
+        AddVectorObs(mlColumn.position.x);
+
         Debug.Log("this.position" + this.transform.position, gameObject);
         Debug.Log("target.position" + mlTarget.position, gameObject);
-        Debug.Log("target.rotation" + mlTarget.rotation.z);
-        Debug.Log("target.velocity" + mlTargetRb2d.velocity.x);
 	}
 
 	public override void AgentAction(float[] vectorAction, string textAction)

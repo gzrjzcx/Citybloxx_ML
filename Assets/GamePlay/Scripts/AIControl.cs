@@ -33,6 +33,6 @@ public class AIControl : MonoBehaviour
 	{
 		GameObject topPiece = GameControl.instance.columnPiecesObj.topPiece;
 		rlAgentObj.mlTarget = topPiece.transform;
-		rlAgentObj.mlTargetRb2d = topPiece.GetComponent<Rigidbody2D>();
+		rlAgentObj.mlColumn = GameControl.instance.columnObj.GetComponent<Transform>();
 	}
 }

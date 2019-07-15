@@ -229,10 +229,12 @@
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Experimental.compute" />
     <None Include="Assets\GamePlay\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\UI\MainScreen\bg\planets\Planets-01\-LER ANTES-.txt" />
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Dense.compute" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\TexConv.compute" />
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\DenseFP16.compute" />
+    <None Include="Assets\UI\MainScreen\bg\planets\Planets-01\-READ BEFORE-.txt" />
     <None Include="Assets\GamePlay\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Random.cginc" />
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Activation.compute" />
@@ -259,6 +261,7 @@
     <None Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Conv.compute" />
     <None Include="Assets\UI\casualUI\button\Button_bottomPart.png.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\UI\MainScreen\bg\planets\giants_high_resolution\license.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/alex/citybloxxDemo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

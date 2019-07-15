@@ -19,6 +19,18 @@ public class ScreenMoveUp : MonoBehaviour
 	private Vector3 cameraDestination;
 	private float slingPosYOffsetDestination;
 	private bool isFinishedOneDrop = false;
+	[SerializeField]
+	private List<string> bgName;
+	private int curBGIdx = 2;
+
+	void Start()
+	{
+		bgName = new List<string>();
+		for(int i=1; i<=15; i++)
+		{
+			bgName.Add("bg" + i.ToString());
+		}
+	}
 
 	public Vector3 cameraPos
 	{
@@ -38,7 +50,8 @@ public class ScreenMoveUp : MonoBehaviour
 
 	public void MoveUp()
 	{
-		BackgroundMoveUp();
+		// BackgroundMoveUp();
+		BGMoveUp_v2();
 		ObstacleMoveUp();
 		SetCameraMoveDestination();
 		SetSlingMoveDestination();
@@ -57,6 +70,46 @@ public class ScreenMoveUp : MonoBehaviour
 		slingPosYOffsetDestination += GameControl.instance.columnObj.columnHeightIncrement;
 		// GameControl.instance.slingObj.offsetY += GameControl.instance.columnObj.columnHeightIncrement;
 		// GameControl.instance.slingObj.transform.DOMoveY(GameControl.instance.columnObj.columnHeightIncrement, 0.5);
+	}
+
+	private void BGMoveUp_v2()
+	{
+		Vector3 posSkyObj_1 = skyObj_1.transform.position;
+		Vector3 posSkyObj_2 = skyObj_2.transform.position;
+		Vector3 posCamera = cameraObj.transform.position;
+		string bgPath = "bg/bg";
+		float bgHeight = 20.4f;
+		float half_h = 10.2f;
+
+		// Debug.Log("sky1.posY = " + posSkyObj_1.y);
+		// Debug.Log("sky2.posY = " + posSkyObj_2.y);
+		// Debug.Log("seaLevel. y = " + GameControl.instance.seaLevel.y);
+		Sprite bg = Resources.Load<Sprite>(bgPath + curBGIdx.ToString());
+
+		if(posSkyObj_1.y < posSkyObj_2.y)
+		{
+			if(GameControl.instance.seaLevel.y >= posSkyObj_1.y + half_h)
+			{
+				curBGIdx ++;
+				if(curBGIdx > 14)
+					curBGIdx = 4;
+				skyObj_1.GetComponent<SpriteRenderer>().sprite = bg;
+				posSkyObj_1.y += 2 * bgHeight;
+				skyObj_1.transform.position = posSkyObj_1;
+			}
+		}
+		else
+		{
+			if(GameControl.instance.seaLevel.y >= posSkyObj_2.y + half_h)
+			{
+				curBGIdx ++;
+				if(curBGIdx > 14)
+					curBGIdx = 4;
+				skyObj_2.GetComponent<SpriteRenderer>().sprite = bg;
+				posSkyObj_2.y += 2 * bgHeight;
+				skyObj_2.transform.position = posSkyObj_2;
+			}
+		}
 	}
 
 	private void BackgroundMoveUp()

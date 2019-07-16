@@ -21,6 +21,7 @@ public class GameControl : MonoBehaviour
     public ParticleControl particleObj;
     public MyCollisionControl mycolObj;
     public AIControl aiObj;
+    public FlyerControl flyerObj;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI populationScoreText;
@@ -102,6 +103,7 @@ public class GameControl : MonoBehaviour
         Scored();
         ScreenMoveUp();
         SetColumnSwinging();
+        flyerObj.SpawnFlyman();
         seaLevel.y++;
 
         if(isDeadCenter)

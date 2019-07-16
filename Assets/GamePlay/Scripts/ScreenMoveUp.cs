@@ -47,10 +47,6 @@ public class ScreenMoveUp : MonoBehaviour
 		{
 			cameraObj.transform.position = Vector3.MoveTowards(
 				cameraObj.transform.position, cameraDestination, moveSpeed*Time.fixedDeltaTime);
-			shadowObj_1.position = Vector3.MoveTowards(
-				shadowObj_1.position, shadowPosYOffsetDestination_1, moveSpeed*Time.fixedDeltaTime);
-			shadowObj_2.position = Vector3.MoveTowards(
-				shadowObj_2.position, shadowPosYOffsetDestination_2, moveSpeed*Time.fixedDeltaTime);
 			GameControl.instance.slingObj.offsetY = Mathf.MoveTowards(
 				GameControl.instance.slingObj.offsetY, slingPosYOffsetDestination, moveSpeed*Time.fixedDeltaTime);
 		}
@@ -122,30 +118,6 @@ public class ScreenMoveUp : MonoBehaviour
 					curBGIdx = 4;
 				skyObj_2.GetComponent<SpriteRenderer>().sprite = bg;
 				posSkyObj_2.y += 2 * bgHeight;
-				skyObj_2.transform.position = posSkyObj_2;
-			}
-		}
-	}
-
-	private void BackgroundMoveUp()
-	{
-		Vector3 posSkyObj_1 = skyObj_1.transform.position;
-		Vector3 posSkyObj_2 = skyObj_2.transform.position;
-		Vector3 posCamera = cameraObj.transform.position;
-
-		if(posSkyObj_1.y < posSkyObj_2.y)
-		{
-			if(posCamera.y - posSkyObj_2.y >= 0)
-			{
-				posSkyObj_1.y += 2 * backgroundHeight;
-				skyObj_1.transform.position = posSkyObj_1;
-			}
-		}
-		else
-		{
-			if(posCamera.y - posSkyObj_1.y >= 0)
-			{
-				posSkyObj_2.y += 2 * backgroundHeight;
 				skyObj_2.transform.position = posSkyObj_2;
 			}
 		}

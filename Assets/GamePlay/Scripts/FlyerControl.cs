@@ -21,6 +21,10 @@ public class FlyerControl : MonoBehaviour
 		{
 			KillAllFlyMan();
 		}
+		if(Input.GetKey(KeyCode.F))
+		{
+			SpawnFlyman();
+		}
 	}
 
 	void Start()
@@ -34,12 +38,20 @@ public class FlyerControl : MonoBehaviour
 		}
 	}
 
+	public void SpawnMultiFlyman()
+	{
+		for(int i=0; i<Random.Range(1, 4); i++)
+		{
+			Invoke("SpawnFlyman", Random.Range(0.05f, 0.2f));
+		}
+	}
+
 	public void SpawnFlyman()
 	{
 		if(GameControl.instance.stackedPieceNum < 2)
 			return;
 		string path = "flyer/man/flyman";
-		flymanPrefab = Resources.Load<GameObject>(path + Random.Range(1, 6));
+		flymanPrefab = Resources.Load<GameObject>(path + Random.Range(1, 7));
 		// flymanPrefab = Resources.Load<GameObject>(path + index);
 		System.Random rnd = new System.Random();
 		int sign = (rnd.Next(2) == 1) ? 1 : -1; // 1->right

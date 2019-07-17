@@ -103,7 +103,7 @@ public class GameControl : MonoBehaviour
         Scored();
         ScreenMoveUp();
         SetColumnSwinging();
-        flyerObj.SpawnFlyman();
+        flyerObj.SpawnMultiFlyman();
         seaLevel.y++;
 
         if(isDeadCenter)
@@ -124,6 +124,7 @@ public class GameControl : MonoBehaviour
         Missed();
         CheckMissNum();
         screenMoveUpObj.ShakeCamera();
+        flyerObj.KillAllFlyMan();
     }
 
     void Scored()

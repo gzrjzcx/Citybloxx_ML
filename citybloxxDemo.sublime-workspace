@@ -4,6 +4,126 @@
 		"selected_items":
 		[
 			[
+				"gam",
+				"gameObject\tGameObject"
+			],
+			[
+				"ki",
+				"Kill(object targetOrId)\tint"
+			],
+			[
+				"p",
+				"Pause(object targetOrId)\tint"
+			],
+			[
+				"setb",
+				"SetBool(string name, bool value)\tvoid"
+			],
+			[
+				"k",
+				"GetKey(KeyCode key)\tbool"
+			],
+			[
+				"getcu",
+				"GetCurrentAnimatorStateInfo(int layerIndex)\tAnimatorStateInfo"
+			],
+			[
+				"anim",
+				"anim\tAnimator"
+			],
+			[
+				"fl",
+				"flymanList\tList<GameObject>"
+			],
+			[
+				"re",
+				"Remove(GameObject item)\tbool"
+			],
+			[
+				"Fly",
+				"FlyerControl\tFlyerControl"
+			],
+			[
+				"of",
+				"offsetY\tfloat"
+			],
+			[
+				"sor",
+				"sortingOrder\tint"
+			],
+			[
+				"DOFade",
+				"DOFade(float endValue, float duration)\tTweenerCore<Color, Color, ColorOptions>"
+			],
+			[
+				"ju",
+				"jump\tTween"
+			],
+			[
+				"jum",
+				"jumpAnimSeq\tSequence"
+			],
+			[
+				"dolocalm",
+				"DOLocalMoveX(float endValue, float duration)\tTweenerCore<Vector3, Vector3, VectorOptions>"
+			],
+			[
+				"screento",
+				"ScreenToWorldPoint(Vector3 position)\tVector3"
+			],
+			[
+				"flman",
+				"flymanPrefab\tGameObject"
+			],
+			[
+				"bo",
+				"boundary_pos\tVector3"
+			],
+			[
+				"vie",
+				"ViewportToScreenPoint(Vector3 position)\tVector3"
+			],
+			[
+				"to",
+				"topPiece\tGameObject"
+			],
+			[
+				"pice",
+				"columnPiecesObj\tColumnPieces"
+			],
+			[
+				"vec",
+				"Vector3\tv"
+			],
+			[
+				"ran",
+				"Range(int min, int max)\tint"
+			],
+			[
+				"lo",
+				"Load<T>(string path)\tT"
+			],
+			[
+				"reso",
+				"Resources\tResources"
+			],
+			[
+				"lis",
+				"List<string>()\tList<string>()"
+			],
+			[
+				"anima",
+				"Animator\tAnimator"
+			],
+			[
+				"getcom",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"Ani",
+				"Animator\tAnimator"
+			],
+			[
 				"shad",
 				"shadowPosYOffsetDestination_2\tVector3"
 			],
@@ -46,10 +166,6 @@
 			[
 				"on",
 				"onKill\tTweenCallback"
-			],
-			[
-				"lo",
-				"loopType\tLoopType"
 			],
 			[
 				"Dot",
@@ -112,16 +228,8 @@
 				"columnPiecesObj\tColumnPieces"
 			],
 			[
-				"re",
-				"Remove(GameObject item)\tbool"
-			],
-			[
 				"pi",
 				"piecePoolSize\tint"
-			],
-			[
-				"gam",
-				"GameControl\tGameControl"
 			],
 			[
 				"game",
@@ -276,10 +384,6 @@
 				"Environment\tEnvironment"
 			],
 			[
-				"to",
-				"ToString()\tstring"
-			],
-			[
 				"pow",
 				"Power_P04_Reward(float distance)\tfloat"
 			],
@@ -376,10 +480,6 @@
 				"StopComboPeriodAnim()\tvoid"
 			],
 			[
-				"p",
-				"PlayStackDeadCenterAnim(Vector3 pos)\tvoid"
-			],
-			[
 				"isp",
 				"isPlaying\tbool"
 			],
@@ -394,10 +494,6 @@
 			[
 				"Par",
 				"ParticleSystem\tParticleSystem"
-			],
-			[
-				"sor",
-				"sortingLayerName\tstring"
 			],
 			[
 				"inex",
@@ -418,102 +514,6 @@
 			[
 				"Tweene",
 				"Tweener\tTweener"
-			],
-			[
-				"l",
-				"loopType\tLoopType"
-			],
-			[
-				"A",
-				"AppendCallback(TweenCallback callback)\tSequence"
-			],
-			[
-				"pla",
-				"PlayBackwards()\tvoid"
-			],
-			[
-				"dotw",
-				"DOTween\tDOTween"
-			],
-			[
-				"s",
-				"StopMotion(int motionFps, AnimationCurve animCurve)\tEaseFunction"
-			],
-			[
-				"setsp",
-				"SetSpeedBased(bool isSpeedBased)\tTweener"
-			],
-			[
-				"Dotw",
-				"doTween\tDoTweenControl"
-			],
-			[
-				"Outqu",
-				"OutQuart\tEase"
-			],
-			[
-				"dopunch",
-				"DOPunchRotation(Vector3 punch, float duration)\tTweener"
-			],
-			[
-				"collider",
-				"Collider2D\tCollider2D"
-			],
-			[
-				"rata",
-				"RotateAround(Vector3 axis, float angle)\tvoid"
-			],
-			[
-				"co",
-				"collider\tCollider2D"
-			],
-			[
-				"dolook",
-				"DOLookAt(Vector3 towards, float duration, AxisConstraint axisConstraint = None, Vector3? up = null)\tTweener"
-			],
-			[
-				"inouqu",
-				"InOutQuart\tEase"
-			],
-			[
-				"ouq",
-				"OutQuart\tEase"
-			],
-			[
-				"out",
-				"OutQuart\tEase"
-			],
-			[
-				"dopu",
-				"DOPunchPosition(Vector3 punch, float duration)\tTweener"
-			],
-			[
-				"ani",
-				"StackingNoDeadCenterAnimation()\tvoid"
-			],
-			[
-				"dopun",
-				"DOPunchRotation(Vector3 punch, float duration)\tTweener"
-			],
-			[
-				"set",
-				"SetEase(Ease ease)\tTweenerCore<Quaternion, Vector3, QuaternionOptions>"
-			],
-			[
-				"sk",
-				"skyObj_2\tGameObject"
-			],
-			[
-				"ju",
-				"DOJump(Vector3 endValue, float jumpPower, int numJumps, float duration)\tSequence"
-			],
-			[
-				"dora",
-				"DORotateQuaternion(Quaternion endValue, float duration)\tTweenerCore<Quaternion, Quaternion, NoOptions>"
-			],
-			[
-				"G",
-				"GO_Extensions\tGO_Extensions"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "Assets/GamePlay/Scripts/GameControl.cs",
 			"settings":
 			{
-				"buffer_size": 4843,
+				"buffer_size": 4909,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -547,19 +547,19 @@
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+			"file": "Assets/GamePlay/Scripts/FlyerControl.cs",
 			"settings":
 			{
-				"buffer_size": 4632,
+				"buffer_size": 2863,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
+			"file": "Assets/GamePlay/Scripts/FlyMan.cs",
 			"settings":
 			{
-				"buffer_size": 567,
+				"buffer_size": 504,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -569,6 +569,24 @@
 			"settings":
 			{
 				"buffer_size": 2795,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/GamePlay/Scripts/Piece.cs",
+			"settings":
+			{
+				"buffer_size": 5952,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+			"settings":
+			{
+				"buffer_size": 3822,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -595,15 +613,6 @@
 			"settings":
 			{
 				"buffer_size": 1499,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/MainButton.cs",
-			"settings":
-			{
-				"buffer_size": 276,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -727,11 +736,12 @@
 	"expanded_folders":
 	[
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities",
 		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts"
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/MainButton.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PauseMenu.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs",
@@ -857,13 +867,11 @@
 		"/Users/alex/Desktop/mlp_cluster/mlp2019/scripts/submit.sh",
 		"/Users/alex/Desktop/install.sh",
 		"/Users/alex/Downloads/irnv2_patching_phase2.sh",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/data_handler.py",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/scripts/test_submit.sh",
-		"/Users/alex/Desktop/mlp_cluster/mlp2019/slurm-301961.out"
+		"/Users/alex/Desktop/mlp_cluster/mlp2019/src/data_handler.py"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 47.0
 	},
 	"find_in_files":
 	{
@@ -952,15 +960,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4843,
+						"buffer_size": 4909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3554,
-								3554
+								2782,
+								2814
 							]
 						],
 						"settings":
@@ -979,7 +987,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2296.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
@@ -1018,7 +1026,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1055,39 +1063,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+					"file": "Assets/GamePlay/Scripts/FlyerControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4632,
+						"buffer_size": 2863,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								251,
-								262
+								367,
+								322
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"2393,2422": "运算符“+=”无法应用于“Vector3”和“float”类型的操作数"
+								"2285,2292": "应输入方法名称"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2962.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1095,42 +1101,45 @@
 				},
 				{
 					"buffer": 4,
-					"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
+					"file": "Assets/GamePlay/Scripts/FlyMan.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 567,
+						"buffer_size": 504,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								114,
-								114
+								329,
+								339
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
+								"215,226": "当前上下文中不存在名称“GameControl”",
 								"26,31": "不需要的 using 指令。",
-								"319,325": "当前上下文中不存在名称“Resume”",
-								"353,358": "当前上下文中不存在名称“Pause”"
+								"415,423": "'“SpriteRenderer”不包含“DOFade”的定义，并且最佳扩展方法重载“ShortcutExtensions.DOFade(Material, float, float)”需要类型为“Material”的接收器"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 5,
 					"file": "Assets/GamePlay/Scripts/ComboControl.cs",
@@ -1144,8 +1153,8 @@
 						"selection":
 						[
 							[
-								1790,
-								1790
+								751,
+								751
 							]
 						],
 						"settings":
@@ -1162,20 +1171,79 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 6,
+					"file": "Assets/GamePlay/Scripts/Piece.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5811,
+								5828
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/GamePlay/Scripts/ScreenMoveUp.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1157,
+								1157
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"2393,2422": "运算符“+=”无法应用于“Vector3”和“float”类型的操作数"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 603.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
 					"semi_transient": false,
 					"settings":
@@ -1203,11 +1271,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "Assets/GamePlay/Scripts/ColumnPieces.cs",
 					"semi_transient": false,
 					"settings":
@@ -1219,13 +1287,18 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								704,
+								704
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"668,680": "无法确定条件表达式的类型，因为“int”和“UnityEngine.GameObject”之间没有隐式转换"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1234,11 +1307,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "Assets/GamePlay/Scripts/PiecePool.cs",
 					"semi_transient": false,
 					"settings":
@@ -1265,42 +1338,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Assets/GamePlay/Scripts/MainButton.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"26,31": "不需要的 using 指令。",
-								"322,333": "'“Transform”不包含“DOMoveX”的定义，并且最佳扩展方法重载“DOTweenModulePhysics.DOMoveX(Rigidbody, float, float, bool)”需要类型为“Rigidbody”的接收器"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1334,7 +1372,7 @@
 		"cols":
 		[
 			0.0,
-			0.695360910791,
+			0.485591947115,
 			1.0
 		],
 		"rows":

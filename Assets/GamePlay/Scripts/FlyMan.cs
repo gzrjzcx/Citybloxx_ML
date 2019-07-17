@@ -7,12 +7,18 @@ public class FlyMan : MonoBehaviour
 {
  	void OnTriggerEnter2D()
  	{
- 		SpriteRenderer renderer = this.GetComponent<SpriteRenderer>();
- 		renderer.DOFade(0, 0.3f).OnComplete(DestroyGO);
+ 		KillFlyMan();
  	}
 
  	void DestroyGO()
  	{
+ 		GameControl.instance.flyerObj.flymanList.Remove(this.gameObject);
  		Destroy(this.gameObject);
+ 	}
+
+ 	public void KillFlyMan()
+ 	{
+ 		SpriteRenderer renderer = this.GetComponent<SpriteRenderer>();
+ 		renderer.DOFade(0, 0.3f).OnComplete(DestroyGO).SetId("FadeOut" + gameObject.name);
  	}
 }

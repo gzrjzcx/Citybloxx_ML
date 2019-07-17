@@ -4268,6 +4268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flymanName: []
+  flymanList: []
+  index: 2
 --- !u!1 &1341039995
 GameObject:
   m_ObjectHideFlags: 0

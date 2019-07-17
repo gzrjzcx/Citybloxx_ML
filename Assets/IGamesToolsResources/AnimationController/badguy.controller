@@ -10,7 +10,7 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Die
-    m_Type: 9
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -45,9 +45,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.79452056
+  m_ExitTime: 0
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -69,7 +69,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.116158605
   m_TransitionOffset: 0
-  m_ExitTime: 0.9981351
+  m_ExitTime: 1.02
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -92,9 +92,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.8235294
+  m_ExitTime: 0
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -221,7 +221,7 @@ AnimatorStateMachine:
     m_Position: {x: 276, y: -84, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102243558309948106}
-    m_Position: {x: 276, y: 60, z: 0}
+    m_Position: {x: 192, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102988984122168448}
     m_Position: {x: 288, y: 132, z: 0}

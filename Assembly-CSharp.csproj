@@ -199,6 +199,8 @@
     <Compile Include="Assets\GamePlay\Scripts\AIControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Base\SingletonScriptableObject.cs" />
     <Compile Include="Assets\GamePlay\Scripts\BtnManager.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\Cloud.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\CloudsControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ColumnPieces.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ColumnSwinging.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ComboControl.cs" />

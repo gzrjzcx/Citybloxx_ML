@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{431EBCEB-9C6F-1464-E351-4A678E260697}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GamePlay/Scripts/FlyerControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GamePlay/Scripts/CloudsControl.cs">
     <Files>
       <File FileName="Assets/GamePlay/Scripts/GameControl.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/ScreenMoveUp.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/RLAgent.cs" Line="22" Column="3" />
       <File FileName="Assets/GamePlay/Scripts/Piece.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/FlyerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/GamePlay/Scripts/CloudsControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -23,6 +24,7 @@
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs" relfile="Assets/GamePlay/Scripts/RLAgent.cs" line="14" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs" relfile="Assets/GamePlay/Scripts/RLAgent.cs" line="20" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyerControl.cs" relfile="Assets/GamePlay/Scripts/FlyerControl.cs" line="23" column="1" />
+      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/CloudsControl.cs" relfile="Assets/GamePlay/Scripts/CloudsControl.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

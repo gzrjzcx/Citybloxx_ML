@@ -22,6 +22,7 @@ public class GameControl : MonoBehaviour
     public MyCollisionControl mycolObj;
     public AIControl aiObj;
     public FlyerControl flyerObj;
+    public CloudsControl cloudObj;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI populationScoreText;
@@ -104,6 +105,7 @@ public class GameControl : MonoBehaviour
         ScreenMoveUp();
         SetColumnSwinging();
         flyerObj.SpawnMultiFlyman();
+        cloudObj.SpawnMultiClouds();
         seaLevel.y++;
 
         if(isDeadCenter)

@@ -40,6 +40,9 @@ public class FlyerControl : MonoBehaviour
 
 	public void SpawnMultiFlyman()
 	{
+		if(GameControl.instance.stackedPieceNum < 2)
+			return;
+
 		for(int i=0; i<Random.Range(1, 4); i++)
 		{
 			Invoke("SpawnFlyman", Random.Range(0.05f, 0.2f));
@@ -48,8 +51,6 @@ public class FlyerControl : MonoBehaviour
 
 	public void SpawnFlyman()
 	{
-		if(GameControl.instance.stackedPieceNum < 2)
-			return;
 		string path = "flyer/man/flyman";
 		flymanPrefab = Resources.Load<GameObject>(path + Random.Range(1, 7));
 		// flymanPrefab = Resources.Load<GameObject>(path + index);

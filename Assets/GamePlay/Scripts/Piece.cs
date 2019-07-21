@@ -55,7 +55,8 @@ public class Piece : MonoBehaviour
             GameControl.instance.piecePoolObj.HookNewPiece();
             rb2d.isKinematic = true;
             rb2d.velocity = Vector3.zero;
-            Parent2Column();        
+            Parent2Column();
+            aiObj.rlAgentObj.RecordThinkingTime();      
         }
     }
 
@@ -69,7 +70,7 @@ public class Piece : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D ctl)
     {
-        GameControl.instance.mycolObj.SetCollisionInfo(ctl);
+         GameControl.instance.mycolObj.SetCollisionInfo(ctl);
 
         if(!isStacked)
         {
@@ -102,6 +103,7 @@ public class Piece : MonoBehaviour
             }
             else
                 Fall();
+            aiObj.AIPlay();
         }
         else
         {

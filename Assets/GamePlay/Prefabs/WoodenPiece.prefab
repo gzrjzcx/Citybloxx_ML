@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7709973032123586591}
   - component: {fileID: 6202146952607995821}
   - component: {fileID: 2572145275926959970}
+  - component: {fileID: 5565025346269531500}
   m_Layer: 0
   m_Name: WoodenPiece
   m_TagString: Untagged
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7682980575725646726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f71da7a64f9e4873941c1d3a7b94359, type: 3}
   m_Name: 
@@ -209,7 +210,7 @@ MonoBehaviour:
     numberOfActionsBetweenDecisions: 1
   pieceObj: {fileID: 8710141791390138346}
   mlTarget: {fileID: 0}
-  mlTargetRb2d: {fileID: 0}
+  mlColumn: {fileID: 0}
 --- !u!114 &2572145275926959970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,4 +223,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc457168906bf48ab9da90a1c520be40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rlAgentObj: {fileID: 6202146952607995821}
+  rlAgentObj: {fileID: 5565025346269531500}
+--- !u!114 &5565025346269531500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682980575725646726}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876ea48eb58924beb839f35b139bf46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: e73723fba173d4481818b69c1a6b9b1a, type: 2}
+  agentParameters:
+    agentCameras: []
+    agentRenderTextures: []
+    maxStep: 1000
+    resetOnDone: 1
+    onDemandDecision: 1
+    numberOfActionsBetweenDecisions: 1
+  mlTarget: {fileID: 0}
+  monitor: {fileID: 0}
+  mlColumn: {fileID: 0}
+  pieceObj: {fileID: 8710141791390138346}
+  thinkingTime: 0
+  cor_count: 0
+  total_count: 0
+  s: 
+  t: 
+  isCorrect: 0

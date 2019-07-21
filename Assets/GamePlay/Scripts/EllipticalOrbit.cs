@@ -18,6 +18,7 @@ public class EllipticalOrbit : MonoBehaviour
 	public float rotateZ;
 
 	public float offsetY = 0f;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class EllipticalOrbit : MonoBehaviour
     {   
         if(IsHookShouldSpin())
         {
+            time = Time.time;
             angle += Time.deltaTime * angularSpeed;
             z = a * Mathf.Cos(angle);
             x = b * Mathf.Sin(angle);

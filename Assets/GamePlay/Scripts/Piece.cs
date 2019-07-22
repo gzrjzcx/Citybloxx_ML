@@ -56,7 +56,7 @@ public class Piece : MonoBehaviour
             rb2d.isKinematic = true;
             rb2d.velocity = Vector3.zero;
             Parent2Column();
-            aiObj.rlAgentObj.RecordThinkingTime();      
+            // aiObj.rlAgentObj.RecordThinkingTime();      
         }
     }
 
@@ -103,7 +103,7 @@ public class Piece : MonoBehaviour
             }
             else
                 Fall();
-            aiObj.AIPlay();
+            // aiObj.AIPlay();
         }
         else
         {

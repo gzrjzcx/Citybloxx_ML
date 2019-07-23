@@ -23,6 +23,9 @@ public class GameControl : MonoBehaviour
     public AIControl aiObj;
     public FlyerControl flyerObj;
     public CloudsControl cloudObj;
+    public PlanetControl planetObj;
+    public StarControl starObj;
+    public SpaceFOControl foObj;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI populationScoreText;
@@ -106,6 +109,7 @@ public class GameControl : MonoBehaviour
         SetColumnSwinging();
         flyerObj.SpawnMultiFlyman();
         cloudObj.SpawnMultiClouds();
+        aiObj.AddMinPosY();
         seaLevel.y++;
 
         if(isDeadCenter)
@@ -123,8 +127,8 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        Missed();
-        CheckMissNum();
+        // Missed();
+        // CheckMissNum();
         screenMoveUpObj.ShakeCamera();
         flyerObj.KillAllFlyMan();
     }

@@ -103,7 +103,6 @@ public class Piece : MonoBehaviour
             }
             else
                 Fall();
-            // aiObj.AIPlay();
         }
         else
         {
@@ -117,6 +116,7 @@ public class Piece : MonoBehaviour
         GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
         doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
         GameControl.instance.columnPiecesObj.Add(this.gameObject);
+        //this.transform.GetComponent<StackAgent>().AddMinPosY();
     }
 
     void Fall()
@@ -138,14 +138,14 @@ public class Piece : MonoBehaviour
         {
             isFallen = false;
             checkIfDeadCenter(absDeltaX, GameControl.instance.mycolObj.topPieceLocalPos.x, GameControl.instance.mycolObj.dropPieceCol);
-            Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
-                + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop true", gameObject);
+            // Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
+            //     + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop true", gameObject);
             return true;
         }
         else 
         {
-            Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
-                + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop false", gameObject);
+            // Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
+            //     + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop false", gameObject);
             isFallen = true;
             return false;
         }

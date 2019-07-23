@@ -16,9 +16,7 @@ GameObject:
   - component: {fileID: 3616114074434243906}
   - component: {fileID: 356531388322607283}
   - component: {fileID: 7709973032123586591}
-  - component: {fileID: 6202146952607995821}
-  - component: {fileID: 2572145275926959970}
-  - component: {fileID: 5565025346269531500}
+  - component: {fileID: 4653860450691623387}
   m_Layer: 0
   m_Name: WoodenPiece
   m_TagString: Untagged
@@ -117,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doTween: {fileID: 356531388322607283}
-  aiObj: {fileID: 2572145275926959970}
+  aiObj: {fileID: 0}
   isHooked: 0
   isStacked: 1
   isFallen: 0
@@ -188,16 +186,16 @@ PolygonCollider2D:
       - {x: -1.0182637, y: -0.99811625}
       - {x: 1.0096118, y: -1.0081084}
       - {x: 1.002857, y: 0.9975741}
---- !u!114 &6202146952607995821
+--- !u!114 &4653860450691623387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7682980575725646726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f71da7a64f9e4873941c1d3a7b94359, type: 3}
+  m_Script: {fileID: 11500000, guid: ac91494d16fd742469315e34924b61c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 11400000, guid: cf69212b8e8e14aafa6b356244c8fee0, type: 2}
@@ -209,48 +207,9 @@ MonoBehaviour:
     onDemandDecision: 1
     numberOfActionsBetweenDecisions: 1
   pieceObj: {fileID: 8710141791390138346}
-  mlTarget: {fileID: 0}
-  mlColumn: {fileID: 0}
---- !u!114 &2572145275926959970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7682980575725646726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc457168906bf48ab9da90a1c520be40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rlAgentObj: {fileID: 5565025346269531500}
---- !u!114 &5565025346269531500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7682980575725646726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876ea48eb58924beb839f35b139bf46e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: e73723fba173d4481818b69c1a6b9b1a, type: 2}
-  agentParameters:
-    agentCameras: []
-    agentRenderTextures: []
-    maxStep: 1000
-    resetOnDone: 1
-    onDemandDecision: 1
-    numberOfActionsBetweenDecisions: 1
-  mlTarget: {fileID: 0}
-  monitor: {fileID: 0}
-  mlColumn: {fileID: 0}
-  pieceObj: {fileID: 8710141791390138346}
-  thinkingTime: 0
-  cor_count: 0
-  total_count: 0
-  s: 
-  t: 
-  isCorrect: 0
+  targetRb2d: {fileID: 0}
+  targetTran: {fileID: 0}
+  columnRb2d: {fileID: 0}
+  columnTran: {fileID: 0}
+  agentRb2d: {fileID: 3616114074434243906}
+  root: {fileID: 0}

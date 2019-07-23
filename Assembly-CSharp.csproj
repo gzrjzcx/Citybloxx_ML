@@ -61,11 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXAcademy.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXDDAAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXPieceAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXReward.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSaverAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSlingAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSwingReward.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CCMStackAgent.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\SpawnMLArea.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DDecision.cs" />
@@ -203,6 +206,8 @@
     <Compile Include="Assets\GamePlay\Scripts\ColumnSwinging.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ComboControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\EllipticalOrbit.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Alarm.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\AlarmControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Cloud.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\CloudsControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\FlyerControl.cs" />
@@ -221,8 +226,8 @@
     <Compile Include="Assets\GamePlay\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Piece.cs" />
     <Compile Include="Assets\GamePlay\Scripts\PiecePool.cs" />
-    <Compile Include="Assets\GamePlay\Scripts\RLAgent.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ScreenMoveUp.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\StackAgent.cs" />
     <Compile Include="Assets\GamePlay\Scripts\StartupSceneManager.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\AutoDestroy.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\DoTweenControl.cs" />

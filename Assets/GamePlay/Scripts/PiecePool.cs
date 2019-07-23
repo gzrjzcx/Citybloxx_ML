@@ -38,6 +38,7 @@ public class PiecePool : MonoBehaviour
         pieceObj.GetComponent<Rigidbody2D>().isKinematic = true;
 
         GameControl.instance.columnPiecesObj.Remove(pieces[currentPieceIdx]);
+        GameControl.instance.aiObj.stackAgentObj = pieces[currentPieceIdx].GetComponent<StackAgent>();
         
         currentPieceIdx++;
         if(currentPieceIdx >= piecePoolSize)

@@ -21,7 +21,7 @@ public class StarControl : MonoBehaviour
 	{
 		starList = new List<GameObject>();
 		starName = new List<string>();
-		for(int i=0; i<=8; i++)
+		for(int i=0; i<=14; i++)
 			starName.Add("star_" + i.ToString());
 	}
 
@@ -41,8 +41,9 @@ public class StarControl : MonoBehaviour
 	{
 		string pfbPath = "star/prefabs/Star";
 		string imgPath = "star/images/clear_";
+		int imgIdx = Random.Range(0, 15);
 		starPrefab = Resources.Load<GameObject>(pfbPath);
-		Sprite img = Resources.Load<Sprite>(imgPath + Random.Range(0, 9));
+		Sprite img = Resources.Load<Sprite>(imgPath + imgIdx);
 
 		Vector3 leftTopPos = Camera.main.ScreenToWorldPoint(
 			new Vector3(0, Screen.height, 8));
@@ -53,13 +54,15 @@ public class StarControl : MonoBehaviour
 			Random.Range(leftTopPos.x, -leftTopPos.x),
 			Random.Range(leftTopPos.y, leftTopPos.y + offsetY), 0f);
 		Vector3 rotEuler = new Vector3(0, 0, Random.Range(0f, 360f));
-		float scale = Random.Range(1f, 2f);
+		float scale = (imgIdx < 9) ? Random.Range(1f, 2f) : Random.Range(0.1f, 0.2f);
+		Debug.Log(scale);
 
 		star = Instantiate(starPrefab, spawnPos, Quaternion.Euler(rotEuler));
 		starList.Add(star);
 		star.transform.SetParent(this.transform, true);
 		star.GetComponent<SpriteRenderer>().sprite = img;
 		star.transform.localScale = new Vector3(scale, scale, 1);
+		star.GetComponent<Star>().imgIdx = imgIdx;
 
 	}
 }

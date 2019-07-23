@@ -4,12 +4,100 @@
 		"selected_items":
 		[
 			[
-				"ino",
-				"InOutCubic\tEase"
+				"spafoty",
+				"SpaceFOType\tSpaceFOType"
+			],
+			[
+				"spafot",
+				"SpaceFOType\tSpaceFOType"
+			],
+			[
+				"spfot",
+				"SpaceFOType\tSpaceFOType"
+			],
+			[
+				"Spaf",
+				"SpaceFOType\tSpaceFOType"
 			],
 			[
 				"of",
 				"offsetX\tfloat"
+			],
+			[
+				"OutQua",
+				"OutQuart\tEase"
+			],
+			[
+				"outqu",
+				"OutQuart\tEase"
+			],
+			[
+				"end",
+				"end_1\tVector3"
+			],
+			[
+				"mov",
+				"mov_out\tTween"
+			],
+			[
+				"pathty",
+				"PathType\tPathType"
+			],
+			[
+				"ve",
+				"Vector3\tVector3"
+			],
+			[
+				"wa",
+				"wayPoints_2\tVector3[]"
+			],
+			[
+				"en",
+				"end_2\tVector3"
+			],
+			[
+				"lt",
+				"LoopType\tLoopType"
+			],
+			[
+				"m",
+				"mov_in\tTween"
+			],
+			[
+				"app",
+				"Append(Tween t)\tSequence"
+			],
+			[
+				"lop",
+				"LoopType\tLoopType"
+			],
+			[
+				"loo",
+				"loopType\tLoopType"
+			],
+			[
+				"dotw",
+				"DOTween\tDOTween"
+			],
+			[
+				"sin",
+				"InOutSine\tEase"
+			],
+			[
+				"S",
+				"SHIP\tSpaceFOType"
+			],
+			[
+				"bo",
+				"bottomCenterPos\tVector3"
+			],
+			[
+				"radi",
+				"radiusX\tfloat"
+			],
+			[
+				"ino",
+				"InOutCubic\tEase"
 			],
 			[
 				"top",
@@ -26,10 +114,6 @@
 			[
 				"scree",
 				"screen_offsetY\tfloat"
-			],
-			[
-				"bo",
-				"bottomPoint\tVector3"
 			],
 			[
 				"ra",
@@ -94,10 +178,6 @@
 			[
 				"loopt",
 				"LoopType\tLoopType"
-			],
-			[
-				"loo",
-				"loops\tint"
 			],
 			[
 				"loop",
@@ -372,10 +452,6 @@
 				"piecePoolSize\tint"
 			],
 			[
-				"m",
-				"mlTargetRb2d\tRigidbody2D"
-			],
-			[
 				"ml",
 				"mlTarget\tTransform"
 			],
@@ -438,82 +514,6 @@
 			[
 				"Af",
 				"AfterCollisionAtGameRunning()\tvoid"
-			],
-			[
-				"fal",
-				"Fall()\tvoid"
-			],
-			[
-				"ob",
-				"ObstacleMoveUp()\tvoid"
-			],
-			[
-				"cam",
-				"cameraPos\tVector3"
-			],
-			[
-				"dr",
-				"dropPieceLocalPos\tVector3"
-			],
-			[
-				"t",
-				"topPieceLocalPos\tVector3"
-			],
-			[
-				"tp",
-				"topPieceCol\tCollider2D"
-			],
-			[
-				"Gam",
-				"GAME_FIRSTPIECE\tGameStatus"
-			],
-			[
-				"ga",
-				"gameObject\tGameObject"
-			],
-			[
-				"GAme",
-				"GAME_FIRSTPIECE\tGameStatus"
-			],
-			[
-				"Domove",
-				"DOMoveY(float endValue, float duration)\tTweenerCore<Vector3, Vector3, VectorOptions>"
-			],
-			[
-				"ve",
-				"Vector3\tVector3"
-			],
-			[
-				"mat",
-				"Mathf\tMathf"
-			],
-			[
-				"mlTarget",
-				"mlTargetRb2d\tRigidbody2D"
-			],
-			[
-				"Rigi",
-				"Rigidbody2D\tRigidbody2D"
-			],
-			[
-				"ML",
-				"ML_Piece\tML_Piece"
-			],
-			[
-				"mono",
-				"MonoBehaviour\tMonoBehaviour"
-			],
-			[
-				"M",
-				"Mathf\tMathf"
-			],
-			[
-				"ar",
-				"args\tstring[]"
-			],
-			[
-				"en",
-				"Environment\tEnvironment"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "Assets/GamePlay/Scripts/GameControl.cs",
 			"settings":
 			{
-				"buffer_size": 5020,
+				"buffer_size": 5121,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -532,7 +532,7 @@
 			"file": "Assets/GamePlay/Scripts/Piece.cs",
 			"settings":
 			{
-				"buffer_size": 6030,
+				"buffer_size": 6036,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -541,7 +541,7 @@
 			"file": "Assets/GamePlay/Scripts/FlyingObject/StarControl.cs",
 			"settings":
 			{
-				"buffer_size": 1502,
+				"buffer_size": 1634,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -550,7 +550,7 @@
 			"file": "Assets/GamePlay/Scripts/FlyingObject/SpaceFOControl.cs",
 			"settings":
 			{
-				"buffer_size": 2531,
+				"buffer_size": 3662,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -559,7 +559,7 @@
 			"file": "Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs",
 			"settings":
 			{
-				"buffer_size": 2875,
+				"buffer_size": 5728,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -568,7 +568,7 @@
 			"file": "Assets/GamePlay/Scripts/FlyingObject/Star.cs",
 			"settings":
 			{
-				"buffer_size": 671,
+				"buffer_size": 735,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -733,11 +733,11 @@
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AIControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/Cloud.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/FlyingObjectControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AIControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/CloudsControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyerControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Cloud.cs",
@@ -879,6 +879,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aiobj",
 			"ing",
 			"planet",
 			"reset",
@@ -952,7 +953,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -961,15 +962,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5020,
+						"buffer_size": 5121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1420,
-								987
+								797,
+								797
 							]
 						],
 						"settings":
@@ -988,11 +989,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 405.0,
+						"translation.x": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1001,28 +1002,34 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6030,
+						"buffer_size": 6036,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5028,
-								5028
+								3046,
+								3046
 							]
 						],
 						"settings":
 						{
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"26,31": "不需要的 using 指令。",
+								"3049,3055": "'“AIControl”未包含“AIPlay”的定义，并且找不到可接受第一个“AIControl”类型参数的可访问扩展方法“AIPlay”(是否缺少 using 指令或程序集引用?)"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1870.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1031,15 +1038,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1502,
+						"buffer_size": 1634,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								605,
-								605
+								1627,
+								1627
 							]
 						],
 						"settings":
@@ -1047,13 +1054,13 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"523,534": "当前上下文中不存在名称“GameControl”"
+								"761,764": "未能找到类型或命名空间名“ing”(是否缺少 using 指令或程序集引用?)"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 358.0,
+						"translation.y": 265.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1065,15 +1072,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2531,
+						"buffer_size": 3662,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2147,
-								2147
+								431,
+								431
 							]
 						],
 						"settings":
@@ -1081,15 +1088,13 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"2347,2354": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中的类型“SpaceFO”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“SpaceFO”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中定义的类型。",
-								"2381,2388": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中的类型“SpaceFO”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“SpaceFO”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中定义的类型。",
-								"2416,2423": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中的类型“SpaceFO”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“SpaceFO”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs”中定义的类型。"
+								"736,746": "“SpawnAlien”方法没有采用 2 个参数的重载"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 808.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1098,7 +1103,7 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1107,15 +1112,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2875,
+						"buffer_size": 5728,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								877,
-								877
+								2838,
+								2838
 							]
 						],
 						"settings":
@@ -1123,18 +1128,18 @@
 							"oops":
 							{
 								"0,5": "不需要的 using 指令。",
-								"112,119": "命名空间“<global namespace>”已经包含“SpaceFO”的定义",
 								"26,31": "不需要的 using 指令。",
-								"469,474": "类型“SpaceFO”已定义了一个名为“Start”的具有相同参数类型的成员",
-								"574,582": "类型“SpaceFO”已定义了一个名为“PlayAnim”的具有相同参数类型的成员"
+								"5042,5043": "应输入 ;"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 980.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1143,15 +1148,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 671,
+						"buffer_size": 735,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								436,
-								415
+								594,
+								594
 							]
 						],
 						"settings":
@@ -1168,7 +1173,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1203,7 +1208,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1234,10 +1239,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 10.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1266,7 +1271,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1329,7 +1334,7 @@
 		"cols":
 		[
 			0.0,
-			0.446489383013,
+			0.463750333868,
 			1.0
 		],
 		"rows":
@@ -1393,7 +1398,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

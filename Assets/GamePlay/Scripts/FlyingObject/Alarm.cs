@@ -29,9 +29,5 @@ public class Alarm : MonoBehaviour
     	pressImg.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0), 0.3f, 1, 0)
     		.SetLoops(-1, LoopType.Restart)
     		.timeScale = 10f;
-    	pressRenderer.DOColor(new Color(60, 60, 60), 0.3f)
-    		.SetEase(Ease.Flash, 2, 0)
-    		.SetLoops(-1, LoopType.Restart)
-    		.timeScale = 10f;
     }
 }

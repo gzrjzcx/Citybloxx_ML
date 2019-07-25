@@ -10,7 +10,6 @@ public class Cloud : MonoBehaviour
 	{
 		float endValue = leftTopPos.x * sign;
 		float imgOffset = -2f * sign;
-		Debug.Log(endValue, gameObject);
 
 		Sequence cloudAnimSeq = DOTween.Sequence().SetId("cloudAnimSeq");
 		cloudAnimSeq.SetLink(this.gameObject);

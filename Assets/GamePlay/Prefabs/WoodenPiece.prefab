@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 356531388322607283}
   - component: {fileID: 7709973032123586591}
   - component: {fileID: 4653860450691623387}
+  - component: {fileID: 6932255215965635018}
   m_Layer: 0
   m_Name: WoodenPiece
   m_TagString: Untagged
@@ -115,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doTween: {fileID: 356531388322607283}
-  aiObj: {fileID: 0}
   isHooked: 0
   isStacked: 1
   isFallen: 0
@@ -213,3 +213,39 @@ MonoBehaviour:
   columnTran: {fileID: 0}
   agentRb2d: {fileID: 3616114074434243906}
   root: {fileID: 0}
+--- !u!114 &6932255215965635018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7682980575725646726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a27ec899107446e8473a6122e27c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: e73723fba173d4481818b69c1a6b9b1a, type: 2}
+  agentParameters:
+    agentCameras: []
+    agentRenderTextures: []
+    maxStep: 1000
+    resetOnDone: 1
+    onDemandDecision: 1
+    numberOfActionsBetweenDecisions: 1
+  pieceObj: {fileID: 8710141791390138346}
+  thinkingTime: 0
+  err_count: 0
+  total_count: 0
+  m2d: 0
+  m2e: 0
+  m2m: 0
+  e2e: 0
+  e2m: 0
+  e2d: 0
+  d2e: 0
+  d2m: 0
+  d2d: 0
+  s: 
+  t: 
+  isError: 0

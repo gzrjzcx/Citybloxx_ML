@@ -199,7 +199,9 @@
     <Compile Include="Assets\GamePlay\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\GamePlay\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\GamePlay\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\GamePlay\Scripts\AIControl.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\AI\AIControl.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\AI\DDAAgent.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\AI\StackAgent.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Base\SingletonScriptableObject.cs" />
     <Compile Include="Assets\GamePlay\Scripts\BtnManager.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ColumnPieces.cs" />
@@ -208,6 +210,8 @@
     <Compile Include="Assets\GamePlay\Scripts\EllipticalOrbit.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Alarm.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\AlarmControl.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Attention.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\AttentionControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Cloud.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\CloudsControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\FlyerControl.cs" />
@@ -227,7 +231,6 @@
     <Compile Include="Assets\GamePlay\Scripts\Piece.cs" />
     <Compile Include="Assets\GamePlay\Scripts\PiecePool.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ScreenMoveUp.cs" />
-    <Compile Include="Assets\GamePlay\Scripts\StackAgent.cs" />
     <Compile Include="Assets\GamePlay\Scripts\StartupSceneManager.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\AutoDestroy.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\DoTweenControl.cs" />

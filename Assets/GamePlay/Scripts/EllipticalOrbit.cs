@@ -18,6 +18,7 @@ public class EllipticalOrbit : MonoBehaviour
 	public float rotateZ;
 
 	public float offsetY = 0f;
+    public float offsetZ = 0f;
     public float time;
 
     // Start is called before the first frame update

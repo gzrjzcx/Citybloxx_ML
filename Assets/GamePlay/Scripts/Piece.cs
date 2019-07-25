@@ -5,7 +5,6 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
     public DoTweenControl doTween;
-    public AIControl aiObj;
     public struct StackStatus
     {
         public bool isStackSuccessful;
@@ -37,26 +36,34 @@ public class Piece : MonoBehaviour
     	{
 	        if(Input.GetKeyDown("space") || Input.touchCount > 0 || dropSignal)
 	        {
-	        	transform.parent = null;
+                transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
                 Vector3 p = transform.position;
                 p.z = 0;
                 transform.position = p;
 	        	transform.rotation = Quaternion.identity;
 	        	rb2d.isKinematic = false;
 	        	isHooked = false;
+                GetThinkingTime();
 	        }
     	}
     }
 
-    void OnCollisionEnter2D()
+    public void GetThinkingTime()
+    {
+        GameControl.instance.aiObj.ddaAgentObj.thinkingTime = 
+            Time.time - GameControl.instance.aiObj.thinkingStartTime;
+        // Debug.Log("GetThinkingTime = " + GameControl.instance.aiObj.ddaAgentObj.thinkingTime);
+    }
+
+    void OnCollisionEnter2D(Collision2D ctl)
     {
         if(!isStacked)
         {
-            GameControl.instance.piecePoolObj.HookNewPiece();
             rb2d.isKinematic = true;
             rb2d.velocity = Vector3.zero;
             Parent2Column();
-            // aiObj.rlAgentObj.RecordThinkingTime();      
+            if(GameControl.instance.gameStatus != GameControl.GameStatus.GAME_START)
+                GameControl.instance.mycolObj.SetCollisionInfo(ctl);
         }
     }
 
@@ -70,8 +77,6 @@ public class Piece : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D ctl)
     {
-         GameControl.instance.mycolObj.SetCollisionInfo(ctl);
-
         if(!isStacked)
         {
             switch(GameControl.instance.gameStatus)
@@ -86,7 +91,10 @@ public class Piece : MonoBehaviour
                     AfterCollisionAtGameRunning();
                     break;
             }
+            GameControl.instance.aiObj.ddaAgentObj.RequestDecision();
+            GameControl.instance.piecePoolObj.HookNewPiece();
         }
+
         isStacked = true;
     }
 
@@ -124,7 +132,7 @@ public class Piece : MonoBehaviour
         stackStatus.isStackSuccessful = false;
         GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
         doTween.FallenAnimation(stackStatus.fallenSide);
-        transform.parent = null;
+        transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
     }
 
     public bool CheckIfCanStack()

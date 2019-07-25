@@ -109,7 +109,7 @@ public class GameControl : MonoBehaviour
         SetColumnSwinging();
         flyerObj.SpawnMultiFlyman();
         cloudObj.SpawnMultiClouds();
-        aiObj.AddMinPosY();
+        // aiObj.AddMinPosY();
         seaLevel.y++;
 
         if(isDeadCenter)

@@ -9,6 +9,11 @@ public class StarControl : MonoBehaviour
 	private GameObject starPrefab;
 	private GameObject star;
 
+	[SerializeField]
+	private int spawnThreshold;
+	[SerializeField]
+	private int spawnProbability;
+
 	void Update()
 	{
 		if(Input.GetKey(KeyCode.S))
@@ -28,8 +33,10 @@ public class StarControl : MonoBehaviour
 
 	public void SpawnMultiStar()
 	{
-		if(GameControl.instance.stackedPieceNum > 20)
+		if(GameControl.instance.stackedPieceNum > spawnThreshold)
 		{
+			if(Random.Range(0, spawnProbability+1) != 0)
+				return;
 			for(int i=0; i<Random.Range(3, 6); i++)
 			{
 				SpawnStar();

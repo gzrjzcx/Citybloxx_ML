@@ -15,6 +15,9 @@ public class FlyerControl : MonoBehaviour
 	// [SerializeField]
 	// private int index=1;
 
+	[SerializeField]
+	private int spawnThreshold;
+
 	void Update()
 	{
 		if(Input.GetKey(KeyCode.K))
@@ -40,7 +43,7 @@ public class FlyerControl : MonoBehaviour
 
 	public void SpawnMultiFlyman()
 	{
-		if(GameControl.instance.stackedPieceNum < 2)
+		if(GameControl.instance.stackedPieceNum < spawnThreshold)
 			return;
 
 		for(int i=0; i<Random.Range(1, 4); i++)

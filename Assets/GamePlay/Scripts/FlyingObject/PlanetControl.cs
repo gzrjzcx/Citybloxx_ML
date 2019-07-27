@@ -8,6 +8,11 @@ public class PlanetControl : MonoBehaviour
 	private GameObject planetPrefab;
 	private GameObject planet;
 
+	[SerializeField]
+	private int spawnThreshold;
+	[SerializeField]
+	private int spawnProbability;
+
 	void Update()
 	{
 		if(Input.GetKey(KeyCode.P))
@@ -25,7 +30,13 @@ public class PlanetControl : MonoBehaviour
 
 	public void SpawnPlanet()
 	{
-		if(GameControl.instance.stackedPieceNum < 50)
+		if(GameControl.instance.stackedPieceNum < spawnThreshold)
+			return;
+
+		if(Random.Range(0, spawnProbability+1) != 0)
+			return;
+
+		if(this.transform.childCount > 0)
 			return;
 
 		string pfbPath = "planet/prefabs/Planet";

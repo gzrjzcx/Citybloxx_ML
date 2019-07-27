@@ -23,7 +23,8 @@ public class DDAAgent : Agent
 
 	public override void CollectObservations()
 	{
-		delta = GameControl.instance.mycolObj.deltaX;
+		delta = Mathf.Abs(GameControl.instance.mycolObj.deltaX);
+		thinkingTime = thinkingTime > 15 ? 15 : thinkingTime;
 		float[] diffFactors = {thinkingTime, 
 								delta,
 								GameControl.instance.columnObj.amplitudeRotate};
@@ -151,7 +152,7 @@ public class DDAAgent : Agent
 			{
 				return delta;
 			}
-			else if(delta <= 0.5)
+			else if(delta < 0.5)
 			{
 				return delta * 2;
 			}

@@ -117,7 +117,7 @@ public class SpaceFO : MonoBehaviour
         wayPoints[0] = spawnPos;
         wayPoints[1] = new Vector3(_x, spawnPos.y + offsetY * 2, 0f);
         wayPoints[2] = new Vector3(_x - offsetX, spawnPos.y + offsetY * 4, 0f);
-        wayPoints[3] = new Vector3(_x + offsetX, spawnPos.y + offsetY * 6, 0f);
+        wayPoints[3] = new Vector3(_x + offsetX, spawnPos.y + offsetY * 12, 0f);
 
         this.transform.DOLocalPath(wayPoints, 8f, PathType.CatmullRom, PathMode.TopDown2D)
             .SetLookAt(0f)

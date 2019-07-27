@@ -26,15 +26,18 @@ public class GameControl : MonoBehaviour
     public PlanetControl planetObj;
     public StarControl starObj;
     public SpaceFOControl foObj;
+    public HighScoreControl highScoreObj;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI populationScoreText;
     public GameObject gameOverText;
     public GameObject[] lifePieces;
+    public InputField nameInputFieldObj;
 
     public int populationScore = 0;
     public int stackedPieceNum = 0;
     public int missNum = 0;
+    public string playerName;
     public Vector3 seaLevel;
 
     public enum GameStatus
@@ -109,6 +112,10 @@ public class GameControl : MonoBehaviour
         SetColumnSwinging();
         flyerObj.SpawnMultiFlyman();
         cloudObj.SpawnMultiClouds();
+        planetObj.SpawnPlanet();
+        starObj.SpawnMultiStar();
+        foObj.SpawnFO();
+        highScoreObj.ShowHighScore();
         // aiObj.AddMinPosY();
         seaLevel.y++;
 
@@ -127,8 +134,8 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        // Missed();
-        // CheckMissNum();
+        Missed();
+        CheckMissNum();
         screenMoveUpObj.ShakeCamera();
         flyerObj.KillAllFlyMan();
     }
@@ -181,20 +188,11 @@ public class GameControl : MonoBehaviour
         columnObj.SetAmplitudeIncrementAndMax();
     }
 
-    // Use this to control the ideal distance
-    // void LockDistanceColumn2Sling()
-    // {
-    //     Debug.Log(columnObj.GetDistanceColumn2Sling);
-    //     if(!Mathf.Approximately(columnObj.initialDistance, 
-    //         columnObj.GetDistanceColumn2Sling))
-    //         {
-    //             columnObj.transform.position = slingObj.transform.position 
-    //                 - new Vector3(0, columnObj.initialDistance - slingObj.offsetY, 0);
-    //         }  
-    // }
-
-
-
+    public void SavePlayerName()
+    {
+        playerName = nameInputFieldObj.text;
+        highScoreObj.UpdateHighScore(stackedPieceNum, playerName);
+    }
 
 
 

@@ -8,6 +8,11 @@ public class SpaceFOControl : MonoBehaviour
 	private GameObject ufoPrefab;
 	private GameObject ufo;
 
+	[SerializeField]
+	private int spawnThreshold;
+	[SerializeField]
+	private int spawnProbability;
+
 	void Update()
 	{
 		if(Input.GetKey(KeyCode.U))
@@ -25,6 +30,15 @@ public class SpaceFOControl : MonoBehaviour
 
 	public void SpawnFO()
 	{
+		if(GameControl.instance.stackedPieceNum < spawnThreshold)
+			return;
+
+		if(Random.Range(0, spawnProbability+1) != 0)
+			return;
+
+		if(this.transform.childCount > 1)
+			return;
+
 		string pfbPath = "ufo/prefabs/ufo";
 		string imgPath = "ufo/images/ufo_";
 		ufoPrefab = Resources.Load<GameObject>(pfbPath);
@@ -118,7 +132,7 @@ public class SpaceFOControl : MonoBehaviour
 	{	
 		Vector3 spawnPos = Camera.main.ScreenToWorldPoint(
 			new Vector3(Screen.width * Random.value,
-				Screen.height + 2f), 0f);
+				Screen.height * 1.5f, 8f));
 		float scale = 0.2f;
 
 		ufo = Instantiate(ufoPrefab, spawnPos,Quaternion.identity);

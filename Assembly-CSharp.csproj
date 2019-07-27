@@ -216,6 +216,8 @@
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\CloudsControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\FlyerControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\FlyMan.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\HighScore.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\FlyingObject\HighScoreControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\Planet.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\PlanetControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\FlyingObject\SpaceFO.cs" />

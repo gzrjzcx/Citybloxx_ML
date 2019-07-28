@@ -19,6 +19,8 @@ public class DDAAgent : Agent
     public string s, t;
     public int isError = 0;
 
+    public bool isEnabled;
+
 	private List<float> perceptionBuffer = new List<float>();
 
 	public override void CollectObservations()
@@ -43,7 +45,9 @@ public class DDAAgent : Agent
 		// Debug.Log("tuneSignal = " + turnSignal);
 		// Accuracy(state, turnSignal);
 		if(turnSignal != 0)
+		{
 			GameControl.instance.aiObj.attentionObj.SpawnLevelAttention(turnSignal);
+		}
 	}
 
 	public List<float> EvaluateDiffLvl(float[] diffFactors, string[] diffLvl)

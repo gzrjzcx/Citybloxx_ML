@@ -91,8 +91,9 @@ public class Piece : MonoBehaviour
                     AfterCollisionAtGameRunning();
                     break;
             }
-            GameControl.instance.aiObj.ddaAgentObj.RequestDecision();
+            GameControl.instance.aiObj.AdjustDifficulty();
             GameControl.instance.piecePoolObj.HookNewPiece();
+            AudioControl.instance.Play("Block_Hit");
         }
 
         isStacked = true;

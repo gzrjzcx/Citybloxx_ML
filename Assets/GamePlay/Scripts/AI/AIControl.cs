@@ -20,13 +20,16 @@ public class AIControl : MonoBehaviour
 
 	private bool isNeedHelp = false;
 
+	public bool isDDA = false;
+	public bool isATS = false;
+
 	void Update()
 	{
 		if(stackAgentObj.pieceObj.isHooked)
 		{
 			if(Input.GetKeyDown(KeyCode.H))
 			{
-				AIPlay();
+				AutoStack();
 			}
 			if(isNeedHelp)
 			{
@@ -36,10 +39,21 @@ public class AIControl : MonoBehaviour
 		}
 	}
 
-	public void AIPlay()
+	public void AdjustDifficulty()
 	{
-		SetRLTarget4stack();
-		isNeedHelp = true;
+		if(isDDA)
+		{
+			ddaAgentObj.RequestDecision();
+		}
+	}
+
+	public void AutoStack()
+	{
+		if(isATS)
+		{
+			SetRLTarget4stack();
+			isNeedHelp = true;
+		}
 	}
 
 	public void SetRLTarget4stack()

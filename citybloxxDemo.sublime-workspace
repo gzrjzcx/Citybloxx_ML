@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"inpu",
+				"InputField\tInputField"
+			],
+			[
+				"high",
+				"highScoreObj\tHighScoreControl"
+			],
+			[
+				"hi",
+				"highScoreAnimSeq\tSequence"
+			],
+			[
+				"back",
+				"OutBack\tEase"
+			],
+			[
+				"dolo",
+				"DOLocalMoveY(float endValue, float duration)\tTweenerCore<Vector3, Vector3, VectorOptions>"
+			],
+			[
+				"off",
+				"offsetY\tfloat"
+			],
+			[
+				"spawn",
+				"SpawnHighScoreBoard()\tvoid"
+			],
+			[
+				"spaw",
+				"SpawnHighScoreBoard()\tvoid"
+			],
+			[
+				"sta",
+				"stackedPieceNum\tint"
+			],
+			[
 				"set",
 				"SetString(string key, string value)\tvoid"
 			],
@@ -14,10 +50,6 @@
 			[
 				"get",
 				"GetInt(string key)\tint"
-			],
-			[
-				"hi",
-				"highScoreList\tList<int>"
 			],
 			[
 				"mat",
@@ -482,38 +514,6 @@
 			[
 				"shadow",
 				"shadowObj_2\tTransform"
-			],
-			[
-				"pos",
-				"posSkyObj_1\tVector3"
-			],
-			[
-				"bg",
-				"bgPath\tstring"
-			],
-			[
-				"res",
-				"Resources\tResources"
-			],
-			[
-				"sky",
-				"skyObj_2\tGameObject"
-			],
-			[
-				"reset",
-				"ResetFillColor()\tvoid"
-			],
-			[
-				"on",
-				"onKill\tTweenCallback"
-			],
-			[
-				"Dot",
-				"DOTween\tDOTween"
-			],
-			[
-				"pop",
-				"populationScoreText\tTextMeshProUGUI"
 			]
 		]
 	},
@@ -523,7 +523,16 @@
 			"file": "Assets/GamePlay/Scripts/GameControl.cs",
 			"settings":
 			{
-				"buffer_size": 4769,
+				"buffer_size": 5070,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
+			"settings":
+			{
+				"buffer_size": 567,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -547,28 +556,10 @@
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/HighScore.cs",
-			"settings":
-			{
-				"buffer_size": 873,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Assets/GamePlay/Scripts/ColumnSwinging.cs",
 			"settings":
 			{
 				"buffer_size": 3581,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/FlyingObject/AttentionControl.cs",
-			"settings":
-			{
-				"buffer_size": 1059,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -583,24 +574,6 @@
 			}
 		},
 		{
-			"file": "Assets/GamePlay/Scripts/PiecePool.cs",
-			"settings":
-			{
-				"buffer_size": 1854,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs",
-			"settings":
-			{
-				"buffer_size": 7362,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Assets/GamePlay/Scripts/AI/StackAgent.cs",
 			"settings":
 			{
@@ -610,10 +583,20 @@
 			}
 		},
 		{
-			"file": "Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
+			"file": "Assets/GamePlay/Scripts/FlyingObject/HighScoreControl.cs",
 			"settings":
 			{
-				"buffer_size": 4417,
+				"buffer_size": 1793,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/GamePlay/Scripts/FlyingObject/HighScore.cs",
+			"settings":
+			{
+				"buffer_size": 949,
+				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
@@ -640,15 +623,6 @@
 			"settings":
 			{
 				"buffer_size": 1809,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs",
-			"settings":
-			{
-				"buffer_size": 5729,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -791,10 +765,18 @@
 	[
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AI",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject",
 		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts"
 	],
 	"file_history":
 	[
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs",
+		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
+		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PiecePool.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/AttentionControl.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/HighScoreControl.cs",
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/HighScore.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/CloudsControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/FlyerControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/FlyMan.cs",
@@ -805,7 +787,6 @@
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/Alarm.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/AlarmControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/AttentionControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/Attention.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AIControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/StackAgent.cs",
@@ -817,10 +798,8 @@
 		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CCMStackAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFOControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/StarControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/Star.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/FlyingObjectControl.cs",
-		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/CloudsControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyerControl.cs",
@@ -829,9 +808,7 @@
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/EllipticalOrbit.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GameControl.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyMan.cs",
-		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PiecePool.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnPieces.cs",
-		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/MainButton.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs",
 		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ColumnSwinging.cs",
@@ -920,13 +897,11 @@
 		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/DataInput.csv",
 		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/RandomAgentExample/DiscretizedRandomAttackingController.py",
 		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/MonteCarloBase.py",
-		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/MonteCarlo.sh",
-		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/QLearning/QLearningBase.py",
-		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/MonteCarlo/UnitTestExample/ExampleUnitTest.py"
+		"/Users/alex/Desktop/HFO/example/RL2019-BaseCodes/Exercise2/MonteCarlo.sh"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -941,6 +916,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"listLength",
 			"delta",
 			"dropPieceLocalPos",
 			"thinkingTime",
@@ -1027,7 +1003,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1036,15 +1012,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4769,
+						"buffer_size": 5070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4751,
-								4751
+								4724,
+								4724
 							]
 						],
 						"settings":
@@ -1056,9 +1032,40 @@
 								"0,5": "不需要的 using 指令。",
 								"110,115": "不需要的 using 指令。",
 								"138,143": "不需要的 using 指令。",
-								"53,58": "不需要的 using 指令。",
-								"611,620": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AIControl.cs”中的类型“AIControl”与“MacBLAS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“AIControl”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AIControl.cs”中定义的类型。"
+								"3218,3231": "以下方法或属性之间的调用具有二义性:“HighScoreControl.ShowHighScore()”和“HighScoreControl.ShowHighScore()”",
+								"5003,5018": "以下方法或属性之间的调用具有二义性:“HighScoreControl.UpdateHighScore(int, string)”和“HighScoreControl.UpdateHighScore(int, string)”",
+								"809,825": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/HighScore.cs”中的类型“HighScoreControl”与“MacBLAS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“HighScoreControl”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/HighScore.cs”中定义的类型。"
 							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3658.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/GamePlay/Scripts/PauseMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/C#/C#.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1067,11 +1074,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "Assets/GamePlay/Scripts/AI/AIControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1131,11 +1138,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "Assets/GamePlay/Scripts/AI/DDAAgent.cs",
 					"semi_transient": false,
 					"settings":
@@ -1178,46 +1185,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3357.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/GamePlay/Scripts/HighScore.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								866,
-								866
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"869,870": "表达式项“)”无效",
-								"870,871": "应输入 ;"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1244,44 +1215,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1633.0,
+						"translation.y": 2125.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "Assets/GamePlay/Scripts/FlyingObject/AttentionControl.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1059,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								514,
-								514
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "Assets/GamePlay/Scripts/Piece.cs",
 					"semi_transient": false,
 					"settings":
@@ -1311,82 +1252,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2713.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "Assets/GamePlay/Scripts/PiecePool.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1854,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1246,
-								1246
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"oops":
-							{
-								"0,5": "不需要的 using 指令。",
-								"1496,1509": "在“AIControl.stackAgentObj”和“AIControl.stackAgentObj”之间具有二义性",
-								"1650,1658": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AI/DDAAgent.cs”中的类型“DDAAgent”与“MacBLAS, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“DDAAgent”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/AI/DDAAgent.cs”中定义的类型。",
-								"26,31": "不需要的 using 指令。"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								591,
-								389
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
+					"buffer": 6,
 					"file": "Assets/GamePlay/Scripts/AI/StackAgent.cs",
 					"semi_transient": false,
 					"settings":
@@ -1413,49 +1286,112 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 6,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 10,
-					"file": "Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs",
+					"buffer": 7,
+					"file": "Assets/GamePlay/Scripts/FlyingObject/HighScoreControl.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4417,
+						"buffer_size": 1793,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1418,
-								1439
+								1078,
+								1078
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"1008,1016": "在“HighScoreControl.scoreKey”和“HighScoreControl.scoreKey”之间具有二义性",
+								"1071,1078": "在“HighScoreControl.nameKey”和“HighScoreControl.nameKey”之间具有二义性",
+								"1134,1147": "类型“HighScoreControl”已定义了一个名为“ShowHighScore”的具有相同参数类型的成员",
+								"1165,1175": "在“HighScoreControl.listLength”和“HighScoreControl.listLength”之间具有二义性",
+								"1199,1210": "当前上下文中不存在名称“GameControl”",
+								"1239,1252": "在“HighScoreControl.highScoreList”和“HighScoreControl.highScoreList”之间具有二义性",
+								"1286,1294": "在“HighScoreControl.nameList”和“HighScoreControl.nameList”之间具有二义性",
+								"1412,1432": "在“HighScoreControl.highScoreBoardPrefab”和“HighScoreControl.highScoreBoardPrefab”之间具有二义性",
+								"1649,1658": "在“HighScoreControl.highScore”和“HighScoreControl.highScore”之间具有二义性",
+								"1673,1693": "在“HighScoreControl.highScoreBoardPrefab”和“HighScoreControl.highScoreBoardPrefab”之间具有二义性",
+								"1729,1738": "在“HighScoreControl.highScore”和“HighScoreControl.highScore”之间具有二义性",
+								"1752,1761": "“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/HighScore.cs”中的类型“HighScore”与“Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null”中的导入类型“HighScore”冲突。请使用“/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyingObject/HighScore.cs”中定义的类型。",
+								"428,433": "类型“HighScoreControl”已定义了一个名为“Start”的具有相同参数类型的成员",
+								"451,461": "在“HighScoreControl.listLength”和“HighScoreControl.listLength”之间具有二义性",
+								"480,493": "在“HighScoreControl.highScoreList”和“HighScoreControl.highScoreList”之间具有二义性",
+								"517,525": "在“HighScoreControl.scoreKey”和“HighScoreControl.scoreKey”之间具有二义性",
+								"547,555": "在“HighScoreControl.nameList”和“HighScoreControl.nameList”之间具有二义性",
+								"582,589": "在“HighScoreControl.nameKey”和“HighScoreControl.nameKey”之间具有二义性",
+								"622,628": "类型“HighScoreControl”已定义了一个名为“Update”的具有相同参数类型的成员",
+								"725,740": "类型“HighScoreControl”已定义了一个名为“UpdateHighScore”的具有相同参数类型的成员",
+								"788,798": "在“HighScoreControl.listLength”和“HighScoreControl.listLength”之间具有二义性",
+								"833,846": "在“HighScoreControl.highScoreList”和“HighScoreControl.highScoreList”之间具有二义性",
+								"879,887": "在“HighScoreControl.scoreKey”和“HighScoreControl.scoreKey”之间具有二义性",
+								"93,109": "命名空间“<global namespace>”已经包含“HighScoreControl”的定义",
+								"941,948": "在“HighScoreControl.nameKey”和“HighScoreControl.nameKey”之间具有二义性"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 1,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 11,
+					"buffer": 8,
+					"file": "Assets/GamePlay/Scripts/FlyingObject/HighScore.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								723,
+								723
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "不需要的 using 指令。",
+								"162,173": "未能找到类型或命名空间名“TextMeshPro”(是否缺少 using 指令或程序集引用?)",
+								"26,31": "不需要的 using 指令。",
+								"480,491": "当前上下文中不存在名称“GameControl”",
+								"79,84": "不需要的 using 指令。",
+								"85,90": "未能找到类型或命名空间名“TMPro”(是否缺少 using 指令或程序集引用?)"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "Assets/GamePlay/Scripts/FlyingObject/PlanetControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1467,8 +1403,8 @@
 						"selection":
 						[
 							[
-								715,
-								715
+								1121,
+								1029
 							]
 						],
 						"settings":
@@ -1483,14 +1419,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 274.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 10,
 					"file": "Assets/GamePlay/Scripts/FlyingObject/SpaceFOControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1521,11 +1457,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 11,
 					"file": "Assets/GamePlay/Scripts/MyCollisionControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1549,45 +1485,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "Assets/GamePlay/Scripts/FlyingObject/SpaceFO.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3605,
-								3605
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 12,
 					"file": "Assets/GamePlay/Scripts/FlyingObject/StarControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1613,11 +1518,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 13,
 					"file": "Assets/GamePlay/Scripts/FlyingObject/FlyerControl.cs",
 					"semi_transient": false,
 					"settings":
@@ -1643,7 +1548,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]

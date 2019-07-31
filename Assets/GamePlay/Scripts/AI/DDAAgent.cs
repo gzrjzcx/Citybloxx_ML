@@ -47,6 +47,14 @@ public class DDAAgent : Agent
 		if(turnSignal != 0)
 		{
 			GameControl.instance.aiObj.attentionObj.SpawnLevelAttention(turnSignal);
+			if(turnSignal == 1)
+			{
+				AudioControl.instance.Play("Level_Down");
+			}
+			else if(turnSignal == 2)
+			{
+				AudioControl.instance.Play("Level_Up");				
+			}
 		}
 	}
 

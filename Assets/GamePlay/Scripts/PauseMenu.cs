@@ -12,6 +12,9 @@ public class PauseMenu : MonoBehaviour
 
     public Button DDA;
     public Button ATS;
+    public Button music;
+    public Button sound;
+
 
     private string path = "pauseMenu/button/";
 
@@ -19,22 +22,29 @@ public class PauseMenu : MonoBehaviour
     {
     	pauseMenuUI.SetActive(false);
     	Time.timeScale = 1f;
+        AudioControl.instance.Play("Click");
     }
 
     public void Pause()
     {
     	pauseMenuUI.SetActive(true);
     	Time.timeScale = 0f;
+        AudioControl.instance.Play("Click");
+
     }
 
     public void Restart()
     {
     	SceneManager.LoadSceneAsync("Main");
+        AudioControl.instance.Play("Click");
+
     }
 
     public void Exit()
     {
     	Application.Quit();
+        AudioControl.instance.Play("Click");
+
     }
 
     public void ToggleDDA()
@@ -51,6 +61,8 @@ public class PauseMenu : MonoBehaviour
             Sprite img = Resources.Load<Sprite>(path + "dda_enable");
             DDA.GetComponent<Image>().sprite = img;
         }
+        AudioControl.instance.Play("Click");
+
     }
 
     public void ToggleATS()
@@ -67,5 +79,71 @@ public class PauseMenu : MonoBehaviour
             Sprite img = Resources.Load<Sprite>(path + "ats_enable");
             ATS.GetComponent<Image>().sprite = img;
         }
+        AudioControl.instance.Play("Click");
+
     }
+
+    public void ToggleMusic()
+    {
+        if(AudioControl.instance.isPlaying("Theme"))
+        {
+            AudioControl.instance.Stop("Theme");
+            Sprite img = Resources.Load<Sprite>(path + "music_disable");
+            music.GetComponent<Image>().sprite = img;
+        }
+        else
+        {
+            AudioControl.instance.Play("Theme");
+            Sprite img = Resources.Load<Sprite>(path + "music_enable");
+            music.GetComponent<Image>().sprite = img;
+        }
+        AudioControl.instance.Play("Click");
+
+    }
+
+    public void ToggleSound()
+    {
+        if(AudioControl.instance.isMute("Block_Hit"))
+        {
+            AudioControl.instance.UnmuteAllSoundEffects();
+            Sprite img = Resources.Load<Sprite>(path + "sound_enable");
+            sound.GetComponent<Image>().sprite = img;
+        }
+        else
+        {
+            AudioControl.instance.MuteAllSoundEffects();
+            Sprite img = Resources.Load<Sprite>(path + "sound_disable");
+            sound.GetComponent<Image>().sprite = img;
+        }
+        AudioControl.instance.Play("Click");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

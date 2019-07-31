@@ -39,8 +39,78 @@ public class AudioControl : MonoBehaviour
 	 {
 	 	Sound s = Array.Find(sounds, sound => sound.name == name);
 	 	if(s == null)
-	 		Debug.LogWarning("Sound" + name + " not found");
+	 		Debug.LogWarning("Sound '" + name + "' not found");
 
 	 	s.source.Play();
 	 }
+
+	 public bool isPlaying(string name)
+	 {
+	 	Sound s = Array.Find(sounds, sound => sound.name == name);
+	 	if(s == null)
+	 		Debug.LogWarning("Sound" + name + " not found");
+	 	return s.source.isPlaying;
+	 }
+
+	 public bool isMute(string name)
+	 {
+	 	Sound s = Array.Find(sounds, sound => sound.name == name);
+	 	if(s == null)
+	 		Debug.LogWarning("Sound" + name + " not found");
+	 	return s.source.mute;
+	 }
+
+	 public void Stop(string name)
+	 {
+	 	Sound s = Array.Find(sounds, sound => sound.name == name);
+	 	if(s == null)
+	 		Debug.LogWarning("Sound '" + name + "' not found");
+
+	 	s.source.Stop();	 	
+	 }
+
+	 public void MuteAllSoundEffects()
+	 {
+	 	foreach(Sound s in sounds)
+	 	{
+	 		if(!s.name.Equals("Theme"))
+	 		{
+	 			s.source.mute = true;
+	 		}
+	 	}
+	 }
+
+	 public void UnmuteAllSoundEffects()
+	 {
+	 	foreach(Sound s in sounds)
+	 	{
+	 		if(!s.name.Equals("Theme"))
+	 		{
+	 			s.source.mute = false;
+	 		}
+	 	}
+	 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

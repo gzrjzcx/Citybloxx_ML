@@ -92,6 +92,7 @@ public class GameControl : MonoBehaviour
             gameStatus = GameStatus.GAME_FIRSTPIECE;
         }
         screenMoveUpObj.ObstacleMoveUp();
+        AudioControl.instance.Play("Block_Hit");
     }
 
     public void AfterCollisionAtFirstPiece()
@@ -165,6 +166,7 @@ public class GameControl : MonoBehaviour
                 comboControlObj.comboScored();
             }
             gameStatus = GameStatus.GAME_OVER;
+            AudioControl.instance.Play("Round_End");
         }
     }
 

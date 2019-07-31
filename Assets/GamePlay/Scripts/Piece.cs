@@ -10,6 +10,7 @@ public class Piece : MonoBehaviour
         public bool isStackSuccessful;
         public int fallenSide;
         public bool isDeadCenter;
+        public bool isFailingCollision;  // stack fail, but collide with top piece(0.5<delta<1)
     }
     public StackStatus stackStatus;
 
@@ -93,7 +94,6 @@ public class Piece : MonoBehaviour
             }
             GameControl.instance.aiObj.AdjustDifficulty();
             GameControl.instance.piecePoolObj.HookNewPiece();
-            AudioControl.instance.Play("Block_Hit");
         }
 
         isStacked = true;
@@ -125,6 +125,7 @@ public class Piece : MonoBehaviour
         GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
         doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
         GameControl.instance.columnPiecesObj.Add(this.gameObject);
+        AudioControl.instance.Play("Block_Hit");
         //this.transform.GetComponent<StackAgent>().AddMinPosY();
     }
 
@@ -134,6 +135,10 @@ public class Piece : MonoBehaviour
         GameControl.instance.AfterPieceStackingFailed(stackStatus.fallenSide);
         doTween.FallenAnimation(stackStatus.fallenSide);
         transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
+        if(stackStatus.isFailingCollision)
+            AudioControl.instance.Play("Fail_1");
+        else
+            AudioControl.instance.Play("Fail_2");
     }
 
     public bool CheckIfCanStack()
@@ -146,16 +151,15 @@ public class Piece : MonoBehaviour
         if(absDeltaX < stackRange)
         {
             isFallen = false;
-            checkIfDeadCenter(absDeltaX, GameControl.instance.mycolObj.topPieceLocalPos.x, GameControl.instance.mycolObj.dropPieceCol);
-            // Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
-            //     + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop true", gameObject);
+            checkIfDeadCenter(absDeltaX, 
+                GameControl.instance.mycolObj.topPieceLocalPos.x, 
+                GameControl.instance.mycolObj.dropPieceCol);
             return true;
         }
         else 
         {
-            // Debug.Log(GameControl.instance.mycolObj.topPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.topPieceLocalPos.x + " | " 
-            //     + GameControl.instance.mycolObj.dropPieceCol.gameObject.name + "  " + GameControl.instance.mycolObj.dropPieceLocalPos.x + " || " + "drop false", gameObject);
             isFallen = true;
+            CheckIfIsFailingCollision();
             return false;
         }
     }
@@ -178,6 +182,20 @@ public class Piece : MonoBehaviour
         {
             stackStatus.isDeadCenter = false;
         }
+    }
+
+    private void CheckIfIsFailingCollision()
+    {
+        float absDeltaX = Mathf.Abs(GameControl.instance.mycolObj.deltaX);
+        if(absDeltaX > 0.5f && absDeltaX < 1f)
+        {
+            stackStatus.isFailingCollision = true;
+        }
+        else
+        {
+            stackStatus.isFailingCollision = false;
+        }
+
     }
 
     private void checkFallenSide()

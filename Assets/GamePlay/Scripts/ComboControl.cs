@@ -16,7 +16,6 @@ public class ComboControl : MonoBehaviour
     public Image fillImage;
     
     public int comboNum = 0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +68,28 @@ public class ComboControl : MonoBehaviour
         comboNumText.text = "x " + comboNum.ToString();
     }
 
+    public void PlayComboSound()
+    {
+        switch(comboNum)
+        {
+            case 1:
+                AudioControl.instance.Play("Good");
+                break;
+            case 3:
+                AudioControl.instance.Play("Great");
+                break;
+            case 5: 
+                AudioControl.instance.Play("Excellent");
+                break;
+            case 8:
+                AudioControl.instance.Play("Amazing");
+                break;
+            case 10:
+                AudioControl.instance.Play("Unbelievable");
+                break;
+        }
+    }
+
     void OnComboTimingComplete()
     {
         comboSlider.gameObject.SetActive(false);
@@ -87,7 +108,8 @@ public class ComboControl : MonoBehaviour
     {
         comboScoreText.gameObject.SetActive(true);
         int comboScore = comboNum * 3;
-        comboScoreText.text = "+ " + comboScore.ToString(); 
+        comboScoreText.text = "+ " + comboScore.ToString();
+        AudioControl.instance.Play("Wow");
         GameControl.instance.populationScore += comboScore;
         GameControl.instance.populationScoreText.text = GameControl.instance.populationScore.ToString();
         Invoke("delayInactiveComboScoreText", 1);

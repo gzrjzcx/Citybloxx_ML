@@ -6,7 +6,15 @@ using DG.Tweening;
 
 public static class GO_Extensions
 {
-
+	public static void GetAllChildsGO(this Transform aParent, List<Transform> childList)
+	{
+		var childs = aParent.Cast<Transform>().ToList();
+		foreach(var c in childs)
+		{
+			childList.Add(c);
+		}		
+	}
+	
 	public static void PositionToLastChild(this Transform aParent)
 	{
 		var childs = aParent.Cast<Transform>().ToList();

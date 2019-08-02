@@ -61,6 +61,10 @@ public class AIControl : MonoBehaviour
 		GameObject topPiece = GameControl.instance.columnPiecesObj.topPiece;
 		stackAgentObj.targetTran = topPiece.transform;
 		stackAgentObj.targetRb2d = topPiece.GetComponent<Rigidbody2D>();
+		foreach(GameObject go in GameControl.instance.columnPiecesObj.columnPieces)
+		{
+			stackAgentObj.piecesList.Add(go);
+		}
 	}
 
 	public void SetRLTarget4DDA()

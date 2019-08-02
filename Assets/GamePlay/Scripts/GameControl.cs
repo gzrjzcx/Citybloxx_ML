@@ -131,6 +131,8 @@ public class GameControl : MonoBehaviour
         {
             comboControlObj.AddComboNum();            
         }
+
+        comboControlObj.PlayComboSound();
     }
 
     public void AfterPieceStackingFailed(int fallenSide)
@@ -167,6 +169,7 @@ public class GameControl : MonoBehaviour
             }
             gameStatus = GameStatus.GAME_OVER;
             AudioControl.instance.Play("Round_End");
+            AudioControl.instance.Stop("Theme");
         }
     }
 

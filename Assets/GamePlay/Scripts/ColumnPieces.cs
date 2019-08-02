@@ -5,13 +5,13 @@ using UnityEngine;
 public class ColumnPieces : MonoBehaviour
 {
 
-	public List<GameObject> columnPieces;
+	public List<GameObject> columnPieces = new List<GameObject>();
 
     // Start is called before the first frame update
-    void Start()
-    {
-		List<GameObject> columnPieces = new List<GameObject>();        
-    }
+  //   void Start()
+  //   {
+		// List<GameObject> columnPieces = new List<GameObject>();        
+  //   }
 
     public void Add(GameObject go)
     {

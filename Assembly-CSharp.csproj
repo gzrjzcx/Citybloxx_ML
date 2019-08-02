@@ -68,6 +68,10 @@
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSlingAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSwingReward.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CCMStackAgent.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\ColumnReset.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\DDATestHelper.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\PiecePosRange.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\PositionRange.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\SpawnMLArea.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />

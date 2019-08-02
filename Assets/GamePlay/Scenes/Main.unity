@@ -4458,7 +4458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnThreshold: 50
-  spawnProbability: 30
+  spawnProbability: 20
 --- !u!1 &1145137653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,7 +4910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 90.69922, y: 148.7998}
+  m_AnchoredPosition: {x: 90.69922, y: 148.80078}
   m_SizeDelta: {x: 180, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264210687

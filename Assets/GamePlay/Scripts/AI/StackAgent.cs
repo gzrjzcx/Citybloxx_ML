@@ -13,6 +13,9 @@ public class StackAgent : Agent
     public Rigidbody2D agentRb2d;
     public Transform root;
 
+    private List<float> perceptionBuffer = new List<float>();
+    public List<GameObject> piecesList = new List<GameObject>();
+    public List<PiecePosRange> piecesDataList = new List<PiecePosRange>();
 
     public override void InitializeAgent()
     {
@@ -23,45 +26,45 @@ public class StackAgent : Agent
 
 	public override void CollectObservations()
 	{
-
-        // Vector2 agentPos = root.transform.InverseTransformPoint(agentRb2d.position);
-        // agentPos.x = agentPos.x / 1.3f;
-        // agentPos.y = (agentPos.y - GameControl.instance.aiObj.agent_min_y) / 1.2f;
-
-        // Vector2 targetPos = root.transform.InverseTransformPoint(targetRb2d.position);
-        // targetPos.x = targetPos.x / 2.1f;
-        // targetPos.y = (targetPos.y - GameControl.instance.aiObj.target_min_y) / 0.2f;
-
-        // Debug.Log("agentPos = "  + agentPos + "targetPos = " + targetPos);
-
-        // AddVectorObs(agentPos); // 2
-        // AddVectorObs(targetPos); // 2
-        // AddVectorObs(agentRb2d.rotation / 20f); // 1
-        // AddVectorObs(targetRb2d.rotation / 15f); // 1
-        // AddVectorObs(columnTran.localPosition.x / 0.5f); // 1
-        // AddVectorObs(columnRb2d.rotation / 15f); // 1
-        // AddVectorObs(targetTran.localPosition.x / 0.5f); // 1
+        // float rot = (GameControl.instance.columnObj.amplitudeRotate - 5f) / 10f;
         Vector2 agentPos = root.transform.InverseTransformPoint(agentRb2d.position);
-        Vector2 targetPos = root.transform.InverseTransformPoint(targetRb2d.position);
-
-        // Debug.Log("agentPos = "  + agentPos + "targetPos = " + targetPos);
-
-        agentPos.x = agentPos.x / 1.3f;
-        agentPos.y = (agentPos.y - 7.4f) / 1.2f;
-
-        targetPos.x = targetPos.x / 3.5f;
-        targetPos.y = (targetPos.y - 3.6f) / 0.41f;
-
-        Debug.Log("agentPosScale = "  + agentPos + "targetPosScale = " + targetPos);
+        agentPos.x = (agentPos.x + 1.42f) / 2.72f;
+        agentPos.y = (agentPos.y - 2.2f) / 1.2f;
 
         AddVectorObs(agentPos); // 2
-        AddVectorObs(targetPos); // 2
-        AddVectorObs(agentRb2d.rotation / 20f); // 1
-        AddVectorObs(targetRb2d.rotation / 15f); // 1
-        AddVectorObs(columnTran.localPosition.x / 0.5f); // 1
-        AddVectorObs(columnRb2d.rotation / 15f); // 1
-        AddVectorObs(targetTran.localPosition.x / 0.5f); // 1
+        AddVectorObs((agentRb2d.rotation + 20f) / 40f); // 1
+
+        AddVectorObs((columnTran.localPosition.x + 0.5f) / 1f); // 1
+        AddVectorObs((columnRb2d.rotation + 15f) / 30f); // 1
+
+        AddVectorObs(PerceptPieces()); // 36
+
+        // AddVectorObs(rot); // 1
 	}
+
+    public List<float> PerceptPieces()
+    {
+        perceptionBuffer.Clear();
+        for(int i=0; i<piecesList.Count; i++)
+        {
+            float[] sublist = new float[4];
+            SetSubList(piecesList[i], sublist, i);
+            perceptionBuffer.AddRange(sublist);
+        }
+        return perceptionBuffer;
+    }
+
+    private void SetSubList(GameObject piece, float[] subList, int idx)
+    {
+        Rigidbody2D pieceRb2d = piece.GetComponent<Rigidbody2D>();
+        Vector2 piecePos = root.transform.InverseTransformPoint(pieceRb2d.position);
+        piecePos.x = (piecePos.x - piecesDataList[idx].minPosX) / piecesDataList[idx].posRangeX;
+        piecePos.y = (piecePos.y - piecesDataList[idx].minPosY) / piecesDataList[idx].posRangeY;
+        subList[0] = piecePos.x;
+        subList[1] = piecePos.y;
+        subList[2] = (pieceRb2d.rotation + 15f) / 30f;
+        subList[3] = (piece.transform.localPosition.x + (0.5f * (idx+1))) / (1 * (idx+1));
+    }
 
 	public override void AgentAction(float[] vectorAction, string textAction)
 	{

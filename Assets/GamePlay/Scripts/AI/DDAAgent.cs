@@ -26,7 +26,7 @@ public class DDAAgent : Agent
 	public override void CollectObservations()
 	{
 		delta = Mathf.Abs(GameControl.instance.mycolObj.deltaX);
-		thinkingTime = thinkingTime > 15 ? 15 : thinkingTime;
+		thinkingTime = thinkingTime > 12 ? 12 : thinkingTime;
 		float[] diffFactors = {thinkingTime, 
 								delta,
 								GameControl.instance.columnObj.amplitudeRotate};
@@ -88,7 +88,7 @@ public class DDAAgent : Agent
 			if(string.Equals(GetRotateLvl(factor), diffLvl[i]))
 			{
 				subList[i] = 1;
-				subList[diffLvl.Length + 1] = (factor-7) / 8f;
+				subList[diffLvl.Length + 1] = (factor-5) / 10f;
 				break;
 			}
 		}
@@ -101,7 +101,7 @@ public class DDAAgent : Agent
 			if(string.Equals(GetTimeLvl(factor), diffLvl[i]))
 			{
 				subList[i] = 1;
-				subList[diffLvl.Length + 1] = factor / 15f;
+				subList[diffLvl.Length + 1] = factor / 12f;
 				break;
 			}
 		}
@@ -122,14 +122,12 @@ public class DDAAgent : Agent
 
 	private string GetRotateLvl(float rotate)
 	{
-		if(rotate < 10f && rotate >= 7f)
+		if(rotate < 7f && rotate >= 0f)
 			return "easy";
-		else if(rotate < 12f)
+		else if(rotate < 11f)
 			return "medium";
-		else if(rotate <= 15f)
-			return "difficult";
 		else
-			return null;
+			return "difficult";
 	}
 
 	private string GetDeltaLvl(float delta)
@@ -138,22 +136,18 @@ public class DDAAgent : Agent
 			return "easy";
 		else if(delta <= 0.5f)
 			return "medium";
-		else if(delta < 2.8f)
-			return "difficult";
 		else
-			return null;
+			return "difficult";
 	}
 
 	public string GetTimeLvl(float elapsedTime)
 	{
 		if(elapsedTime < 2.5f)
 			return "easy";
-		else if(elapsedTime < 7.5)
+		else if(elapsedTime < 5)
 			return "medium";
-		else if(elapsedTime <= 15)
+		else
 			return "difficult";
-		else 
-			return null;
 	}
 
 	public float deltaDegree
@@ -164,9 +158,9 @@ public class DDAAgent : Agent
 			{
 				return delta;
 			}
-			else if(delta < 0.5)
+			else if(delta <= 0.4)
 			{
-				return delta * 2;
+				return delta * 2.5f;
 			}
 			else
 			{
@@ -177,9 +171,9 @@ public class DDAAgent : Agent
 
 	private int GetCurrentState()
 	{
-		float exp = 0.2f * (thinkingTime / 15f) + 0.7f * deltaDegree
-					+ 0.1f * ((GameControl.instance.columnObj.amplitudeRotate-7f) / 8f);
-		if(exp < 0.2)
+		float exp = 0.2f * (thinkingTime / 12f) + 0.7f * deltaDegree
+					+ 0.1f * ((GameControl.instance.columnObj.amplitudeRotate-5f) / 11f);
+		if(exp < 0.3)
 			return 1; // easy
 		else if(exp < 0.75)
 			return 0; // medium

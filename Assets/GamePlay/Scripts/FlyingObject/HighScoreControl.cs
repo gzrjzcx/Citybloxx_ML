@@ -39,8 +39,6 @@ public class HighScoreControl : MonoBehaviour
 			{
 				PlayerPrefs.SetInt(scoreKey + i.ToString(), curScore);
 				PlayerPrefs.SetString(nameKey + i.ToString(), curName);
-				Debug.Log(PlayerPrefs.GetInt(scoreKey + i.ToString()));
-				Debug.Log(PlayerPrefs.GetString(nameKey + i.ToString()));
 				break;
 			}
 		}
@@ -71,6 +69,7 @@ public class HighScoreControl : MonoBehaviour
 
 		highScore = Instantiate(highScoreBoardPrefab, spawnPos, Quaternion.identity);
 		highScore.GetComponent<HighScore>().nameText.text = name;
+		highScore.transform.SetParent(this.transform, true);
 	}
 
 }

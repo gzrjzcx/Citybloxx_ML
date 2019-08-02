@@ -213,6 +213,17 @@ MonoBehaviour:
   columnTran: {fileID: 0}
   agentRb2d: {fileID: 3616114074434243906}
   root: {fileID: 0}
+  piecesList: []
+  piecesDataList:
+  - {fileID: 11400000, guid: ea80436870c56430c81b80ce0f66549a, type: 2}
+  - {fileID: 11400000, guid: 5f7a5a3c327a9454fa15dc39fe257998, type: 2}
+  - {fileID: 11400000, guid: de92947820b434edeb35c54766bef640, type: 2}
+  - {fileID: 11400000, guid: b70ee90ae4af64c82ac12668ddc401c4, type: 2}
+  - {fileID: 11400000, guid: 97467d284f2044d69b58811cc6a5da4a, type: 2}
+  - {fileID: 11400000, guid: ee1552f67e62241a292efe0854484ad4, type: 2}
+  - {fileID: 11400000, guid: 7b2889676eb174244b66d6d6a546100a, type: 2}
+  - {fileID: 11400000, guid: 99bb2a0c3518549bbb563d3f4f9498f9, type: 2}
+  - {fileID: 11400000, guid: 99ed575583e414224a1f087c58fe9bf1, type: 2}
 --- !u!114 &6932255215965635018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,3 +260,4 @@ MonoBehaviour:
   s: 
   t: 
   isError: 0
+  isEnabled: 0

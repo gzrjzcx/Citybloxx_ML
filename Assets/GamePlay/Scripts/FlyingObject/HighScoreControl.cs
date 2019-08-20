@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HighScoreControl : MonoBehaviour
 {
+	private class Record
+	{
+		public int score;
+		public string name;
+	}
 
-	public List<int> highScoreList = new List<int>();
-	public List<string> nameList = new List<string>();
+	private List<Record> records = new List<Record>();
 
 	private GameObject highScoreBoardPrefab;
 	private GameObject highScore;
@@ -16,16 +21,20 @@ public class HighScoreControl : MonoBehaviour
 
 	void Start()
 	{
-		for(int i=listLength; i>0; i--)
+		PlayerPrefs.DeleteAll();
+		for(int i=0; i<listLength; i++)
 		{
-			highScoreList.Add(PlayerPrefs.GetInt(scoreKey + i.ToString()));
-			nameList.Add(PlayerPrefs.GetString(nameKey + i.ToString()));
+			Record r = new Record();
+			r.score = PlayerPrefs.GetInt(scoreKey + i.ToString());
+			r.name = PlayerPrefs.GetString(nameKey + i.ToString(), "Anonymous");
+			records.Add(r);
 		}
+		records = records.OrderBy( r => r.score ).ToList();
 	}
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.R))
+		if(GameControl.instance.isDug && Input.GetKeyDown(KeyCode.R))
 		{
 			SpawnHighScoreBoard("Alex");
 		}
@@ -33,14 +42,16 @@ public class HighScoreControl : MonoBehaviour
 
 	public void UpdateHighScore(int curScore, string curName)
 	{
-		for(int i = listLength-1; i>0; i--)
+		if(curScore > records[0].score)
 		{
-			if(curScore > highScoreList[i])
-			{
-				PlayerPrefs.SetInt(scoreKey + i.ToString(), curScore);
-				PlayerPrefs.SetString(nameKey + i.ToString(), curName);
-				break;
-			}
+			records[0].score = curScore;
+			records[0].name = curName;			
+		}
+		records = records.OrderBy( r => r.score ).ToList();
+		for(int i = 0; i<listLength; i++)
+		{
+			PlayerPrefs.SetInt(scoreKey + i.ToString(), records[i].score);
+			PlayerPrefs.SetString(nameKey + i.ToString(), records[i].name);				
 		}
 	}
 
@@ -48,9 +59,10 @@ public class HighScoreControl : MonoBehaviour
 	{
 		for(int i=listLength-1; i>0; i--)
 		{
-			if(GameControl.instance.stackedPieceNum == highScoreList[i])
+			if(records[i].name != null 
+				&& GameControl.instance.stackedPieceNum == records[i].score)
 			{
-				SpawnHighScoreBoard(nameList[i]);
+				SpawnHighScoreBoard(records[i].name);
 			}
 		}
 	}

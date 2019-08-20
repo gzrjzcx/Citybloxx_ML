@@ -14,14 +14,15 @@ public class DoTweenControl : MonoBehaviour
 		 		targetJump -= new Vector3(-4 * fallenSide, 0, 0);
 		Vector3 targetRotation = new Vector3(0, -270 * fallenSide, 35);
 
-		transform.DORotate(targetRotation, 2);
-		transform.DOJump(targetJump, 2f, 1, 2).SetEase(Ease.Linear).OnComplete(OnJumpComplete);
+		transform.DORotate(targetRotation, 0.8f);
+		transform.DOJump(targetJump, 2f, 1, 0.8f).SetEase(Ease.Linear).OnComplete(OnJumpComplete);
 	}
 
 	private void OnJumpComplete()
 	{
 		transform.rotation = Quaternion.identity;
 		transform.GetComponent<Piece>().isFallen = false;
+		GameControl.instance.piecePoolObj.HookFailedPiece();
 	}
 
 	public void StackingNoDeadCenterAnimation(int fallenSide, bool isDeadCenter)

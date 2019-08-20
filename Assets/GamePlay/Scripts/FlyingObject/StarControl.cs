@@ -62,7 +62,6 @@ public class StarControl : MonoBehaviour
 			Random.Range(leftTopPos.y, leftTopPos.y + offsetY), 0f);
 		Vector3 rotEuler = new Vector3(0, 0, Random.Range(0f, 360f));
 		float scale = (imgIdx < 9) ? Random.Range(1f, 2f) : Random.Range(0.1f, 0.2f);
-		Debug.Log(scale);
 
 		star = Instantiate(starPrefab, spawnPos, Quaternion.Euler(rotEuler));
 		starList.Add(star);

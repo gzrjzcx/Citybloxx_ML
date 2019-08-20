@@ -27,6 +27,7 @@ public class GameControl : MonoBehaviour
     public StarControl starObj;
     public SpaceFOControl foObj;
     public HighScoreControl highScoreObj;
+    public Tester tester;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI populationScoreText;
@@ -39,6 +40,8 @@ public class GameControl : MonoBehaviour
     public int missNum = 0;
     public string playerName;
     public Vector3 seaLevel;
+
+    public bool isDug;
 
     public enum GameStatus
     {
@@ -83,6 +86,10 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             gameStatus = GameStatus.GAME_START; 
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            ScreenCapture.CaptureScreenshot("screenshot/" + Time.time + ".png");
+        }
     }
 
     public void AfterCollisionAtGameStart()
@@ -93,6 +100,7 @@ public class GameControl : MonoBehaviour
         }
         screenMoveUpObj.ObstacleMoveUp();
         AudioControl.instance.Play("Block_Hit");
+        piecePoolObj.HookNewPiece();
     }
 
     public void AfterCollisionAtFirstPiece()
@@ -117,7 +125,7 @@ public class GameControl : MonoBehaviour
         starObj.SpawnMultiStar();
         foObj.SpawnFO();
         highScoreObj.ShowHighScore();
-        // aiObj.AddMinPosY();
+        aiObj.AddMinPosY();
         seaLevel.y++;
 
         if(isDeadCenter)
@@ -126,6 +134,7 @@ public class GameControl : MonoBehaviour
             comboControlObj.Combo();
             columnObj.Set2ComboSwingingAmplitude();
             particleObj.PlayComboPeriodAnim();
+            tester.dcNum++;
         }
         else if(gameStatus == GameStatus.GAME_COMBO)
         {
@@ -137,10 +146,16 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        Missed();
-        CheckMissNum();
+        if(tester.testType == Tester.TestType.NORMAL)
+        {
+            Missed();
+            CheckMissNum();
+            tester.Record();
+        }
+        tester.missNum++;
         screenMoveUpObj.ShakeCamera();
         flyerObj.KillAllFlyMan();
+        GameControl.instance.aiObj.stackAgentObj.isPlaying = false;
     }
 
     void Scored()

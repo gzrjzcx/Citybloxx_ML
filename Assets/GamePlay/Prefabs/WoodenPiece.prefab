@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac91494d16fd742469315e34924b61c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: cf69212b8e8e14aafa6b356244c8fee0, type: 2}
+  brain: {fileID: 11400000, guid: d82a2c004c91248ac91e688cc1c2d85c, type: 2}
   agentParameters:
     agentCameras: []
     agentRenderTextures: []
@@ -209,10 +209,31 @@ MonoBehaviour:
   pieceObj: {fileID: 8710141791390138346}
   targetRb2d: {fileID: 0}
   targetTran: {fileID: 0}
-  columnRb2d: {fileID: 0}
-  columnTran: {fileID: 0}
   agentRb2d: {fileID: 3616114074434243906}
+  agentTran: {fileID: 233358126232300190}
   root: {fileID: 0}
+  agentVelocity: {x: 0, y: 0}
+  piecesVelocity:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  agentLastPos: {x: 0, y: 0}
+  piecesLastPos:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
   piecesList: []
   piecesDataList:
   - {fileID: 11400000, guid: ea80436870c56430c81b80ce0f66549a, type: 2}
@@ -224,6 +245,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b2889676eb174244b66d6d6a546100a, type: 2}
   - {fileID: 11400000, guid: 99bb2a0c3518549bbb563d3f4f9498f9, type: 2}
   - {fileID: 11400000, guid: 99ed575583e414224a1f087c58fe9bf1, type: 2}
+  isPlaying: 0
 --- !u!114 &6932255215965635018
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,13 +15,23 @@ public class AIControl : MonoBehaviour
 
     public float thinkingStartTime = 0;
 
-    public float agent_min_y = 2.2f;
-    public float target_min_y = -0.9f;
-
-	private bool isNeedHelp = false;
+    public float agent_min_y;
+    public float[] pieces_min_y;
 
 	public bool isDDA = false;
 	public bool isATS = false;
+	public bool isATSTest;
+
+	void Start()
+	{
+		agent_min_y = 2.2f;
+		int i=0;
+		foreach(PiecePosRange p in stackAgentObj.piecesDataList)
+		{
+			pieces_min_y[i] = p.minPosY;
+			i++;
+		}
+	}
 
 	void Update()
 	{
@@ -30,12 +40,9 @@ public class AIControl : MonoBehaviour
 			if(Input.GetKeyDown(KeyCode.H))
 			{
 				AutoStack();
-			}
-			if(isNeedHelp)
-			{
-				stackAgentObj.RequestDecision();
-				isNeedHelp = false;
-			}			
+				GameControl.instance.tester.helpNum++;
+				// isATSTest = true;
+			}		
 		}
 	}
 
@@ -52,8 +59,13 @@ public class AIControl : MonoBehaviour
 		if(isATS)
 		{
 			SetRLTarget4stack();
-			isNeedHelp = true;
+			stackAgentObj.ResetPos();
+			stackAgentObj.isPlaying = true;
 		}
+		// Debug.Log("----  AutoStack Start ------ | " + GameControl.instance.stackedPieceNum);
+		// SetRLTarget4stack();
+		// stackAgentObj.ResetPos();
+		// stackAgentObj.isPlaying = true;
 	}
 
 	public void SetRLTarget4stack()
@@ -61,6 +73,7 @@ public class AIControl : MonoBehaviour
 		GameObject topPiece = GameControl.instance.columnPiecesObj.topPiece;
 		stackAgentObj.targetTran = topPiece.transform;
 		stackAgentObj.targetRb2d = topPiece.GetComponent<Rigidbody2D>();
+		stackAgentObj.piecesList.Clear();
 		foreach(GameObject go in GameControl.instance.columnPiecesObj.columnPieces)
 		{
 			stackAgentObj.piecesList.Add(go);
@@ -82,13 +95,15 @@ public class AIControl : MonoBehaviour
 
 	public void AddMinPosY()
 	{
-		if(GameControl.instance.stackedPieceNum < 4)
+		if(GameControl.instance.stackedPieceNum < 9)
 			return;
 		float columnIncrement = GameControl.instance.columnObj.columnHeightIncrement;
-		float increnment = columnIncrement > 0.5 ? columnIncrement : 1;
-		agent_min_y += increnment;
-		target_min_y += increnment;
-		Debug.Log("add min pos Y , increnment = " + increnment, gameObject);
+		// float increnment = columnIncrement > 0.5 ? columnIncrement : 1;
+		agent_min_y += columnIncrement;
+		for(int i=0; i<9; i++)
+		{
+			pieces_min_y[i] += columnIncrement;
+		}
 	}
 
 	public void SetThinkingStartTime()
@@ -96,8 +111,6 @@ public class AIControl : MonoBehaviour
 		thinkingStartTime = Time.time;
 		// Debug.Log("SetThinkingStartTime = " + thinkingStartTime);
 	}
-
-
 
 
 

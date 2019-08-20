@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{431EBCEB-9C6F-1464-E351-4A678E260697}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GamePlay/Scripts/Piece.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GamePlay/Scripts/PiecePool.cs">
     <Files>
-      <File FileName="Assets/GamePlay/Scripts/GameControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/GamePlay/Scripts/GameControl.cs" Line="157" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/ScreenMoveUp.cs" Line="1" Column="1" />
       <File FileName="Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs" Line="1" Column="1" />
       <File FileName="Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXPieceAgent.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/EllipticalOrbit.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/AI/DDAAgent.cs" Line="1" Column="1" />
-      <File FileName="Assets/GamePlay/Scripts/Piece.cs" Line="197" Column="1" />
+      <File FileName="Assets/GamePlay/Scripts/Piece.cs" Line="97" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/MyCollisionControl.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/FlyingObject/CloudsControl.cs" Line="1" Column="1" />
       <File FileName="Assets/GamePlay/Scripts/Utilities/DoTweenControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/GamePlay/Scripts/PiecePool.cs" Line="56" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -21,7 +22,6 @@
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/Scripts/ML/CBXPieceAgent.cs" relfile="Assets/Scripts/ML/CBXPieceAgent.cs" line="95" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ObstacleControl.cs" relfile="Assets/GamePlay/Scripts/ObstacleControl.cs" line="21" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/ObstacleControl.cs" relfile="Assets/GamePlay/Scripts/ObstacleControl.cs" line="30" column="1" />
-      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/GameControl.cs" relfile="Assets/GamePlay/Scripts/GameControl.cs" line="157" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/StartupSceneManager.cs" relfile="Assets/GamePlay/Scripts/StartupSceneManager.cs" line="9" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/LoadingScene.cs" relfile="Assets/GamePlay/Scripts/LoadingScene.cs" line="17" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/RLAgent.cs" relfile="Assets/GamePlay/Scripts/RLAgent.cs" line="28" column="1" />
@@ -30,8 +30,9 @@
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/FlyerControl.cs" relfile="Assets/GamePlay/Scripts/FlyerControl.cs" line="23" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/CloudsControl.cs" relfile="Assets/GamePlay/Scripts/CloudsControl.cs" line="42" column="1" />
       <Breakpoint file="/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs" relfile="Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/CBXDDAAgent.cs" line="143" column="1" />
-      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs" relfile="Assets/GamePlay/Scripts/Piece.cs" line="160" column="1" />
-      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs" relfile="Assets/GamePlay/Scripts/Piece.cs" line="134" column="1" />
+      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PiecePool.cs" relfile="Assets/GamePlay/Scripts/PiecePool.cs" line="34" column="1" />
+      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/PiecePool.cs" relfile="Assets/GamePlay/Scripts/PiecePool.cs" line="56" column="1" />
+      <Breakpoint file="/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts/Piece.cs" relfile="Assets/GamePlay/Scripts/Piece.cs" line="96" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

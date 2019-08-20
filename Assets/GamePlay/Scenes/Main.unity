@@ -4102,6 +4102,7 @@ GameObject:
   - component: {fileID: 1065792519}
   - component: {fileID: 1065792520}
   - component: {fileID: 1065792521}
+  - component: {fileID: 1065792522}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -4138,6 +4139,7 @@ MonoBehaviour:
   starObj: {fileID: 875426883}
   foObj: {fileID: 1137466184}
   highScoreObj: {fileID: 1145137655}
+  tester: {fileID: 1065792522}
   scoreText: {fileID: 2112618767}
   populationScoreText: {fileID: 1046943907}
   gameOverText: {fileID: 1943313062}
@@ -4151,6 +4153,7 @@ MonoBehaviour:
   missNum: 0
   playerName: 
   seaLevel: {x: 0, y: -5, z: 0}
+  isDug: 0
   gameStatus: 0
 --- !u!114 &1065792517
 MonoBehaviour:
@@ -4169,6 +4172,7 @@ MonoBehaviour:
   piecePoolSize: 10
   SlingObj: {fileID: 1341039995}
   currentPieceIdx: 0
+  lastPieceIdx: 0
   pieces: []
   idlePieceArea: {fileID: 1989658751}
 --- !u!4 &1065792518
@@ -4241,6 +4245,26 @@ MonoBehaviour:
   dropPieceCol: {fileID: 0}
   topPieceCol: {fileID: 0}
   deltaX: 0
+--- !u!114 &1065792522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065792515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c799e761f2c3642beb85b48cdfad6e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalThinkingTime: 0
+  missNum: 0
+  dcNum: 0
+  helpNum: 0
+  adjustNum: 0
+  menu: {fileID: 2069769235}
+  testType: 0
+  isAI: 0
 --- !u!1 &1076779374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4502,8 +4526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4636ce680b46345e8a8d6c9674ef6d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreList: 
-  nameList: []
 --- !u!1 &1217826074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6671,9 +6693,19 @@ MonoBehaviour:
   attentionObj: {fileID: 830252433}
   thinkingStartTime: 0
   agent_min_y: 2.2
-  target_min_y: -0.9
+  pieces_min_y:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   isDDA: 0
   isATS: 0
+  isATSTest: 0
 --- !u!198 &1848857013 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198163637374424290, guid: daa6cceb1b087d74aad6916dac2805ea,

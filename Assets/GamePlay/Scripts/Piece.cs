@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Piece : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class Piece : MonoBehaviour
 	        	transform.rotation = Quaternion.identity;
 	        	rb2d.isKinematic = false;
 	        	isHooked = false;
+                dropSignal = false;
                 GetThinkingTime();
 	        }
     	}
@@ -53,6 +55,8 @@ public class Piece : MonoBehaviour
     {
         GameControl.instance.aiObj.ddaAgentObj.thinkingTime = 
             Time.time - GameControl.instance.aiObj.thinkingStartTime;
+        GameControl.instance.tester.totalThinkingTime += 
+            GameControl.instance.aiObj.ddaAgentObj.thinkingTime;
         // Debug.Log("GetThinkingTime = " + GameControl.instance.aiObj.ddaAgentObj.thinkingTime);
     }
 
@@ -93,11 +97,10 @@ public class Piece : MonoBehaviour
                     break;
             }
             GameControl.instance.aiObj.AdjustDifficulty();
-            GameControl.instance.piecePoolObj.HookNewPiece();
         }
-
         isStacked = true;
     }
+
 
     void AfterCollisionAtGameRunning()
     {
@@ -122,11 +125,11 @@ public class Piece : MonoBehaviour
     void Stack()
     {
         stackStatus.isStackSuccessful = true;
+        GameControl.instance.piecePoolObj.HookNewPiece(); // failed piece hooked at dotweenControl.cs
         GameControl.instance.AfterPieceStackingSuccessfully(stackStatus.isDeadCenter);
-        doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
         GameControl.instance.columnPiecesObj.Add(this.gameObject);
+        doTween.StackingNoDeadCenterAnimation(stackStatus.fallenSide, stackStatus.isDeadCenter);
         AudioControl.instance.Play("Block_Hit");
-        //this.transform.GetComponent<StackAgent>().AddMinPosY();
     }
 
     void Fall()
@@ -139,6 +142,7 @@ public class Piece : MonoBehaviour
             AudioControl.instance.Play("Fail_1");
         else
             AudioControl.instance.Play("Fail_2");
+        GameControl.instance.aiObj.stackAgentObj.isPlaying = false;
     }
 
     public bool CheckIfCanStack()

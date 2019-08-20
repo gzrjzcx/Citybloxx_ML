@@ -67,12 +67,16 @@
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSaverAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSlingAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CBXSwingReward.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CCMAgent_Position.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\CCMStackAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\ColumnReset.cs" />
-    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\DDATestHelper.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\DDAAgentV2.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\PiecePosRange.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\PositionRange.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\RewardAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\SpawnMLArea.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\TestHelper\CCMTest.cs" />
+    <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_Scripts\TestHelper\DDATestHelper.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
     <Compile Include="Assets\CBX_RL\Assets\ML_Agents\ML_SourceFiles\ML-Agents\Examples\3DBall\Scripts\Ball3DDecision.cs" />
@@ -240,6 +244,7 @@
     <Compile Include="Assets\GamePlay\Scripts\PiecePool.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ScreenMoveUp.cs" />
     <Compile Include="Assets\GamePlay\Scripts\StartupSceneManager.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\Tester.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\AutoDestroy.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\DoTweenControl.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Utilities\Extension.cs" />
@@ -904,6 +909,18 @@
     <ProjectReference Include="MacBLAS.csproj">
       <Project>{9D92D103-B921-3F0C-8B66-3377BE2B4FB7}</Project>
       <Name>MacBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{ECC57E46-A44B-3130-E226-F3DB6F502C8D}</Project>
+      <Name>Unity.Recorder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{4B2A92CA-E261-25A5-35CE-A68891AFB745}</Project>
+      <Name>Unity.Recorder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Samples.csproj">
+      <Project>{5E05F764-4A7A-6615-F641-1CE00C91DB9B}</Project>
+      <Name>Unity.Recorder.Samples</Name>
     </ProjectReference>
     <ProjectReference Include="iOSBLAS.csproj">
       <Project>{EC75D93B-CC8E-788D-7713-7A17543B68E1}</Project>

@@ -13,13 +13,13 @@ public class SpaceFOControl : MonoBehaviour
 	[SerializeField]
 	private int spawnProbability;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.U))
-		{
-			SpawnFO();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.U))
+	// 	{
+	// 		SpawnFO();
+	// 	}
+	// }
 
 	void Start()
 	{
@@ -74,7 +74,6 @@ public class SpaceFOControl : MonoBehaviour
 		float offsetY = Random.Range(0f, 3f);
 		Vector3 spawnPos = new Vector3(leftCenterPos.x - offsetX,
 									leftCenterPos.y - offsetY, 0f);
-		Debug.Log(spawnPos);
 
 		float scale = 0.4f;
 

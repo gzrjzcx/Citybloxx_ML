@@ -7,13 +7,13 @@ public class AttentionControl : MonoBehaviour
 	private GameObject attentionPrefab;
 	private GameObject attention;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.A))
-		{
-			SpawnLevelAttention(Random.Range(0, 2));
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.A))
+	// 	{
+	// 		SpawnLevelAttention(Random.Range(0, 2));
+	// 	}
+	// }
 
     public void SpawnLevelAttention(int turnSignal)
     {

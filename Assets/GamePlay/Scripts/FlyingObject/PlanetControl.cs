@@ -13,13 +13,13 @@ public class PlanetControl : MonoBehaviour
 	[SerializeField]
 	private int spawnProbability;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.P))
-		{
-			SpawnPlanet();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.P))
+	// 	{
+	// 		SpawnPlanet();
+	// 	}
+	// }
 
 	void Start()
 	{

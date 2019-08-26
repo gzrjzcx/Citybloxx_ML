@@ -43,7 +43,7 @@ public class DDAAgent : Agent
 				AudioControl.instance.Play("Level_Up");				
 			}
 
-			GameControl.instance.tester.adjustNum++;
+			// GameControl.instance.tester.adjustNum++;
 
 		}
 	}

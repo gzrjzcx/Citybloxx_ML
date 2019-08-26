@@ -14,13 +14,13 @@ public class StarControl : MonoBehaviour
 	[SerializeField]
 	private int spawnProbability;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.S))
-		{
-			SpawnStar();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.S))
+	// 	{
+	// 		SpawnStar();
+	// 	}
+	// }
 
 	void Start()
 	{

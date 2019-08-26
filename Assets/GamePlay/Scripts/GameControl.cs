@@ -86,10 +86,10 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             gameStatus = GameStatus.GAME_START; 
         }
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            ScreenCapture.CaptureScreenshot("screenshot/" + Time.time + ".png");
-        }
+        // if(Input.GetKeyDown(KeyCode.P))
+        // {
+        //     ScreenCapture.CaptureScreenshot("screenshot/" + Time.time + ".png");
+        // }
     }
 
     public void AfterCollisionAtGameStart()
@@ -127,6 +127,7 @@ public class GameControl : MonoBehaviour
         highScoreObj.ShowHighScore();
         aiObj.AddMinPosY();
         seaLevel.y++;
+        // tester.isATSStack = false;
 
         if(isDeadCenter)
         {
@@ -134,7 +135,7 @@ public class GameControl : MonoBehaviour
             comboControlObj.Combo();
             columnObj.Set2ComboSwingingAmplitude();
             particleObj.PlayComboPeriodAnim();
-            tester.dcNum++;
+            // tester.dcNum++;
         }
         else if(gameStatus == GameStatus.GAME_COMBO)
         {
@@ -146,13 +147,20 @@ public class GameControl : MonoBehaviour
 
     public void AfterPieceStackingFailed(int fallenSide)
     {
-        if(tester.testType == Tester.TestType.NORMAL)
-        {
+        // if(tester.testType == Tester.TestType.NORMAL)
+        // {
             Missed();
             CheckMissNum();
-            tester.Record();
-        }
-        tester.missNum++;
+            // tester.Record();
+        // }
+        // if((tester.isAI == Tester.IsAI.ATS ||
+        //     tester.isAI == Tester.IsAI.ATSDDA) && 
+        //         tester.isATSStack)
+        // {
+        //     tester.AIFiledNum++;
+        //     tester.isATSStack = false;
+        // }
+        // tester.missNum++;
         screenMoveUpObj.ShakeCamera();
         flyerObj.KillAllFlyMan();
         GameControl.instance.aiObj.stackAgentObj.isPlaying = false;
@@ -214,6 +222,22 @@ public class GameControl : MonoBehaviour
         highScoreObj.UpdateHighScore(stackedPieceNum, playerName);
     }
 
+    public void AutoPlaying()
+    {
+        if(aiObj.stackAgentObj.pieceObj.isHooked)
+        {
+            aiObj.AutoStack();
+            AudioControl.instance.Play("Click");
+            Debug.Log("auto playing" + " pieccName = " + aiObj.stackAgentObj.pieceObj.name);             
+        }        
+    }
+
+    public void CancelCurrentATS()
+    {
+        Time.timeScale = 1f;
+        Destroy(FindObjectOfType<Alarm>().gameObject);
+        AudioControl.instance.Play("Click");       
+    }
 
 
 

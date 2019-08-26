@@ -11,6 +11,7 @@ public class HighScoreControl : MonoBehaviour
 		public string name;
 	}
 
+	[SerializeField]
 	private List<Record> records = new List<Record>();
 
 	private GameObject highScoreBoardPrefab;
@@ -21,7 +22,7 @@ public class HighScoreControl : MonoBehaviour
 
 	void Start()
 	{
-		PlayerPrefs.DeleteAll();
+		// PlayerPrefs.DeleteAll();
 		for(int i=0; i<listLength; i++)
 		{
 			Record r = new Record();
@@ -30,14 +31,6 @@ public class HighScoreControl : MonoBehaviour
 			records.Add(r);
 		}
 		records = records.OrderBy( r => r.score ).ToList();
-	}
-
-	void Update()
-	{
-		if(GameControl.instance.isDug && Input.GetKeyDown(KeyCode.R))
-		{
-			SpawnHighScoreBoard("Alex");
-		}
 	}
 
 	public void UpdateHighScore(int curScore, string curName)

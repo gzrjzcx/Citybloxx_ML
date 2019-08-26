@@ -11,6 +11,8 @@ public class Tester : MonoBehaviour
     public int dcNum = 0;
     public int helpNum = 0;
     public int adjustNum = 0;
+    public int AIFiledNum = 0;
+    public bool isATSStack;
 
     public PauseMenu menu;
 
@@ -72,7 +74,8 @@ public class Tester : MonoBehaviour
 		{
 			sw.WriteLine(
 			 "total_num" + "\t" + "total_score" + "\t" + "thinkingTime" + "\t" + "missed_num" + "\t"
-			  + "total_time" + "\t" + "dc_num" + "\t" + "help_num" + "\t" + "adjust_num" + "\t" + "isAI");
+			  + "total_time" + "\t" + "dc_num" + "\t" + "help_num" + "\t" + "adjust_num" + "\t" 
+              + "AIMode" + "\t" + "isAIFailed");
 		}   		
     }
 
@@ -90,7 +93,8 @@ public class Tester : MonoBehaviour
 			  dcNum + "\t" + 
 			  helpNum + "\t" + 
 			  adjustNum + "\t" + 
-			  isAI.ToString());
+			  isAI.ToString() + "\t" +
+              AIFiledNum);
 		}  
     }
 
@@ -99,7 +103,7 @@ public class Tester : MonoBehaviour
     	if(Time.time > 300)
     	{
     		Record();
-    		EditorApplication.isPaused = true;
+    		// EditorApplication.isPaused = true;
     	}
     }
 
@@ -108,7 +112,7 @@ public class Tester : MonoBehaviour
     	if(GameControl.instance.stackedPieceNum > 50)
     	{
     		Record();
-    		EditorApplication.isPaused = true;    		
+    		// EditorApplication.isPaused = true;    		
     	}
     }
 

@@ -32,7 +32,7 @@ public class ComboControl : MonoBehaviour
         }
         else
         {
-            comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, true, false, false);
+            comboTimer.startTiming(5, OnComboTimingComplete, OnComboTimingProcess, false, false, false);
             PlayComboBarStarAnim();
         }
 

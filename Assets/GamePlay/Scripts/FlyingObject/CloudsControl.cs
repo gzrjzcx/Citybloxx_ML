@@ -12,13 +12,13 @@ public class CloudsControl : MonoBehaviour
 	[SerializeField]
 	private int lastCloudPieceNum = 10;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.C))
-		{
-			SpawnCloud();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.C))
+	// 	{
+	// 		SpawnCloud();
+	// 	}
+	// }
 
 	void Start()
 	{

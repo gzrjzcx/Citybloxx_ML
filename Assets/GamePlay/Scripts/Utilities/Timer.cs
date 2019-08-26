@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
 	public bool isTiming = false;
 	public bool isTimerEnd = true;
 	public bool isTimerDestoryAfterTiming = true;
-	public bool isIgnoreTimeScale = true;
+	public bool isIgnoreTimeScale = false;
 	public bool isRepeate = false;
 
 	float timerTarget;
@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
 	}
 
 	public void startTiming(float timerTarget_, CompleteEvent onTimerCompleted_, UpdateEvent updateEvent_ = null,
-		bool isIgnoreTimeScale_ = true, bool isRepeate_ = false, bool isDestory_ = true)
+		bool isIgnoreTimeScale_ = false, bool isRepeate_ = false, bool isDestory_ = true)
 	{
 		timerTarget = timerTarget_;
 		if(onTimerCompleted_ != null)

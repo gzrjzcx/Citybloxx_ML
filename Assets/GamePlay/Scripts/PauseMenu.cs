@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     public Button ATS;
     public Button music;
     public Button sound;
+    public GameObject ATS_UI; // UI in the main screen
 
 
     private string path = "pauseMenu/button/";
@@ -72,12 +73,14 @@ public class PauseMenu : MonoBehaviour
             GameControl.instance.aiObj.isATS = false;
             Sprite img = Resources.Load<Sprite>(path + "ats_disable");
             ATS.GetComponent<Image>().sprite = img;
+            ATS_UI.SetActive(false);
         }
         else
         {
             GameControl.instance.aiObj.isATS = true;
             Sprite img = Resources.Load<Sprite>(path + "ats_enable");
             ATS.GetComponent<Image>().sprite = img;
+            ATS_UI.SetActive(true);
         }
         AudioControl.instance.Play("Click");
 
@@ -118,9 +121,6 @@ public class PauseMenu : MonoBehaviour
         AudioControl.instance.Play("Click");
 
     }
-
-
-
 
 
 

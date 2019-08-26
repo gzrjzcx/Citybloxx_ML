@@ -37,8 +37,8 @@ public class Piece : MonoBehaviour
     	if(isHooked)
     	{
 	        if(Input.GetKeyDown("space") || Input.touchCount > 0 || dropSignal)
-	        {
-                transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
+	         {
+                   transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
                 Vector3 p = transform.position;
                 p.z = 0;
                 transform.position = p;

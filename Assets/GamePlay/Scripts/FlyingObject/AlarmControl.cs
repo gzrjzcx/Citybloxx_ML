@@ -8,13 +8,13 @@ public class AlarmControl : MonoBehaviour
 	private GameObject alarmPrefab;
 	private GameObject alarm;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.A))
-		{
-			SpawnAlarm();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.A))
+	// 	{
+	// 		SpawnAlarm();
+	// 	}
+	// }
 
 	public void SpawnAlarm()
 	{

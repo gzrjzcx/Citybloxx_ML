@@ -75,7 +75,7 @@ public class StackAgent : Agent
         Vector2 agentPos = pos2root(new Vector2(agentTran.position.x, agentTran.position.y));
         // Debug.Log("agentPos = " + agentPos + "  normalize: " + (agentPos.y - agentTran.position.y) / 1.2f, gameObject);
         agentPos.x = (agentPos.x + 1.42f) / 2.72f;
-        agentPos.y = (agentPos.y - GameControl.instance.aiObj.agent_min_y) / 1.2f;
+        agentPos.y = (agentPos.y - GameControl.instance.aiObj.agent_min_y) / 1.3f;
         AddVectorObs(agentPos); // 2
 
         float agentRot = agentTran.eulerAngles.z > 180 ? 
@@ -114,19 +114,19 @@ public class StackAgent : Agent
         subList[3] = (piece.transform.localPosition.x + (0.5f * (idx+1))) / (1 * (idx+1));
         subList[4] = (piecesVelocity[idx].x - piecesDataList[idx].minVeloX) / piecesDataList[idx].veloRangeX;
         subList[5] = (piecesVelocity[idx].y - piecesDataList[idx].minVeloY) / piecesDataList[idx].veloRangeY;
-        if(subList[4] > 1f || subList[5] > 1f)
-        {
-            Debug.Log("Raw velocity: = " + piecesVelocity[idx] + " min = " + piecesDataList[idx].minVeloX + " " +piecesDataList[idx].minVeloY);
-            Debug.Log("vel_x = " + subList[4] + " vel_y = " + subList[5] + " " + piece.name);
-            // EditorApplication.isPaused = true;
-        }
+        // if(subList[4] > 1f || subList[5] > 1f)
+        // {
+        //     // Debug.Log("Raw velocity: = " + piecesVelocity[idx] + " min = " + piecesDataList[idx].minVeloX + " " +piecesDataList[idx].minVeloY);
+        //     // Debug.Log("vel_x = " + subList[4] + " vel_y = " + subList[5] + " " + piece.name);
+        //     // EditorApplication.isPaused = true;
+        // }
 
-        if(subList[0] > 1f || subList[1] > 1f)
-        {
-            Debug.Log("Raw pos: = " + pieceWorldPos + " Normalize: " + piecePos + 
-                " min_x = " + piecesDataList[idx].minPosX + " min_y = " + GameControl.instance.aiObj.pieces_min_y[idx] + " " + piece.name);
-            // EditorApplication.isPaused = true;
-        }
+        // if(subList[0] > 1f || subList[1] > 1f)
+        // {
+        //     // Debug.Log("Raw pos: = " + pieceWorldPos + " Normalize: " + piecePos + 
+        //     //     " min_x = " + piecesDataList[idx].minPosX + " min_y = " + GameControl.instance.aiObj.pieces_min_y[idx] + " " + piece.name);
+        //     // EditorApplication.isPaused = true;
+        // }
 
     }
 
@@ -135,9 +135,10 @@ public class StackAgent : Agent
 		int dropSignal = Mathf.FloorToInt(vectorAction[0]);
 		if(dropSignal == 1)
 		{
-			pieceObj.dropSignal = true;
-			// GameControl.instance.aiObj.alarmObj.SpawnAlarm();
-			// Time.timeScale = 0.1f;
+            // GameControl.instance.tester.isATSStack = true;
+			// pieceObj.dropSignal = true;
+			GameControl.instance.aiObj.alarmObj.SpawnAlarm();
+			Time.timeScale = 0.01f;
             isPlaying = false;
 		}
 	}

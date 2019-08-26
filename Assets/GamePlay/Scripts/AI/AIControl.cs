@@ -24,7 +24,7 @@ public class AIControl : MonoBehaviour
 
 	void Start()
 	{
-		agent_min_y = 2.2f;
+		agent_min_y = 7.1f;
 		int i=0;
 		foreach(PiecePosRange p in stackAgentObj.piecesDataList)
 		{
@@ -40,7 +40,7 @@ public class AIControl : MonoBehaviour
 			if(Input.GetKeyDown(KeyCode.H))
 			{
 				AutoStack();
-				GameControl.instance.tester.helpNum++;
+				// GameControl.instance.tester.helpNum++;
 				// isATSTest = true;
 			}		
 		}
@@ -111,8 +111,6 @@ public class AIControl : MonoBehaviour
 		thinkingStartTime = Time.time;
 		// Debug.Log("SetThinkingStartTime = " + thinkingStartTime);
 	}
-
-
 
 
 

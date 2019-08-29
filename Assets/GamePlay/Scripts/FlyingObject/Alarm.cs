@@ -14,6 +14,8 @@ public class Alarm : MonoBehaviour
 		{
 			Time.timeScale = 1f;
 			Destroy(this.gameObject);
+            if(AudioControl.instance.isPlaying("pureAlarm"))
+                AudioControl.instance.Stop("pureAlarm");
 		}
 	}
 

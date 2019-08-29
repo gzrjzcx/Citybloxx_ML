@@ -18,17 +18,17 @@ public class FlyerControl : MonoBehaviour
 	[SerializeField]
 	private int spawnThreshold;
 
-	void Update()
-	{
-		if(Input.GetKey(KeyCode.K))
-		{
-			KillAllFlyMan();
-		}
-		if(Input.GetKey(KeyCode.F))
-		{
-			SpawnFlyman();
-		}
-	}
+	// void Update()
+	// {
+	// 	if(Input.GetKey(KeyCode.K))
+	// 	{
+	// 		KillAllFlyMan();
+	// 	}
+	// 	if(Input.GetKey(KeyCode.F))
+	// 	{
+	// 		SpawnFlyman();
+	// 	}
+	// }
 
 	void Start()
 	{

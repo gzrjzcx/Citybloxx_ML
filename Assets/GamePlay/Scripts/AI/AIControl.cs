@@ -24,7 +24,8 @@ public class AIControl : MonoBehaviour
 
 	void Start()
 	{
-		agent_min_y = 7.1f;
+		// agent_min_y = 7.1f; // 820b_sv4
+		agent_min_y = 2.2f; // 814b_sv4
 		int i=0;
 		foreach(PiecePosRange p in stackAgentObj.piecesDataList)
 		{
@@ -61,6 +62,7 @@ public class AIControl : MonoBehaviour
 			SetRLTarget4stack();
 			stackAgentObj.ResetPos();
 			stackAgentObj.isPlaying = true;
+			AudioControl.instance.Play("tickClock");
 		}
 		// Debug.Log("----  AutoStack Start ------ | " + GameControl.instance.stackedPieceNum);
 		// SetRLTarget4stack();

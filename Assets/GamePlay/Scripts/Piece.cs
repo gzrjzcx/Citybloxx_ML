@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.EventSystems;
 
 public class Piece : MonoBehaviour
 {
@@ -36,19 +37,48 @@ public class Piece : MonoBehaviour
     {
     	if(isHooked)
     	{
-	        if(Input.GetKeyDown("space") || Input.touchCount > 0 || dropSignal)
-	         {
-                   transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
-                Vector3 p = transform.position;
-                p.z = 0;
-                transform.position = p;
-	        	transform.rotation = Quaternion.identity;
-	        	rb2d.isKinematic = false;
-	        	isHooked = false;
-                dropSignal = false;
-                GetThinkingTime();
-	        }
+#if UNITY_EDITOR
+            if(Input.GetKeyDown("space") || dropSignal)
+            {
+                DropPiece();
+            }
+#elif UNITY_STANDALONE_OSX
+            if(Input.GetKeyDown("space") || dropSignal)
+            {
+                DropPiece();
+            }
+#endif
+            if(Input.touchCount > 0)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hit;
+                if(!Physics.Raycast(ray, out hit, 100))
+                {
+                    DropPiece();
+                }
+            }
+            else if(dropSignal)
+            {
+                DropPiece();
+            }
+            // if(Input.GetKeyDown(KeyCode.F))
+            // {
+            //     FlashPiece();
+            // }
     	}
+    }
+
+    void DropPiece()
+    {
+        transform.SetParent(GameControl.instance.piecePoolObj.idlePieceArea, true);
+        Vector3 p = transform.position;
+        p.z = 0;
+        transform.position = p;
+        transform.rotation = Quaternion.identity;
+        rb2d.isKinematic = false;
+        isHooked = false;
+        dropSignal = false;
+        GetThinkingTime();  
     }
 
     public void GetThinkingTime()
@@ -219,5 +249,30 @@ public class Piece : MonoBehaviour
     {
         if(isFallen)
             GameControl.instance.particleObj.PlayFallenWaterAnim(transform.position);
+    }
+
+    void FlashPiece()
+    {
+        // this.GetComponent<MeshRenderer>().material.DOColor(Color.red, 1f)
+        //     .SetEase(Ease.Flash, 16, 1)
+        //     .SetLoops(10, LoopType.Restart);
+        // Gradient gradient = new Gradient();
+        // GradientColorKey[] colorKey = new GradientColorKey[2];
+        // GradientAlphaKey[] alphaKey = new GradientAlphaKey[2];
+
+        // colorKey[0].color = Color.red;
+        // colorKey[0].time = 0.0f;
+        // colorKey[1].color = Color.blue;
+        // colorKey[1].time = 1.0f;
+
+        // alphaKey[0].alpha = 0.0f;
+        // alphaKey[0].time = 0.0f;
+        // alphaKey[1].alpha = 0.0f;
+        // alphaKey[1].time = 1.0f;
+
+        // gradient.SetKeys(colorKey, alphaKey);
+
+        // this.GetComponent<MeshRenderer>().material.DOGradientColor(gradient, 2f)
+        //     .SetEase(Ease.Flash, 16, 2);        
     }
 }

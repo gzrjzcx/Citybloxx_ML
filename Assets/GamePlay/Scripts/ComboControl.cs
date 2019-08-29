@@ -74,18 +74,23 @@ public class ComboControl : MonoBehaviour
         {
             case 1:
                 AudioControl.instance.Play("Good");
+                GameControl.instance.wordObj.SpawnWord("Good");
                 break;
             case 3:
                 AudioControl.instance.Play("Great");
+                GameControl.instance.wordObj.SpawnWord("Great");
                 break;
             case 5: 
                 AudioControl.instance.Play("Excellent");
+                GameControl.instance.wordObj.SpawnWord("Excellent");
                 break;
             case 8:
                 AudioControl.instance.Play("Amazing");
+                GameControl.instance.wordObj.SpawnWord("Amazing");
                 break;
             case 10:
                 AudioControl.instance.Play("Unbelievable");
+                GameControl.instance.wordObj.SpawnWord("Unbelievable");
                 break;
         }
     }

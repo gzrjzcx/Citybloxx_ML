@@ -75,7 +75,8 @@ public class StackAgent : Agent
         Vector2 agentPos = pos2root(new Vector2(agentTran.position.x, agentTran.position.y));
         // Debug.Log("agentPos = " + agentPos + "  normalize: " + (agentPos.y - agentTran.position.y) / 1.2f, gameObject);
         agentPos.x = (agentPos.x + 1.42f) / 2.72f;
-        agentPos.y = (agentPos.y - GameControl.instance.aiObj.agent_min_y) / 1.3f;
+        agentPos.y = (agentPos.y - GameControl.instance.aiObj.agent_min_y) / 1.2f;
+        // 820b_sv4 model range value = 1.3f
         AddVectorObs(agentPos); // 2
 
         float agentRot = agentTran.eulerAngles.z > 180 ? 
@@ -140,6 +141,8 @@ public class StackAgent : Agent
 			GameControl.instance.aiObj.alarmObj.SpawnAlarm();
 			Time.timeScale = 0.01f;
             isPlaying = false;
+            AudioControl.instance.Stop("tickClock");
+            AudioControl.instance.Play("pureAlarm");
 		}
 	}
 

@@ -13,13 +13,13 @@ public class SpaceFOControl : MonoBehaviour
 	[SerializeField]
 	private int spawnProbability;
 
-	// void Update()
-	// {
-	// 	if(Input.GetKey(KeyCode.U))
-	// 	{
-	// 		SpawnFO();
-	// 	}
-	// }
+	void Update()
+	{
+		if(Input.GetKey(KeyCode.Equals))
+		{
+			SpawnFO_debug();
+		}
+	}
 
 	void Start()
 	{
@@ -39,6 +39,34 @@ public class SpaceFOControl : MonoBehaviour
 		if(this.transform.childCount > 1)
 			return;
 
+		string pfbPath = "ufo/prefabs/ufo";
+		string imgPath = "ufo/images/ufo_";
+		ufoPrefab = Resources.Load<GameObject>(pfbPath);
+		int imgIdx = Random.Range(1, 7);
+		Sprite img = Resources.Load<Sprite>(imgPath + imgIdx);
+
+		int sign = (Random.Range(0, 2) == 1) ? 1 : -1; // 1->right
+		switch(imgIdx)
+		{
+			case 1:
+			case 2:
+				SpawnSpaceShip(sign, img);
+				break;
+			case 3:
+				SpawnSatellite(img);
+				break;
+			case 4:
+			case 5:
+				SpawnRocket(sign, img);
+				break;
+			case 6:
+				SpawnAlien(img);
+				break;
+		}
+	}
+
+	public void SpawnFO_debug()
+	{
 		string pfbPath = "ufo/prefabs/ufo";
 		string imgPath = "ufo/images/ufo_";
 		ufoPrefab = Resources.Load<GameObject>(pfbPath);

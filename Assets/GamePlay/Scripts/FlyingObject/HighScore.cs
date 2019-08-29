@@ -30,10 +30,16 @@ public class HighScore : MonoBehaviour
 
         highScoreAnimSeq.Append(mov_in);
         highScoreAnimSeq.Append(suspend);
+        highScoreAnimSeq.AppendCallback(RemoveHighScore);
     }
 
     void OnBecameInvisible()
     {
         Destroy(this.gameObject);
-    }   
+    }
+
+    void RemoveHighScore()
+    {
+        Destroy(this.gameObject);
+    }
 }

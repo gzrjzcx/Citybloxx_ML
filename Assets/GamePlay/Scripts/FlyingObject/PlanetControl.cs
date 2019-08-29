@@ -13,13 +13,13 @@ public class PlanetControl : MonoBehaviour
 	[SerializeField]
 	private int spawnProbability;
 
-	// void Update()
-	// {
-	// 	if(Input.GetKey(KeyCode.P))
-	// 	{
-	// 		SpawnPlanet();
-	// 	}
-	// }
+	void Update()
+	{
+		if(Input.GetKey(KeyCode.Equals))
+		{
+			SpawnPlanet_debug();
+		}
+	}
 
 	void Start()
 	{
@@ -39,6 +39,34 @@ public class PlanetControl : MonoBehaviour
 		if(this.transform.childCount > 0)
 			return;
 
+		string pfbPath = "planet/prefabs/Planet";
+		string imgPath = "planet/images/planet_";
+		planetPrefab = Resources.Load<GameObject>(pfbPath);
+		int imgIdx = Random.Range(1, 8);
+		Sprite img = Resources.Load<Sprite>(imgPath + imgIdx);
+
+		int sign = (Random.Range(0, 2) == 1) ? 1 : -1; // 1->right
+		Vector3 leftTopPos = Camera.main.ScreenToWorldPoint(
+			new Vector3(0, Screen.height, 8));
+
+		float offsetX = (-2 - Random.Range(0f, 1f)) * sign;
+		float offsetY = 3f;
+		float _x = (sign == 1) ? -leftTopPos.x : leftTopPos.x;
+		Vector3 spawnPos = new Vector3(_x + offsetX,
+									leftTopPos.y + offsetY, 0f);
+
+		Vector3 rotEuler = new Vector3(0, 0, Random.Range(0f, 360f));
+		float scale = Random.Range(0.5f, 0.8f);
+
+		planet = Instantiate(planetPrefab, spawnPos, Quaternion.Euler(rotEuler));
+		planet.transform.SetParent(this.transform, true);
+		planet.GetComponent<SpriteRenderer>().sprite = img;
+		planet.transform.localScale = new Vector3(scale, scale, scale);
+
+	}
+
+	public void SpawnPlanet_debug()
+	{
 		string pfbPath = "planet/prefabs/Planet";
 		string imgPath = "planet/images/planet_";
 		planetPrefab = Resources.Load<GameObject>(pfbPath);

@@ -27,6 +27,7 @@ public class GameControl : MonoBehaviour
     public StarControl starObj;
     public SpaceFOControl foObj;
     public HighScoreControl highScoreObj;
+    public WordControl wordObj;
     public Tester tester;
 
     public TextMeshProUGUI scoreText;
@@ -228,7 +229,6 @@ public class GameControl : MonoBehaviour
         {
             aiObj.AutoStack();
             AudioControl.instance.Play("Click");
-            Debug.Log("auto playing" + " pieccName = " + aiObj.stackAgentObj.pieceObj.name);             
         }        
     }
 
@@ -236,7 +236,9 @@ public class GameControl : MonoBehaviour
     {
         Time.timeScale = 1f;
         Destroy(FindObjectOfType<Alarm>().gameObject);
-        AudioControl.instance.Play("Click");       
+        AudioControl.instance.Play("Click");
+        if(AudioControl.instance.isPlaying("pureAlarm"))
+            AudioControl.instance.Stop("pureAlarm");
     }
 
 

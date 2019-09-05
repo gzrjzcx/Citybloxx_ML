@@ -25,7 +25,7 @@ This is the [usage](https://github.com/gzrjzcx/Citybloxx_ML/issues/1) of how to 
 
 ## Game Video
 
-[![The Video of Auto-stakcing Agent Gameplaying](/screenshot/cover.img)](https://www.youtube.com/watch?v=NGrwlK7TIi4&feature=youtu.be)
+[![The Video of Auto-stakcing Agent Gameplaying](https://github.com/gzrjzcx/Citybloxx_ML/blob/dev/screenshot/cover.png)](https://www.youtube.com/watch?v=NGrwlK7TIi4&feature=youtu.be)
 
 This game played by the Auto-stacking(ATS) agent. It finally reached 181 blocks and stuck due to the too left the rotation. The video shows that the agent has learned the ability to take advantage of the velocity to play the game. One of the established policies seeks to make the blocks column sway in the left side so that the velocity of the column will be 0 at the right maximum rotation range.
 In other words, the agent will stack the block to a quiet(or smaller velocity) column. Generally speaking, stacking a block to a quiet target is easier than to a moving target.

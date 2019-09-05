@@ -646,9 +646,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/alex/citybloxxDemo",
-		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts",
-		"/Users/alex/citybloxxDemo/Assets/CBX_RL/Assets/ML_Agents/ML_Scripts/TestHelper"
+		"/Users/alex/citybloxxDemo/Assets/GamePlay/Scripts"
 	],
 	"file_history":
 	[
@@ -943,11 +941,12 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1527.0,
+						"translation.y": 1607.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

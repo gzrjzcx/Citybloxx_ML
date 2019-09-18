@@ -13,8 +13,6 @@ This is the [usage](https://github.com/gzrjzcx/Citybloxx_ML/issues/1) of how to 
         - *Auto-stacking Agent(ATS):* Help players to find the correct time to drop the block at a difficult situation.
         - *Difficulty Dynamic Adjustment:* Adjusting the game difficulty dynamically depends on the current player's skill.
 
-- Student name:
-    - Alex Zou
 - EPCC supervisor name:
     - Charaka Palansuriya
     - Salome Llabres
@@ -46,7 +44,7 @@ Because we leverage different repos to store the codes, the usage may be differe
 #### For Normal Game
 If you only want to play the game without AI module(i.e. two intelligent agents), you can just clone the `dev` branch of this repo. Then build and play by Unity.  
 
-Or you can download the [executable](https://github.com/gzrjzcx/Citybloxx_ML/blob/dev/citybloxx) file(only for Mac) to play it directly. You need to turn on the AI help from the menu located on the top right corner of the screen manually.
+Or you can download the [executable](https://www.jianguoyun.com/p/DeJmn2cQmMziBxjUw_IB) file(only for Mac) to play it directly. You need to turn on the AI help from the menu located on the top right corner of the screen manually.
 
 #### For AI Module
 If you want to experience the aids provided by AI, you need to clone this repo recursively so as to get the [submodule](https://github.com/gzrjzcx/CBX_RL) of this repo. This sub-directory includes the codes about AI parts. We provide a [script](https://github.com/gzrjzcx/Citybloxx_ML/blob/dev/cbx_setup.sh) to do it rapidly. Download and execute the script:
@@ -59,7 +57,7 @@ After script running, you can open the project by Unity. Please note you will ge
 To use the two agents, you may need drag the model files from `/Assets/CBX_RL/Assets/ML_Agents/models/CCM` to the brain component of `WoodenPiece` game object prefab. Therein, the CCM directory corresponds to auto-stack agent and DDA directory refers to DDA agent. There are several different trained models for different effects you can try.
 
 #### For Training
-If you want to continue the training of intelligent agents, you will need to clone the fork of ML-Agents agent in my gitHub. Because I have modified some source codes of ML-Agents toolkit for higher training performance.
+If you want to continue the training of both intelligent agents, you will also need to clone the fork of [ML-Agents](https://github.com/gzrjzcx/ML-agents) repo in my gitHub. Because I have modified some source codes of ML-Agents toolkit for higher training performance. For example, I have added a flag `--rf` to specify the reward function. You need to specify this flag when training.
 
 
 

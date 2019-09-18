@@ -523,7 +523,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3501,
+				"buffer_size": 3962,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -928,15 +928,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3501,
+						"buffer_size": 3962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3485,
-								3485
+								1821,
+								1821
 							]
 						],
 						"settings":
@@ -946,7 +946,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1607.0,
+						"translation.y": 680.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

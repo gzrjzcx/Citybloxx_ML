@@ -32,7 +32,7 @@ This is the [usage](https://github.com/gzrjzcx/Citybloxx_ML/issues/1) of how to 
 alt="The Video of Auto-stakcing Agent Gameplaying" width="720" height="540" border="10" /></a>
 
 
-This game played by the Auto-stacking(ATS) agent. It finally reached 181 blocks and stuck due to the too left the rotation. The video shows that the agent has learned the ability to take advantage of the velocity to play the game. One of the established policies seeks to make the blocks column sway in the left side so that the velocity of the column will be 0 at the right maximum rotation range.
+This game played by the Auto-stacking(ATS) agent. It finally reached 181 blocks and stuck due to the too left rotation. The video shows that the agent has learned to take advantage of the velocity to play the game. One of the established policies seeks to make the blocks column sway in the left side so that the velocity of the column will be 0 at the right maximum rotation range.
 In other words, the agent will stack the block to a quiet(or smaller velocity) column. Generally speaking, stacking a block to a quiet target is easier than to a moving target.
 
 ## How To Use
@@ -44,29 +44,12 @@ Because we leverage different repos to store the codes, the usage may be differe
 - `Blender: 2.79b`
 
 #### For Normal Game
-If you only want to play the game without AI module(i.e. two intelligent agents), you can just clone the `dev` branch of this repo. 
+If you only want to play the game without AI module(i.e. two intelligent agents), you can just clone the `dev` branch of this repo. Then build and play by Unity.
 
 #### For AI Module
-If you want to experience the aids provided by AI, you need to clone this repo recursively so as to get the submodule of this repo. This sub-directory includes the codes about AI parts. We provide a script to do it rapidly:
-```sh
-git clone --recursive https://github.com/gzrjzcx/Citybloxx_ML
-cd Citybloxx_ML
-git checkout dev
-git submodule update
-cd Assets/CBX_RL
-mkdir TO_DEL
-mv * TO_DEL
-mv TO_DEL/Assets .
-rm -rf TO_DEL
-cd Assets
-mkdir TO_DEL
-mv * TO_DEL
-mv TO_DEL/ML_Agents .
-rm -rf TO_DEL
-cd ..
-cd ..
-```
-After executing the script, you can open the project by Unity. Please note you will get many compiler errors about a plugin called 'TextMeshPro...'. No worry, just click any error message then click the corresponding highlighted gameObject. Afterwards, a dialog will pop up and click the `import TMP Essentials` button to get the essentials of TextMeshPro plugin. Finally, close and reopen the project then you can run the game.
+If you want to experience the aids provided by AI, you need to clone this repo recursively so as to get the [submodule](https://github.com/gzrjzcx/CBX_RL) of this repo. This sub-directory includes the codes about AI parts. We provide a [script]() to do it rapidly:
+
+After executing the script, you can open the project by Unity. Please note you will get many compiler errors about a plugin called *'TextMeshPro...'*. No worry, just click any error message then click the corresponding highlighted gameObject. Afterwards, a dialog will pop up and click the `import TMP Essentials` button to get the essentials of TextMeshPro plugin. Finally, close and reopen the project then you can run the game.
 
 #### For Training
 If you want to continue the training of intelligent agents, you will need to clone the fork of ML-Agents agent in my gitHub. Because I have modified some source codes of ML-Agents toolkit for higher training performance.

@@ -1,3 +1,4 @@
+ #!/bin/bash
 git clone --recursive https://github.com/gzrjzcx/Citybloxx_ML
 cd Citybloxx_ML
 git checkout dev

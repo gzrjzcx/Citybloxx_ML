@@ -44,12 +44,19 @@ Because we leverage different repos to store the codes, the usage may be differe
 - `Blender: 2.79b`
 
 #### For Normal Game
-If you only want to play the game without AI module(i.e. two intelligent agents), you can just clone the `dev` branch of this repo. Then build and play by Unity.
+If you only want to play the game without AI module(i.e. two intelligent agents), you can just clone the `dev` branch of this repo. Then build and play by Unity.  
+
+Or you can download the [executable](https://github.com/gzrjzcx/Citybloxx_ML/blob/dev/citybloxx) file(only for Mac) to play it directly. You need to turn on the AI help from the menu located on the top right corner of the screen manually.
 
 #### For AI Module
-If you want to experience the aids provided by AI, you need to clone this repo recursively so as to get the [submodule](https://github.com/gzrjzcx/CBX_RL) of this repo. This sub-directory includes the codes about AI parts. We provide a [script]() to do it rapidly:
+If you want to experience the aids provided by AI, you need to clone this repo recursively so as to get the [submodule](https://github.com/gzrjzcx/CBX_RL) of this repo. This sub-directory includes the codes about AI parts. We provide a [script](https://github.com/gzrjzcx/Citybloxx_ML/blob/dev/cbx_setup.sh) to do it rapidly. Download and execute the script:
+```sh
+./cbx_setup.sh
+```
 
-After executing the script, you can open the project by Unity. Please note you will get many compiler errors about a plugin called *'TextMeshPro...'*. No worry, just click any error message then click the corresponding highlighted gameObject. Afterwards, a dialog will pop up and click the `import TMP Essentials` button to get the essentials of TextMeshPro plugin. Finally, close and reopen the project then you can run the game.
+After script running, you can open the project by Unity. Please note you will get many compiler errors about a plugin called *'TextMeshPro...'*. No worry, just click any error message then click the corresponding highlighted gameObject. Afterwards, a dialog will pop up and click the `import TMP Essentials` button to get the essentials of TextMeshPro plugin. Finally, close and reopen the project then you can run the game.  
+
+To use the two agents, you may need drag the model files from `/Assets/CBX_RL/Assets/ML_Agents/models/CCM` to the brain component of `WoodenPiece` game object prefab. Therein, the CCM directory corresponds to auto-stack agent and DDA directory refers to DDA agent. There are several different trained models for different effects you can try.
 
 #### For Training
 If you want to continue the training of intelligent agents, you will need to clone the fork of ML-Agents agent in my gitHub. Because I have modified some source codes of ML-Agents toolkit for higher training performance.
